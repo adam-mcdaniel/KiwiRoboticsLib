@@ -1,0 +1,440 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module KiwiRobotLib.subsystem</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="KiwiRobotLib.html"><font color="#ffffff">KiwiRobotLib</font></a>.subsystem</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cmurp9%5Cdocuments%5Cprogramming%5Crobotics%5Cpython%5Ckiwirobotics%5Ckiwirobotlib%5Csubsystem.py">c:\users\murp9\documents\programming\robotics\python\kiwirobotics\kiwirobotlib\subsystem.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#9AC2C9">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#9AC2C9"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="ctre.html">ctre</a><br>
+<a href="wpilib.drive.html">wpilib.drive</a><br>
+</td><td width="25%" valign=top><a href="threading.html">threading</a><br>
+<a href="time.html">time</a><br>
+</td><td width="25%" valign=top><a href="wpilib.html">wpilib</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#8AA1B1">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#8AA1B1"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="KiwiRobotLib.subsystem.html#Subsystem">Subsystem</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="KiwiRobotLib.subsystem.html#BasicChassis">BasicChassis</a>(<a href="wpilib.drive.differentialdrive.html#DifferentialDrive">wpilib.drive.differentialdrive.DifferentialDrive</a>, <a href="KiwiRobotLib.subsystem.html#Subsystem">Subsystem</a>)
+</font></dt><dt><font face="helvetica, arial"><a href="KiwiRobotLib.subsystem.html#BasicElevator">BasicElevator</a>
+</font></dt></dl>
+</dd>
+</dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="wpilib.drive.differentialdrive.html#DifferentialDrive">wpilib.drive.differentialdrive.DifferentialDrive</a>(<a href="wpilib.drive.robotdrivebase.html#RobotDriveBase">wpilib.drive.robotdrivebase.RobotDriveBase</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="KiwiRobotLib.subsystem.html#BasicChassis">BasicChassis</a>(<a href="wpilib.drive.differentialdrive.html#DifferentialDrive">wpilib.drive.differentialdrive.DifferentialDrive</a>, <a href="KiwiRobotLib.subsystem.html#Subsystem">Subsystem</a>)
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#B9D8C2">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="BasicChassis">class <strong>BasicChassis</strong></a>(<a href="wpilib.drive.differentialdrive.html#DifferentialDrive">wpilib.drive.differentialdrive.DifferentialDrive</a>, <a href="KiwiRobotLib.subsystem.html#Subsystem">Subsystem</a>)</font></td></tr>
+    
+<tr bgcolor="#B9D8C2"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>This&nbsp;class&nbsp;is&nbsp;a&nbsp;quick&nbsp;and&nbsp;easy&nbsp;way&nbsp;to&nbsp;make&nbsp;a&nbsp;chassis,&nbsp;although&nbsp;it<br>
+should&nbsp;be&nbsp;modified&nbsp;for&nbsp;gear&nbsp;shifting,&nbsp;etc.<br>
+&nbsp;<br>
+It&nbsp;takes&nbsp;2,&nbsp;4,&nbsp;or&nbsp;6&nbsp;motor&nbsp;objects.<br>
+&nbsp;<br>
+The&nbsp;first&nbsp;half&nbsp;of&nbsp;the&nbsp;motors&nbsp;are&nbsp;considered&nbsp;the&nbsp;"left"&nbsp;motors.<br>
+The&nbsp;second&nbsp;half&nbsp;of&nbsp;the&nbsp;motors&nbsp;are&nbsp;considered&nbsp;the&nbsp;"right"&nbsp;motors.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="KiwiRobotLib.subsystem.html#BasicChassis">BasicChassis</a></dd>
+<dd><a href="wpilib.drive.differentialdrive.html#DifferentialDrive">wpilib.drive.differentialdrive.DifferentialDrive</a></dd>
+<dd><a href="wpilib.drive.robotdrivebase.html#RobotDriveBase">wpilib.drive.robotdrivebase.RobotDriveBase</a></dd>
+<dd><a href="wpilib.sendablebase.html#SendableBase">wpilib.sendablebase.SendableBase</a></dd>
+<dd><a href="wpilib.sendable.html#Sendable">wpilib.sendable.Sendable</a></dd>
+<dd><a href="wpilib.motorsafety.html#MotorSafety">wpilib.motorsafety.MotorSafety</a></dd>
+<dd><a href="KiwiRobotLib.subsystem.html#Subsystem">Subsystem</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="BasicChassis-__init__"><strong>__init__</strong></a>(self, *args)</dt><dd><tt>Constructor&nbsp;for&nbsp;<a href="wpilib.drive.differentialdrive.html#DifferentialDrive">DifferentialDrive</a>.<br>
+&nbsp;<br>
+..&nbsp;note::&nbsp;To&nbsp;pass&nbsp;multiple&nbsp;motors&nbsp;per&nbsp;side,&nbsp;use&nbsp;a&nbsp;:class:`.SpeedControllerGroup`.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If&nbsp;a&nbsp;motor&nbsp;needs&nbsp;to&nbsp;be&nbsp;inverted,&nbsp;do&nbsp;so&nbsp;before&nbsp;passing&nbsp;it&nbsp;in.<br>
+&nbsp;<br>
+:param&nbsp;leftMotor:&nbsp;Left&nbsp;motor(s)<br>
+:param&nbsp;rightMotor:&nbsp;Right&nbsp;motor(s)<br>
+:type&nbsp;leftMotor:&nbsp;:class:`.SpeedController`<br>
+:type&nbsp;rightMotor:&nbsp;:class:`.SpeedController`</tt></dd></dl>
+
+<dl><dt><a name="BasicChassis-update"><strong>update</strong></a>(self, joystick, buttons=None)</dt><dd><tt>This&nbsp;function&nbsp;should&nbsp;be&nbsp;overwritten,&nbsp;it&nbsp;is&nbsp;only&nbsp;here&nbsp;because<br>
+this&nbsp;class&nbsp;is&nbsp;intended&nbsp;to&nbsp;be&nbsp;useful&nbsp;without&nbsp;writing&nbsp;a&nbsp;bunch&nbsp;of<br>
+code&nbsp;first.</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="wpilib.drive.differentialdrive.html#DifferentialDrive">wpilib.drive.differentialdrive.DifferentialDrive</a>:<br>
+<dl><dt><a name="BasicChassis-arcadeDrive"><strong>arcadeDrive</strong></a>(self, xSpeed, zRotation, squaredInputs=True)</dt><dd><tt>Arcade&nbsp;drive&nbsp;method&nbsp;for&nbsp;differential&nbsp;drive&nbsp;platform.<br>
+&nbsp;<br>
+:param&nbsp;xSpeed:&nbsp;The&nbsp;robot's&nbsp;speed&nbsp;along&nbsp;the&nbsp;X&nbsp;axis&nbsp;`[-1.0..1.0]`.&nbsp;Forward&nbsp;is&nbsp;positive<br>
+:param&nbsp;zRotation:&nbsp;The&nbsp;robot's&nbsp;zRotation&nbsp;rate&nbsp;around&nbsp;the&nbsp;Z&nbsp;axis&nbsp;`[-1.0..1.0]`.&nbsp;Clockwise&nbsp;is&nbsp;positive<br>
+:param&nbsp;squaredInputs:&nbsp;If&nbsp;set,&nbsp;decreases&nbsp;the&nbsp;sensitivity&nbsp;at&nbsp;low&nbsp;speeds.</tt></dd></dl>
+
+<dl><dt><a name="BasicChassis-curvatureDrive"><strong>curvatureDrive</strong></a>(self, xSpeed, zRotation, isQuickTurn)</dt><dd><tt>Curvature&nbsp;drive&nbsp;method&nbsp;for&nbsp;differential&nbsp;drive&nbsp;platform.<br>
+&nbsp;<br>
+The&nbsp;zRotation&nbsp;argument&nbsp;controls&nbsp;the&nbsp;curvature&nbsp;of&nbsp;the&nbsp;robot's&nbsp;path&nbsp;rather&nbsp;than&nbsp;its&nbsp;rate<br>
+of&nbsp;heading&nbsp;change.&nbsp;This&nbsp;makes&nbsp;the&nbsp;robot&nbsp;more&nbsp;controllable&nbsp;at&nbsp;high&nbsp;speeds.&nbsp;Also&nbsp;handles<br>
+the&nbsp;robot's&nbsp;quick&nbsp;turn&nbsp;functionality&nbsp;-&nbsp;"quick&nbsp;turn"&nbsp;overrides&nbsp;constant-curvature&nbsp;turning<br>
+for&nbsp;turn-in-place&nbsp;maneuvers<br>
+&nbsp;<br>
+:param&nbsp;xSpeed:&nbsp;The&nbsp;robot's&nbsp;speed&nbsp;along&nbsp;the&nbsp;X&nbsp;axis&nbsp;`[-1.0..1.0]`.&nbsp;Forward&nbsp;is&nbsp;positive.<br>
+:param&nbsp;zRotation:&nbsp;&nbsp;The&nbsp;robot's&nbsp;rotation&nbsp;rate&nbsp;around&nbsp;the&nbsp;Z&nbsp;axis&nbsp;`[-1.0..1.0]`.&nbsp;Clockwise&nbsp;is&nbsp;positive.<br>
+:param&nbsp;isQuickTurn:&nbsp;If&nbsp;set,&nbsp;overrides&nbsp;constant-curvature&nbsp;turning&nbsp;for<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;turn-in-place&nbsp;maneuvers.</tt></dd></dl>
+
+<dl><dt><a name="BasicChassis-getDescription"><strong>getDescription</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="BasicChassis-initSendable"><strong>initSendable</strong></a>(self, builder)</dt><dd><tt>Initializes&nbsp;this&nbsp;Sendable&nbsp;<a href="builtins.html#object">object</a>.<br>
+&nbsp;<br>
+:param&nbsp;builder:&nbsp;sendable&nbsp;builder</tt></dd></dl>
+
+<dl><dt><a name="BasicChassis-setQuickStopAlpha"><strong>setQuickStopAlpha</strong></a>(self, alpha)</dt><dd><tt>Sets&nbsp;the&nbsp;low-pass&nbsp;filter&nbsp;gain&nbsp;for&nbsp;QuickStop&nbsp;in&nbsp;curvature&nbsp;drive.<br>
+&nbsp;<br>
+The&nbsp;low-pass&nbsp;filter&nbsp;filters&nbsp;incoming&nbsp;rotation&nbsp;rate&nbsp;commands&nbsp;to&nbsp;smooth&nbsp;out&nbsp;high&nbsp;frequency<br>
+changes.<br>
+&nbsp;<br>
+:param&nbsp;alpha:&nbsp;Low-pass&nbsp;filter&nbsp;gain&nbsp;[0.0..2.0].&nbsp;Smaller&nbsp;values&nbsp;result&nbsp;in&nbsp;slower&nbsp;output&nbsp;changes.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Values&nbsp;between&nbsp;1.0&nbsp;and&nbsp;2.0&nbsp;result&nbsp;in&nbsp;output&nbsp;oscillation.&nbsp;Values&nbsp;below&nbsp;0.0&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;above&nbsp;2.0&nbsp;are&nbsp;unstable.</tt></dd></dl>
+
+<dl><dt><a name="BasicChassis-setQuickStopThreshold"><strong>setQuickStopThreshold</strong></a>(self, threshold)</dt><dd><tt>Sets&nbsp;the&nbsp;QuickStop&nbsp;speed&nbsp;threshold&nbsp;in&nbsp;curvature&nbsp;drive.<br>
+&nbsp;<br>
+QuickStop&nbsp;compensates&nbsp;for&nbsp;the&nbsp;robot's&nbsp;moment&nbsp;of&nbsp;inertia&nbsp;when&nbsp;stopping&nbsp;after&nbsp;a&nbsp;QuickTurn.<br>
+&nbsp;<br>
+While&nbsp;QuickTurn&nbsp;is&nbsp;enabled,&nbsp;the&nbsp;QuickStop&nbsp;accumulator&nbsp;takes&nbsp;on&nbsp;the&nbsp;rotation&nbsp;rate&nbsp;value<br>
+outputted&nbsp;by&nbsp;the&nbsp;low-pass&nbsp;filter&nbsp;when&nbsp;the&nbsp;robot's&nbsp;speed&nbsp;along&nbsp;the&nbsp;X&nbsp;axis&nbsp;is&nbsp;below&nbsp;the<br>
+threshold.&nbsp;When&nbsp;QuickTurn&nbsp;is&nbsp;disabled,&nbsp;the&nbsp;accumulator's&nbsp;value&nbsp;is&nbsp;applied&nbsp;against&nbsp;the&nbsp;computed<br>
+angular&nbsp;power&nbsp;request&nbsp;to&nbsp;slow&nbsp;the&nbsp;robot's&nbsp;rotation.<br>
+&nbsp;<br>
+:param&nbsp;threshold:&nbsp;X&nbsp;speed&nbsp;below&nbsp;which&nbsp;quick&nbsp;stop&nbsp;accumulator&nbsp;will&nbsp;receive&nbsp;rotation&nbsp;rate&nbsp;values&nbsp;`[0..1.0]`.</tt></dd></dl>
+
+<dl><dt><a name="BasicChassis-stopMotor"><strong>stopMotor</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="BasicChassis-tankDrive"><strong>tankDrive</strong></a>(self, leftSpeed, rightSpeed, squaredInputs=True)</dt><dd><tt>Provide&nbsp;tank&nbsp;steering&nbsp;using&nbsp;the&nbsp;stored&nbsp;robot&nbsp;configuration.<br>
+&nbsp;<br>
+:param&nbsp;leftSpeed:&nbsp;The&nbsp;robot's&nbsp;left&nbsp;side&nbsp;speed&nbsp;along&nbsp;the&nbsp;X&nbsp;axis&nbsp;`[-1.0..1.0]`.&nbsp;Forward&nbsp;is&nbsp;positive.<br>
+:param&nbsp;rightSpeed:&nbsp;The&nbsp;robot's&nbsp;right&nbsp;side&nbsp;speed&nbsp;along&nbsp;the&nbsp;X&nbsp;axis`[-1.0..1.0]`.&nbsp;Forward&nbsp;is&nbsp;positive.<br>
+:param&nbsp;squaredInputs:&nbsp;If&nbsp;set,&nbsp;decreases&nbsp;the&nbsp;input&nbsp;sensitivity&nbsp;at&nbsp;low&nbsp;speeds</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="wpilib.drive.differentialdrive.html#DifferentialDrive">wpilib.drive.differentialdrive.DifferentialDrive</a>:<br>
+<dl><dt><strong>instances</strong> = 0</dl>
+
+<dl><dt><strong>kDefaultQuickStopAlpha</strong> = 0.1</dl>
+
+<dl><dt><strong>kDefaultQuickStopThreshold</strong> = 0.2</dl>
+
+<hr>
+Methods inherited from <a href="wpilib.drive.robotdrivebase.html#RobotDriveBase">wpilib.drive.robotdrivebase.RobotDriveBase</a>:<br>
+<dl><dt><a name="BasicChassis-setDeadband"><strong>setDeadband</strong></a>(self, deadband:float)</dt><dd><tt>Sets&nbsp;the&nbsp;deadband&nbsp;applied&nbsp;to&nbsp;the&nbsp;drive&nbsp;inputs&nbsp;(e.g.&nbsp;joystick&nbsp;values).<br>
+&nbsp;<br>
+The&nbsp;default&nbsp;value&nbsp;is&nbsp;:const:`kDefaultDeadband`.&nbsp;Inputs&nbsp;smaller&nbsp;than&nbsp;the&nbsp;deadband&nbsp;are&nbsp;set&nbsp;to<br>
+0&nbsp;while&nbsp;inputs&nbsp;larger&nbsp;than&nbsp;the&nbsp;deadband&nbsp;are&nbsp;scaled&nbsp;from&nbsp;0&nbsp;to&nbsp;1.&nbsp;See&nbsp;:meth:`applyDeadband`.<br>
+&nbsp;<br>
+:param&nbsp;deadband:&nbsp;The&nbsp;deadband&nbsp;to&nbsp;set</tt></dd></dl>
+
+<dl><dt><a name="BasicChassis-setMaxOutput"><strong>setMaxOutput</strong></a>(self, maxOutput:float)</dt><dd><tt>Configure&nbsp;the&nbsp;scaling&nbsp;factor&nbsp;for&nbsp;using&nbsp;drive&nbsp;methods&nbsp;with&nbsp;motor&nbsp;controllers&nbsp;in&nbsp;a&nbsp;mode<br>
+other&nbsp;than&nbsp;PercentVbus&nbsp;or&nbsp;to&nbsp;limit&nbsp;the&nbsp;maximum&nbsp;output.<br>
+&nbsp;<br>
+The&nbsp;default&nbsp;value&nbsp;is&nbsp;:const:`kDefaultMaxOutput`.<br>
+&nbsp;<br>
+:param&nbsp;maxOutput:&nbsp;Multiplied&nbsp;with&nbsp;the&nbsp;output&nbsp;percentage&nbsp;computed&nbsp;by&nbsp;the&nbsp;drive&nbsp;functions.</tt></dd></dl>
+
+<hr>
+Static methods inherited from <a href="wpilib.drive.robotdrivebase.html#RobotDriveBase">wpilib.drive.robotdrivebase.RobotDriveBase</a>:<br>
+<dl><dt><a name="BasicChassis-applyDeadband"><strong>applyDeadband</strong></a>(value, deadband)</dt><dd><tt>Returns&nbsp;0.0&nbsp;if&nbsp;the&nbsp;given&nbsp;value&nbsp;is&nbsp;within&nbsp;the&nbsp;specified&nbsp;range&nbsp;around&nbsp;zero.&nbsp;The&nbsp;remaining&nbsp;range<br>
+between&nbsp;the&nbsp;deadband&nbsp;and&nbsp;1.0&nbsp;is&nbsp;scaled&nbsp;from&nbsp;0.0&nbsp;to&nbsp;1.0.<br>
+&nbsp;<br>
+:param&nbsp;value:&nbsp;value&nbsp;to&nbsp;clip<br>
+:param&nbsp;deadband:&nbsp;range&nbsp;around&nbsp;zero</tt></dd></dl>
+
+<dl><dt><a name="BasicChassis-limit"><strong>limit</strong></a>(value)</dt><dd><tt>Limit&nbsp;motor&nbsp;values&nbsp;to&nbsp;the&nbsp;-1.0&nbsp;to&nbsp;+1.0&nbsp;range.</tt></dd></dl>
+
+<dl><dt><a name="BasicChassis-normalize"><strong>normalize</strong></a>(wheelSpeeds)</dt><dd><tt>Normalize&nbsp;all&nbsp;wheel&nbsp;speeds&nbsp;if&nbsp;the&nbsp;magnitude&nbsp;of&nbsp;any&nbsp;wheel&nbsp;is&nbsp;greater<br>
+than&nbsp;1.0.<br>
+&nbsp;<br>
+:param&nbsp;wheelSpeeds:&nbsp;Iterable&nbsp;of&nbsp;wheelspeeds&nbsp;to&nbsp;normalize</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="wpilib.drive.robotdrivebase.html#RobotDriveBase">wpilib.drive.robotdrivebase.RobotDriveBase</a>:<br>
+<dl><dt><strong>MotorType</strong> = &lt;class 'wpilib.drive.robotdrivebase.RobotDriveBase.MotorType'&gt;<dd><tt>The&nbsp;location&nbsp;of&nbsp;a&nbsp;motor&nbsp;on&nbsp;the&nbsp;robot&nbsp;for&nbsp;the&nbsp;purpose&nbsp;of&nbsp;driving.</tt></dl>
+
+<dl><dt><strong>kDefaultDeadband</strong> = 0.02</dl>
+
+<dl><dt><strong>kDefaultMaxOutput</strong> = 1.0</dl>
+
+<hr>
+Methods inherited from <a href="wpilib.sendablebase.html#SendableBase">wpilib.sendablebase.SendableBase</a>:<br>
+<dl><dt><a name="BasicChassis-addChild"><strong>addChild</strong></a>(self, child)</dt><dd><tt>Add&nbsp;a&nbsp;child&nbsp;component<br>
+&nbsp;<br>
+:param&nbsp;child:&nbsp;child&nbsp;component</tt></dd></dl>
+
+<dl><dt><a name="BasicChassis-free"><strong>free</strong></a>(self)</dt><dd><tt>Free&nbsp;the&nbsp;resources&nbsp;used&nbsp;by&nbsp;this&nbsp;<a href="builtins.html#object">object</a>.</tt></dd></dl>
+
+<dl><dt><a name="BasicChassis-getName"><strong>getName</strong></a>(self)</dt><dd><tt>Gets&nbsp;the&nbsp;name&nbsp;of&nbsp;this&nbsp;Sendable&nbsp;<a href="builtins.html#object">object</a>.<br>
+&nbsp;<br>
+:returns:&nbsp;Name</tt></dd></dl>
+
+<dl><dt><a name="BasicChassis-getSubsystem"><strong>getSubsystem</strong></a>(self)</dt><dd><tt>Gets&nbsp;the&nbsp;subsystem&nbsp;name&nbsp;of&nbsp;this&nbsp;Sendable&nbsp;<a href="builtins.html#object">object</a>.<br>
+&nbsp;<br>
+:returns:&nbsp;subsystem&nbsp;name</tt></dd></dl>
+
+<dl><dt><a name="BasicChassis-setName"><strong>setName</strong></a>(self, *args, **kwargs)</dt><dd><tt>Sets&nbsp;the&nbsp;name&nbsp;of&nbsp;this&nbsp;Sendable&nbsp;<a href="builtins.html#object">object</a>.<br>
+&nbsp;<br>
+Arguments&nbsp;can&nbsp;be&nbsp;structured&nbsp;as&nbsp;follows:<br>
+&nbsp;<br>
+-&nbsp;name<br>
+-&nbsp;subsystem,&nbsp;name<br>
+-&nbsp;moduleType,&nbsp;channel<br>
+-&nbsp;moduleType,&nbsp;moduleNumber,&nbsp;channel<br>
+&nbsp;<br>
+:param&nbsp;name:&nbsp;name<br>
+:type&nbsp;name:&nbsp;str<br>
+:param&nbsp;subsystem:&nbsp;subsystem&nbsp;name<br>
+:type&nbsp;subsystem:&nbsp;str<br>
+:param&nbsp;moduleType:&nbsp;A&nbsp;string&nbsp;that&nbsp;defines&nbsp;the&nbsp;module&nbsp;name&nbsp;in&nbsp;the&nbsp;label&nbsp;for&nbsp;the&nbsp;value<br>
+:type&nbsp;moduleType:&nbsp;str<br>
+:param&nbsp;channel:&nbsp;The&nbsp;channel&nbsp;number&nbsp;the&nbsp;device&nbsp;is&nbsp;plugged&nbsp;into<br>
+:type&nbsp;channel:&nbsp;int<br>
+:param&nbsp;moduleNumber:&nbsp;The&nbsp;number&nbsp;of&nbsp;the&nbsp;particular&nbsp;module&nbsp;type<br>
+:type&nbsp;moduleNumber:&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="BasicChassis-setSubsystem"><strong>setSubsystem</strong></a>(self, subsystem)</dt><dd><tt>Sets&nbsp;the&nbsp;subsystem&nbsp;name&nbsp;of&nbsp;this&nbsp;Sendable&nbsp;<a href="builtins.html#object">object</a>.<br>
+&nbsp;<br>
+:param&nbsp;subsystem:&nbsp;subsystem&nbsp;name</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="wpilib.sendable.html#Sendable">wpilib.sendable.Sendable</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Methods inherited from <a href="wpilib.motorsafety.html#MotorSafety">wpilib.motorsafety.MotorSafety</a>:<br>
+<dl><dt><a name="BasicChassis-check"><strong>check</strong></a>(self)</dt><dd><tt>Check&nbsp;if&nbsp;this&nbsp;motor&nbsp;has&nbsp;exceeded&nbsp;its&nbsp;timeout.<br>
+This&nbsp;method&nbsp;is&nbsp;called&nbsp;periodically&nbsp;to&nbsp;determine&nbsp;if&nbsp;this&nbsp;motor&nbsp;has<br>
+exceeded&nbsp;its&nbsp;timeout&nbsp;value.&nbsp;If&nbsp;it&nbsp;has,&nbsp;the&nbsp;stop&nbsp;method&nbsp;is&nbsp;called,<br>
+and&nbsp;the&nbsp;motor&nbsp;is&nbsp;shut&nbsp;down&nbsp;until&nbsp;its&nbsp;value&nbsp;is&nbsp;updated&nbsp;again.</tt></dd></dl>
+
+<dl><dt><a name="BasicChassis-feed"><strong>feed</strong></a>(self)</dt><dd><tt>Feed&nbsp;the&nbsp;motor&nbsp;safety&nbsp;<a href="builtins.html#object">object</a>.<br>
+Resets&nbsp;the&nbsp;timer&nbsp;on&nbsp;this&nbsp;<a href="builtins.html#object">object</a>&nbsp;that&nbsp;is&nbsp;used&nbsp;to&nbsp;do&nbsp;the&nbsp;timeouts.</tt></dd></dl>
+
+<dl><dt><a name="BasicChassis-getExpiration"><strong>getExpiration</strong></a>(self)</dt><dd><tt>Retrieve&nbsp;the&nbsp;timeout&nbsp;value&nbsp;for&nbsp;the&nbsp;corresponding&nbsp;motor&nbsp;safety<br>
+<a href="builtins.html#object">object</a>.<br>
+&nbsp;<br>
+:returns:&nbsp;the&nbsp;timeout&nbsp;value&nbsp;in&nbsp;seconds.<br>
+:rtype:&nbsp;float</tt></dd></dl>
+
+<dl><dt><a name="BasicChassis-isAlive"><strong>isAlive</strong></a>(self)</dt><dd><tt>Determine&nbsp;of&nbsp;the&nbsp;motor&nbsp;is&nbsp;still&nbsp;operating&nbsp;or&nbsp;has&nbsp;timed&nbsp;out.<br>
+&nbsp;<br>
+:returns:&nbsp;True&nbsp;if&nbsp;the&nbsp;motor&nbsp;is&nbsp;still&nbsp;operating&nbsp;normally&nbsp;and&nbsp;hasn't<br>
+&nbsp;&nbsp;&nbsp;&nbsp;timed&nbsp;out.<br>
+:rtype:&nbsp;float</tt></dd></dl>
+
+<dl><dt><a name="BasicChassis-isSafetyEnabled"><strong>isSafetyEnabled</strong></a>(self)</dt><dd><tt>Return&nbsp;the&nbsp;state&nbsp;of&nbsp;the&nbsp;motor&nbsp;safety&nbsp;enabled&nbsp;flag.<br>
+Return&nbsp;if&nbsp;the&nbsp;motor&nbsp;safety&nbsp;is&nbsp;currently&nbsp;enabled&nbsp;for&nbsp;this&nbsp;device.<br>
+&nbsp;<br>
+:returns:&nbsp;True&nbsp;if&nbsp;motor&nbsp;safety&nbsp;is&nbsp;enforced&nbsp;for&nbsp;this&nbsp;device<br>
+:rtype:&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="BasicChassis-setExpiration"><strong>setExpiration</strong></a>(self, expirationTime)</dt><dd><tt>Set&nbsp;the&nbsp;expiration&nbsp;time&nbsp;for&nbsp;the&nbsp;corresponding&nbsp;motor&nbsp;safety&nbsp;<a href="builtins.html#object">object</a>.<br>
+&nbsp;<br>
+:param&nbsp;expirationTime:&nbsp;The&nbsp;timeout&nbsp;value&nbsp;in&nbsp;seconds.<br>
+:type&nbsp;expirationTime:&nbsp;float</tt></dd></dl>
+
+<dl><dt><a name="BasicChassis-setSafetyEnabled"><strong>setSafetyEnabled</strong></a>(self, enabled)</dt><dd><tt>Enable/disable&nbsp;motor&nbsp;safety&nbsp;for&nbsp;this&nbsp;device.<br>
+Turn&nbsp;on&nbsp;and&nbsp;off&nbsp;the&nbsp;motor&nbsp;safety&nbsp;option&nbsp;for&nbsp;this&nbsp;PWM&nbsp;<a href="builtins.html#object">object</a>.<br>
+&nbsp;<br>
+:param&nbsp;enabled:&nbsp;True&nbsp;if&nbsp;motor&nbsp;safety&nbsp;is&nbsp;enforced&nbsp;for&nbsp;this&nbsp;<a href="builtins.html#object">object</a><br>
+:type&nbsp;&nbsp;enabled:&nbsp;bool</tt></dd></dl>
+
+<hr>
+Static methods inherited from <a href="wpilib.motorsafety.html#MotorSafety">wpilib.motorsafety.MotorSafety</a>:<br>
+<dl><dt><a name="BasicChassis-checkMotors"><strong>checkMotors</strong></a>()</dt><dd><tt>Check&nbsp;the&nbsp;motors&nbsp;to&nbsp;see&nbsp;if&nbsp;any&nbsp;have&nbsp;timed&nbsp;out.<br>
+This&nbsp;static&nbsp;method&nbsp;is&nbsp;called&nbsp;periodically&nbsp;to&nbsp;poll&nbsp;all&nbsp;the&nbsp;motors&nbsp;and<br>
+stop&nbsp;any&nbsp;that&nbsp;have&nbsp;timed&nbsp;out.</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="wpilib.motorsafety.html#MotorSafety">wpilib.motorsafety.MotorSafety</a>:<br>
+<dl><dt><strong>DEFAULT_SAFETY_EXPIRATION</strong> = 0.1</dl>
+
+<dl><dt><strong>helpers</strong> = &lt;_weakrefset.WeakSet object&gt;</dl>
+
+<dl><dt><strong>helpers_lock</strong> = &lt;unlocked _thread.lock object&gt;</dl>
+
+<hr>
+Methods inherited from <a href="KiwiRobotLib.subsystem.html#Subsystem">Subsystem</a>:<br>
+<dl><dt><a name="BasicChassis-thread"><strong>thread</strong></a>(self, method, *args)</dt><dd><tt>This&nbsp;function&nbsp;allows&nbsp;a&nbsp;system&nbsp;to&nbsp;start&nbsp;a&nbsp;process&nbsp;that&nbsp;runs<br>
+in&nbsp;the&nbsp;background.<br>
+&nbsp;<br>
+This&nbsp;could&nbsp;be&nbsp;used&nbsp;for&nbsp;several&nbsp;things,&nbsp;such&nbsp;as&nbsp;monitoring&nbsp;encoder<br>
+values&nbsp;and&nbsp;shifting&nbsp;gears&nbsp;accordingly.<br>
+&nbsp;<br>
+:param&nbsp;method:&nbsp;The&nbsp;function&nbsp;to&nbsp;run&nbsp;in&nbsp;the&nbsp;background<br>
+:param&nbsp;args:&nbsp;The&nbsp;arguments&nbsp;to&nbsp;be&nbsp;passed&nbsp;to&nbsp;the&nbsp;function&nbsp;ran&nbsp;in&nbsp;the&nbsp;background</tt></dd></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#B9D8C2">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="BasicElevator">class <strong>BasicElevator</strong></a>(<a href="KiwiRobotLib.subsystem.html#Subsystem">Subsystem</a>)</font></td></tr>
+    
+<tr bgcolor="#B9D8C2"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>This&nbsp;class&nbsp;is&nbsp;a&nbsp;quick&nbsp;and&nbsp;easy&nbsp;way&nbsp;to&nbsp;make&nbsp;an&nbsp;elevator,&nbsp;but<br>
+it&nbsp;really&nbsp;should&nbsp;be&nbsp;modified&nbsp;for&nbsp;use&nbsp;in&nbsp;a&nbsp;competition.<br>
+&nbsp;<br>
+It&nbsp;takes&nbsp;any&nbsp;number&nbsp;of&nbsp;motor&nbsp;objects,<br>
+an&nbsp;upward&nbsp;speed&nbsp;between&nbsp;-1&nbsp;and&nbsp;1,<br>
+and&nbsp;a&nbsp;downard&nbsp;speed&nbsp;between&nbsp;-1&nbsp;and&nbsp;1.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="KiwiRobotLib.subsystem.html#BasicElevator">BasicElevator</a></dd>
+<dd><a href="KiwiRobotLib.subsystem.html#Subsystem">Subsystem</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="BasicElevator-__init__"><strong>__init__</strong></a>(self, *args, up_speed=0, down_speed=0)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="BasicElevator-setCurrentLimit"><strong>setCurrentLimit</strong></a>(self, current)</dt><dd><tt>This&nbsp;function&nbsp;sets&nbsp;the&nbsp;current&nbsp;limit&nbsp;so&nbsp;that<br>
+the&nbsp;elevator&nbsp;stops&nbsp;moving&nbsp;when&nbsp;the&nbsp;current<br>
+reaches&nbsp;that&nbsp;limit.</tt></dd></dl>
+
+<dl><dt><a name="BasicElevator-update"><strong>update</strong></a>(self, direction='None')</dt><dd><tt>This&nbsp;function&nbsp;should&nbsp;be&nbsp;overwritten&nbsp;if<br>
+necessary,&nbsp;but&nbsp;in&nbsp;most&nbsp;cases&nbsp;it&nbsp;shouldnt&nbsp;be.<br>
+&nbsp;<br>
+This&nbsp;function&nbsp;should&nbsp;just&nbsp;be&nbsp;used&nbsp;through&nbsp;"super()",<br>
+and&nbsp;called&nbsp;to&nbsp;move&nbsp;the&nbsp;elevator&nbsp;up&nbsp;and&nbsp;down.</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="KiwiRobotLib.subsystem.html#Subsystem">Subsystem</a>:<br>
+<dl><dt><a name="BasicElevator-thread"><strong>thread</strong></a>(self, method, *args)</dt><dd><tt>This&nbsp;function&nbsp;allows&nbsp;a&nbsp;system&nbsp;to&nbsp;start&nbsp;a&nbsp;process&nbsp;that&nbsp;runs<br>
+in&nbsp;the&nbsp;background.<br>
+&nbsp;<br>
+This&nbsp;could&nbsp;be&nbsp;used&nbsp;for&nbsp;several&nbsp;things,&nbsp;such&nbsp;as&nbsp;monitoring&nbsp;encoder<br>
+values&nbsp;and&nbsp;shifting&nbsp;gears&nbsp;accordingly.<br>
+&nbsp;<br>
+:param&nbsp;method:&nbsp;The&nbsp;function&nbsp;to&nbsp;run&nbsp;in&nbsp;the&nbsp;background<br>
+:param&nbsp;args:&nbsp;The&nbsp;arguments&nbsp;to&nbsp;be&nbsp;passed&nbsp;to&nbsp;the&nbsp;function&nbsp;ran&nbsp;in&nbsp;the&nbsp;background</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="KiwiRobotLib.subsystem.html#Subsystem">Subsystem</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#B9D8C2">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Subsystem">class <strong>Subsystem</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#B9D8C2"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>The&nbsp;<a href="#Subsystem">Subsystem</a>&nbsp;class&nbsp;is&nbsp;the&nbsp;baseclass&nbsp;for&nbsp;all&nbsp;subsystems&nbsp;in&nbsp;the&nbsp;framework.<br>
+&nbsp;<br>
+An&nbsp;example&nbsp;usage&nbsp;of&nbsp;this&nbsp;baseclass&nbsp;would&nbsp;be:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;'''<br>
+&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;Claw(<a href="#Subsystem">Subsystem</a>):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def&nbsp;<a href="#Subsystem-__init__">__init__</a>(self):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.<strong>solenoids</strong>&nbsp;=&nbsp;SolenoidHandler(left_claw_solenoid,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;right_claw_solenoid,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pcm=20)<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.<strong>left_motors</strong>&nbsp;=&nbsp;MotorHandler(front_left_claw_motor,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;back_left_claw_motor)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.<strong>right_motors</strong>&nbsp;=&nbsp;MotorHandler(front_right_claw_motor,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;back_right_claw_motor)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.<a href="#Subsystem-thread">thread</a>(self.<strong>background_proc</strong>)<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def&nbsp;<a href="#Subsystem-update">update</a>(self,&nbsp;joystick):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pass<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def&nbsp;background_proc(self):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while&nbsp;True:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("waiting...")<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;time.sleep(1)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;'''<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Subsystem-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="Subsystem-thread"><strong>thread</strong></a>(self, method, *args)</dt><dd><tt>This&nbsp;function&nbsp;allows&nbsp;a&nbsp;system&nbsp;to&nbsp;start&nbsp;a&nbsp;process&nbsp;that&nbsp;runs<br>
+in&nbsp;the&nbsp;background.<br>
+&nbsp;<br>
+This&nbsp;could&nbsp;be&nbsp;used&nbsp;for&nbsp;several&nbsp;things,&nbsp;such&nbsp;as&nbsp;monitoring&nbsp;encoder<br>
+values&nbsp;and&nbsp;shifting&nbsp;gears&nbsp;accordingly.<br>
+&nbsp;<br>
+:param&nbsp;method:&nbsp;The&nbsp;function&nbsp;to&nbsp;run&nbsp;in&nbsp;the&nbsp;background<br>
+:param&nbsp;args:&nbsp;The&nbsp;arguments&nbsp;to&nbsp;be&nbsp;passed&nbsp;to&nbsp;the&nbsp;function&nbsp;ran&nbsp;in&nbsp;the&nbsp;background</tt></dd></dl>
+
+<dl><dt><a name="Subsystem-update"><strong>update</strong></a>(self, *args)</dt><dd><tt>This&nbsp;function&nbsp;is&nbsp;intended&nbsp;to&nbsp;be&nbsp;overwritten.<br>
+&nbsp;<br>
+Use&nbsp;this&nbsp;function&nbsp;during&nbsp;teleop&nbsp;to&nbsp;pass<br>
+joystick&nbsp;data&nbsp;or&nbsp;other&nbsp;data&nbsp;to&nbsp;the&nbsp;subsystem.</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#40476D">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#40476D"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-reduce"><strong>reduce</strong></a>(...)</dt><dd><tt><a href="#-reduce">reduce</a>(function,&nbsp;sequence[,&nbsp;initial])&nbsp;-&gt;&nbsp;value<br>
+&nbsp;<br>
+Apply&nbsp;a&nbsp;function&nbsp;of&nbsp;two&nbsp;arguments&nbsp;cumulatively&nbsp;to&nbsp;the&nbsp;items&nbsp;of&nbsp;a&nbsp;sequence,<br>
+from&nbsp;left&nbsp;to&nbsp;right,&nbsp;so&nbsp;as&nbsp;to&nbsp;reduce&nbsp;the&nbsp;sequence&nbsp;to&nbsp;a&nbsp;single&nbsp;value.<br>
+For&nbsp;example,&nbsp;<a href="#-reduce">reduce</a>(lambda&nbsp;x,&nbsp;y:&nbsp;x+y,&nbsp;[1,&nbsp;2,&nbsp;3,&nbsp;4,&nbsp;5])&nbsp;calculates<br>
+((((1+2)+3)+4)+5).&nbsp;&nbsp;If&nbsp;initial&nbsp;is&nbsp;present,&nbsp;it&nbsp;is&nbsp;placed&nbsp;before&nbsp;the&nbsp;items<br>
+of&nbsp;the&nbsp;sequence&nbsp;in&nbsp;the&nbsp;calculation,&nbsp;and&nbsp;serves&nbsp;as&nbsp;a&nbsp;default&nbsp;when&nbsp;the<br>
+sequence&nbsp;is&nbsp;empty.</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#826754">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#826754"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>compressor</strong> = &lt;wpilib.compressor.Compressor object&gt;<br>
+<strong>pcm</strong> = 20</td></tr></table>
+</body></html>

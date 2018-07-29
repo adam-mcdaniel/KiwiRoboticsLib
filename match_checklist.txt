@@ -1,0 +1,5 @@
+1. Charge air tanks.
+2. Clean wheels.
+3. Check intake.
+4. Check for pneumatic leaks.
+5. Check if motors are hot.

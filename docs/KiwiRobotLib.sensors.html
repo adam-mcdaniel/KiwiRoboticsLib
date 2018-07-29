@@ -1,0 +1,321 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module KiwiRobotLib.sensors</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="KiwiRobotLib.html"><font color="#ffffff">KiwiRobotLib</font></a>.sensors</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cmurp9%5Cdocuments%5Cprogramming%5Crobotics%5Cpython%5Ckiwirobotics%5Ckiwirobotlib%5Csensors.py">c:\users\murp9\documents\programming\robotics\python\kiwirobotics\kiwirobotlib\sensors.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#9AC2C9">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#9AC2C9"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="time.html">time</a><br>
+</td><td width="25%" valign=top><a href="wpilib.html">wpilib</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#8AA1B1">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#8AA1B1"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="KiwiRobotLib.sensors.html#UltraSonicSensor">UltraSonicSensor</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="wpilib.adxrs450_gyro.html#ADXRS450_Gyro">wpilib.adxrs450_gyro.ADXRS450_Gyro</a>(<a href="wpilib.gyrobase.html#GyroBase">wpilib.gyrobase.GyroBase</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="KiwiRobotLib.sensors.html#Gyro">Gyro</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#B9D8C2">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Gyro">class <strong>Gyro</strong></a>(<a href="wpilib.adxrs450_gyro.html#ADXRS450_Gyro">wpilib.adxrs450_gyro.ADXRS450_Gyro</a>)</font></td></tr>
+    
+<tr bgcolor="#B9D8C2"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>This&nbsp;class&nbsp;is&nbsp;used&nbsp;to&nbsp;interface&nbsp;with&nbsp;the&nbsp;ADXRS450&nbsp;<a href="#Gyro">Gyro</a>.<br>
+It&nbsp;isn't&nbsp;important,&nbsp;it&nbsp;only&nbsp;adds&nbsp;the&nbsp;option&nbsp;of&nbsp;a&nbsp;scale&nbsp;factor.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="KiwiRobotLib.sensors.html#Gyro">Gyro</a></dd>
+<dd><a href="wpilib.adxrs450_gyro.html#ADXRS450_Gyro">wpilib.adxrs450_gyro.ADXRS450_Gyro</a></dd>
+<dd><a href="wpilib.gyrobase.html#GyroBase">wpilib.gyrobase.GyroBase</a></dd>
+<dd><a href="wpilib.sensorbase.html#SensorBase">wpilib.sensorbase.SensorBase</a></dd>
+<dd><a href="wpilib.sendablebase.html#SendableBase">wpilib.sendablebase.SendableBase</a></dd>
+<dd><a href="wpilib.sendable.html#Sendable">wpilib.sendable.Sendable</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Gyro-__init__"><strong>__init__</strong></a>(self, scale_factor=1)</dt><dd><tt>Constructor.<br>
+&nbsp;<br>
+:param&nbsp;port:&nbsp;The&nbsp;SPI&nbsp;port&nbsp;that&nbsp;the&nbsp;gyro&nbsp;is&nbsp;connected&nbsp;to<br>
+:type&nbsp;port:&nbsp;:class:`.SPI.Port`</tt></dd></dl>
+
+<dl><dt><a name="Gyro-getAngle"><strong>getAngle</strong></a>(self)</dt><dd><tt>Return&nbsp;the&nbsp;actual&nbsp;angle&nbsp;in&nbsp;degrees&nbsp;that&nbsp;the&nbsp;robot&nbsp;is&nbsp;currently&nbsp;facing.<br>
+&nbsp;<br>
+The&nbsp;angle&nbsp;is&nbsp;based&nbsp;on&nbsp;the&nbsp;current&nbsp;accumulator&nbsp;value&nbsp;corrected&nbsp;by&nbsp;the<br>
+oversampling&nbsp;rate,&nbsp;the&nbsp;gyro&nbsp;type&nbsp;and&nbsp;the&nbsp;A/D&nbsp;calibration&nbsp;values.&nbsp;The&nbsp;angle<br>
+is&nbsp;continuous,&nbsp;that&nbsp;is&nbsp;it&nbsp;will&nbsp;continue&nbsp;from&nbsp;360&nbsp;to&nbsp;361&nbsp;degrees.&nbsp;This<br>
+allows&nbsp;algorithms&nbsp;that&nbsp;wouldn't&nbsp;want&nbsp;to&nbsp;see&nbsp;a&nbsp;discontinuity&nbsp;in&nbsp;the&nbsp;gyro<br>
+output&nbsp;as&nbsp;it&nbsp;sweeps&nbsp;past&nbsp;from&nbsp;360&nbsp;to&nbsp;0&nbsp;on&nbsp;the&nbsp;second&nbsp;time&nbsp;around.<br>
+&nbsp;<br>
+:returns:&nbsp;the&nbsp;current&nbsp;heading&nbsp;of&nbsp;the&nbsp;robot&nbsp;in&nbsp;degrees.&nbsp;This&nbsp;heading&nbsp;is&nbsp;based<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;on&nbsp;integration&nbsp;of&nbsp;the&nbsp;returned&nbsp;rate&nbsp;from&nbsp;the&nbsp;gyro.</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="wpilib.adxrs450_gyro.html#ADXRS450_Gyro">wpilib.adxrs450_gyro.ADXRS450_Gyro</a>:<br>
+<dl><dt><a name="Gyro-calibrate"><strong>calibrate</strong></a>(self)</dt><dd><tt>Calibrate&nbsp;the&nbsp;gyro&nbsp;by&nbsp;running&nbsp;for&nbsp;a&nbsp;number&nbsp;of&nbsp;samples&nbsp;and&nbsp;computing&nbsp;the<br>
+center&nbsp;value.&nbsp;Then&nbsp;use&nbsp;the&nbsp;center&nbsp;value&nbsp;as&nbsp;the&nbsp;Accumulator&nbsp;center&nbsp;value&nbsp;for<br>
+subsequent&nbsp;measurements.<br>
+&nbsp;<br>
+It's&nbsp;important&nbsp;to&nbsp;make&nbsp;sure&nbsp;that&nbsp;the&nbsp;robot&nbsp;is&nbsp;not&nbsp;moving&nbsp;while&nbsp;the&nbsp;centering<br>
+calculations&nbsp;are&nbsp;in&nbsp;progress,&nbsp;this&nbsp;is&nbsp;typically&nbsp;done&nbsp;when&nbsp;the&nbsp;robot&nbsp;is&nbsp;first<br>
+turned&nbsp;on&nbsp;while&nbsp;it's&nbsp;sitting&nbsp;at&nbsp;rest&nbsp;before&nbsp;the&nbsp;competition&nbsp;starts.<br>
+&nbsp;<br>
+..&nbsp;note::&nbsp;Usually&nbsp;you&nbsp;don't&nbsp;need&nbsp;to&nbsp;call&nbsp;this,&nbsp;as&nbsp;it's&nbsp;called&nbsp;when&nbsp;the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="builtins.html#object">object</a>&nbsp;is&nbsp;first&nbsp;created.&nbsp;If&nbsp;you&nbsp;do,&nbsp;it&nbsp;will&nbsp;freeze&nbsp;your&nbsp;robot<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;5&nbsp;seconds</tt></dd></dl>
+
+<dl><dt><a name="Gyro-free"><strong>free</strong></a>(self)</dt><dd><tt>Delete&nbsp;(free)&nbsp;the&nbsp;spi&nbsp;port&nbsp;used&nbsp;for&nbsp;the&nbsp;gyro&nbsp;and&nbsp;stop&nbsp;accumulating.</tt></dd></dl>
+
+<dl><dt><a name="Gyro-getRate"><strong>getRate</strong></a>(self)</dt><dd><tt>Return&nbsp;the&nbsp;rate&nbsp;of&nbsp;rotation&nbsp;of&nbsp;the&nbsp;gyro<br>
+&nbsp;<br>
+The&nbsp;rate&nbsp;is&nbsp;based&nbsp;on&nbsp;the&nbsp;most&nbsp;recent&nbsp;reading&nbsp;of&nbsp;the&nbsp;gyro&nbsp;value<br>
+&nbsp;<br>
+:returns:&nbsp;the&nbsp;current&nbsp;rate&nbsp;in&nbsp;degrees&nbsp;per&nbsp;second</tt></dd></dl>
+
+<dl><dt><a name="Gyro-isConnected"><strong>isConnected</strong></a>(self) -&gt; bool</dt></dl>
+
+<dl><dt><a name="Gyro-reset"><strong>reset</strong></a>(self)</dt><dd><tt>Reset&nbsp;the&nbsp;gyro.<br>
+&nbsp;<br>
+Resets&nbsp;the&nbsp;gyro&nbsp;to&nbsp;a&nbsp;heading&nbsp;of&nbsp;zero.&nbsp;This&nbsp;can&nbsp;be&nbsp;used&nbsp;if<br>
+there&nbsp;is&nbsp;significant&nbsp;drift&nbsp;in&nbsp;the&nbsp;gyro&nbsp;and&nbsp;it&nbsp;needs&nbsp;to&nbsp;be&nbsp;recalibrated<br>
+after&nbsp;it&nbsp;has&nbsp;been&nbsp;running.</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="wpilib.adxrs450_gyro.html#ADXRS450_Gyro">wpilib.adxrs450_gyro.ADXRS450_Gyro</a>:<br>
+<dl><dt><strong>kCalibrationSampleTime</strong> = 5.0</dl>
+
+<dl><dt><strong>kDegreePerSecondPerLSB</strong> = 0.0125</dl>
+
+<dl><dt><strong>kFaultRegister</strong> = 10</dl>
+
+<dl><dt><strong>kHiCSTRegister</strong> = 6</dl>
+
+<dl><dt><strong>kLoCSTRegister</strong> = 4</dl>
+
+<dl><dt><strong>kPIDRegister</strong> = 12</dl>
+
+<dl><dt><strong>kQuadRegister</strong> = 8</dl>
+
+<dl><dt><strong>kRateRegister</strong> = 0</dl>
+
+<dl><dt><strong>kSNHighRegister</strong> = 14</dl>
+
+<dl><dt><strong>kSNLowRegister</strong> = 16</dl>
+
+<dl><dt><strong>kSamplePeriod</strong> = 0.0005</dl>
+
+<dl><dt><strong>kTemRegister</strong> = 2</dl>
+
+<hr>
+Methods inherited from <a href="wpilib.gyrobase.html#GyroBase">wpilib.gyrobase.GyroBase</a>:<br>
+<dl><dt><a name="Gyro-getPIDSourceType"><strong>getPIDSourceType</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Gyro-initSendable"><strong>initSendable</strong></a>(self, builder)</dt><dd><tt>Initializes&nbsp;this&nbsp;Sendable&nbsp;<a href="builtins.html#object">object</a>.<br>
+&nbsp;<br>
+:param&nbsp;builder:&nbsp;sendable&nbsp;builder</tt></dd></dl>
+
+<dl><dt><a name="Gyro-pidGet"><strong>pidGet</strong></a>(self)</dt><dd><tt>Get&nbsp;the&nbsp;output&nbsp;of&nbsp;the&nbsp;gyro&nbsp;for&nbsp;use&nbsp;with&nbsp;PIDControllers.&nbsp;May&nbsp;be<br>
+the&nbsp;angle&nbsp;or&nbsp;rate&nbsp;depending&nbsp;on&nbsp;the&nbsp;set&nbsp;:class:`.PIDSourceType`<br>
+&nbsp;<br>
+:returns:&nbsp;the&nbsp;current&nbsp;angle&nbsp;according&nbsp;to&nbsp;the&nbsp;gyro<br>
+:rtype:&nbsp;float</tt></dd></dl>
+
+<dl><dt><a name="Gyro-setPIDSourceType"><strong>setPIDSourceType</strong></a>(self, pidSource)</dt><dd><tt>Set&nbsp;which&nbsp;parameter&nbsp;of&nbsp;the&nbsp;gyro&nbsp;you&nbsp;are&nbsp;using&nbsp;as&nbsp;a&nbsp;process<br>
+control&nbsp;variable.&nbsp;The&nbsp;<a href="#Gyro">Gyro</a>&nbsp;class&nbsp;supports&nbsp;the&nbsp;rate&nbsp;and&nbsp;angle<br>
+parameters.<br>
+&nbsp;<br>
+:param&nbsp;pidSource:&nbsp;An&nbsp;enum&nbsp;to&nbsp;select&nbsp;the&nbsp;parameter.<br>
+:type&nbsp;&nbsp;pidSource:&nbsp;:class:`.PIDSource.PIDSourceType`</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="wpilib.gyrobase.html#GyroBase">wpilib.gyrobase.GyroBase</a>:<br>
+<dl><dt><strong>PIDSourceType</strong> = &lt;class 'wpilib.interfaces.pidsource.PIDSource.PIDSourceType'&gt;<dd><tt>A&nbsp;description&nbsp;for&nbsp;the&nbsp;type&nbsp;of&nbsp;output&nbsp;value&nbsp;to&nbsp;provide&nbsp;to&nbsp;a<br>
+:class:`.PIDController`</tt></dl>
+
+<hr>
+Static methods inherited from <a href="wpilib.sensorbase.html#SensorBase">wpilib.sensorbase.SensorBase</a>:<br>
+<dl><dt><a name="Gyro-checkAnalogInputChannel"><strong>checkAnalogInputChannel</strong></a>(channel)</dt><dd><tt>Check&nbsp;that&nbsp;the&nbsp;analog&nbsp;input&nbsp;number&nbsp;is&nbsp;value.<br>
+Verify&nbsp;that&nbsp;the&nbsp;analog&nbsp;input&nbsp;number&nbsp;is&nbsp;one&nbsp;of&nbsp;the&nbsp;legal&nbsp;channel<br>
+numbers.&nbsp;&nbsp;Channel&nbsp;numbers&nbsp;are&nbsp;0-based.<br>
+&nbsp;<br>
+:param&nbsp;channel:&nbsp;The&nbsp;channel&nbsp;number&nbsp;to&nbsp;check.</tt></dd></dl>
+
+<dl><dt><a name="Gyro-checkAnalogOutputChannel"><strong>checkAnalogOutputChannel</strong></a>(channel)</dt><dd><tt>Check&nbsp;that&nbsp;the&nbsp;analog&nbsp;input&nbsp;number&nbsp;is&nbsp;value.<br>
+Verify&nbsp;that&nbsp;the&nbsp;analog&nbsp;input&nbsp;number&nbsp;is&nbsp;one&nbsp;of&nbsp;the&nbsp;legal&nbsp;channel<br>
+numbers.&nbsp;&nbsp;Channel&nbsp;numbers&nbsp;are&nbsp;0-based.<br>
+&nbsp;<br>
+:param&nbsp;channel:&nbsp;The&nbsp;channel&nbsp;number&nbsp;to&nbsp;check.</tt></dd></dl>
+
+<dl><dt><a name="Gyro-checkDigitalChannel"><strong>checkDigitalChannel</strong></a>(channel)</dt><dd><tt>Check&nbsp;that&nbsp;the&nbsp;digital&nbsp;channel&nbsp;number&nbsp;is&nbsp;valid.<br>
+Verify&nbsp;that&nbsp;the&nbsp;channel&nbsp;number&nbsp;is&nbsp;one&nbsp;of&nbsp;the&nbsp;legal&nbsp;channel&nbsp;numbers.<br>
+Channel&nbsp;numbers&nbsp;are&nbsp;0-based.<br>
+&nbsp;<br>
+:param&nbsp;channel:&nbsp;The&nbsp;channel&nbsp;number&nbsp;to&nbsp;check.</tt></dd></dl>
+
+<dl><dt><a name="Gyro-checkPDPChannel"><strong>checkPDPChannel</strong></a>(channel)</dt><dd><tt>Verify&nbsp;that&nbsp;the&nbsp;power&nbsp;distribution&nbsp;channel&nbsp;number&nbsp;is&nbsp;within&nbsp;limits.<br>
+Channel&nbsp;numbers&nbsp;are&nbsp;0-based.<br>
+&nbsp;<br>
+:param&nbsp;channel:&nbsp;The&nbsp;channel&nbsp;number&nbsp;to&nbsp;check.</tt></dd></dl>
+
+<dl><dt><a name="Gyro-checkPDPModule"><strong>checkPDPModule</strong></a>(module)</dt><dd><tt>Verify&nbsp;that&nbsp;the&nbsp;power&nbsp;distribution&nbsp;module&nbsp;number&nbsp;is&nbsp;within&nbsp;limits.<br>
+Module&nbsp;numbers&nbsp;are&nbsp;0-based.<br>
+&nbsp;<br>
+:param&nbsp;module:&nbsp;The&nbsp;module&nbsp;number&nbsp;to&nbsp;check.</tt></dd></dl>
+
+<dl><dt><a name="Gyro-checkPWMChannel"><strong>checkPWMChannel</strong></a>(channel)</dt><dd><tt>Check&nbsp;that&nbsp;the&nbsp;digital&nbsp;channel&nbsp;number&nbsp;is&nbsp;valid.<br>
+Verify&nbsp;that&nbsp;the&nbsp;channel&nbsp;number&nbsp;is&nbsp;one&nbsp;of&nbsp;the&nbsp;legal&nbsp;channel&nbsp;numbers.<br>
+Channel&nbsp;numbers&nbsp;are&nbsp;0-based.<br>
+&nbsp;<br>
+:param&nbsp;channel:&nbsp;The&nbsp;channel&nbsp;number&nbsp;to&nbsp;check.</tt></dd></dl>
+
+<dl><dt><a name="Gyro-checkRelayChannel"><strong>checkRelayChannel</strong></a>(channel)</dt><dd><tt>Check&nbsp;that&nbsp;the&nbsp;digital&nbsp;channel&nbsp;number&nbsp;is&nbsp;valid.<br>
+Verify&nbsp;that&nbsp;the&nbsp;channel&nbsp;number&nbsp;is&nbsp;one&nbsp;of&nbsp;the&nbsp;legal&nbsp;channel&nbsp;numbers.<br>
+Channel&nbsp;numbers&nbsp;are&nbsp;0-based.<br>
+&nbsp;<br>
+:param&nbsp;channel:&nbsp;The&nbsp;channel&nbsp;number&nbsp;to&nbsp;check.</tt></dd></dl>
+
+<dl><dt><a name="Gyro-checkSolenoidChannel"><strong>checkSolenoidChannel</strong></a>(channel)</dt><dd><tt>Verify&nbsp;that&nbsp;the&nbsp;solenoid&nbsp;channel&nbsp;number&nbsp;is&nbsp;within&nbsp;limits.&nbsp;&nbsp;Channel<br>
+numbers&nbsp;are&nbsp;0-based.<br>
+&nbsp;<br>
+:param&nbsp;channel:&nbsp;The&nbsp;channel&nbsp;number&nbsp;to&nbsp;check.</tt></dd></dl>
+
+<dl><dt><a name="Gyro-checkSolenoidModule"><strong>checkSolenoidModule</strong></a>(moduleNumber)</dt><dd><tt>Verify&nbsp;that&nbsp;the&nbsp;solenoid&nbsp;module&nbsp;is&nbsp;correct.<br>
+&nbsp;<br>
+:param&nbsp;moduleNumber:&nbsp;The&nbsp;solenoid&nbsp;module&nbsp;module&nbsp;number&nbsp;to&nbsp;check.</tt></dd></dl>
+
+<dl><dt><a name="Gyro-getDefaultSolenoidModule"><strong>getDefaultSolenoidModule</strong></a>()</dt><dd><tt>Get&nbsp;the&nbsp;number&nbsp;of&nbsp;the&nbsp;default&nbsp;solenoid&nbsp;module.<br>
+&nbsp;<br>
+:returns:&nbsp;The&nbsp;number&nbsp;of&nbsp;the&nbsp;default&nbsp;solenoid&nbsp;module.</tt></dd></dl>
+
+<dl><dt><a name="Gyro-setDefaultSolenoidModule"><strong>setDefaultSolenoidModule</strong></a>(moduleNumber)</dt><dd><tt>Set&nbsp;the&nbsp;default&nbsp;location&nbsp;for&nbsp;the&nbsp;Solenoid&nbsp;module.<br>
+&nbsp;<br>
+:param&nbsp;moduleNumber:&nbsp;The&nbsp;number&nbsp;of&nbsp;the&nbsp;solenoid&nbsp;module&nbsp;to&nbsp;use.</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="wpilib.sensorbase.html#SensorBase">wpilib.sensorbase.SensorBase</a>:<br>
+<dl><dt><strong>defaultSolenoidModule</strong> = 0</dl>
+
+<dl><dt><strong>kAnalogInputChannels</strong> = 8</dl>
+
+<dl><dt><strong>kAnalogOutputChannels</strong> = 2</dl>
+
+<dl><dt><strong>kDigitalChannels</strong> = 31</dl>
+
+<dl><dt><strong>kPCMModules</strong> = 63</dl>
+
+<dl><dt><strong>kPDPChannels</strong> = 16</dl>
+
+<dl><dt><strong>kPDPModules</strong> = 63</dl>
+
+<dl><dt><strong>kPwmChannels</strong> = 20</dl>
+
+<dl><dt><strong>kRelayChannels</strong> = 4</dl>
+
+<dl><dt><strong>kSolenoidChannels</strong> = 8</dl>
+
+<dl><dt><strong>kSystemClockTicksPerMicrosecond</strong> = 40</dl>
+
+<hr>
+Methods inherited from <a href="wpilib.sendablebase.html#SendableBase">wpilib.sendablebase.SendableBase</a>:<br>
+<dl><dt><a name="Gyro-addChild"><strong>addChild</strong></a>(self, child)</dt><dd><tt>Add&nbsp;a&nbsp;child&nbsp;component<br>
+&nbsp;<br>
+:param&nbsp;child:&nbsp;child&nbsp;component</tt></dd></dl>
+
+<dl><dt><a name="Gyro-getName"><strong>getName</strong></a>(self)</dt><dd><tt>Gets&nbsp;the&nbsp;name&nbsp;of&nbsp;this&nbsp;Sendable&nbsp;<a href="builtins.html#object">object</a>.<br>
+&nbsp;<br>
+:returns:&nbsp;Name</tt></dd></dl>
+
+<dl><dt><a name="Gyro-getSubsystem"><strong>getSubsystem</strong></a>(self)</dt><dd><tt>Gets&nbsp;the&nbsp;subsystem&nbsp;name&nbsp;of&nbsp;this&nbsp;Sendable&nbsp;<a href="builtins.html#object">object</a>.<br>
+&nbsp;<br>
+:returns:&nbsp;subsystem&nbsp;name</tt></dd></dl>
+
+<dl><dt><a name="Gyro-setName"><strong>setName</strong></a>(self, *args, **kwargs)</dt><dd><tt>Sets&nbsp;the&nbsp;name&nbsp;of&nbsp;this&nbsp;Sendable&nbsp;<a href="builtins.html#object">object</a>.<br>
+&nbsp;<br>
+Arguments&nbsp;can&nbsp;be&nbsp;structured&nbsp;as&nbsp;follows:<br>
+&nbsp;<br>
+-&nbsp;name<br>
+-&nbsp;subsystem,&nbsp;name<br>
+-&nbsp;moduleType,&nbsp;channel<br>
+-&nbsp;moduleType,&nbsp;moduleNumber,&nbsp;channel<br>
+&nbsp;<br>
+:param&nbsp;name:&nbsp;name<br>
+:type&nbsp;name:&nbsp;str<br>
+:param&nbsp;subsystem:&nbsp;subsystem&nbsp;name<br>
+:type&nbsp;subsystem:&nbsp;str<br>
+:param&nbsp;moduleType:&nbsp;A&nbsp;string&nbsp;that&nbsp;defines&nbsp;the&nbsp;module&nbsp;name&nbsp;in&nbsp;the&nbsp;label&nbsp;for&nbsp;the&nbsp;value<br>
+:type&nbsp;moduleType:&nbsp;str<br>
+:param&nbsp;channel:&nbsp;The&nbsp;channel&nbsp;number&nbsp;the&nbsp;device&nbsp;is&nbsp;plugged&nbsp;into<br>
+:type&nbsp;channel:&nbsp;int<br>
+:param&nbsp;moduleNumber:&nbsp;The&nbsp;number&nbsp;of&nbsp;the&nbsp;particular&nbsp;module&nbsp;type<br>
+:type&nbsp;moduleNumber:&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="Gyro-setSubsystem"><strong>setSubsystem</strong></a>(self, subsystem)</dt><dd><tt>Sets&nbsp;the&nbsp;subsystem&nbsp;name&nbsp;of&nbsp;this&nbsp;Sendable&nbsp;<a href="builtins.html#object">object</a>.<br>
+&nbsp;<br>
+:param&nbsp;subsystem:&nbsp;subsystem&nbsp;name</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="wpilib.sendable.html#Sendable">wpilib.sendable.Sendable</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#B9D8C2">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="UltraSonicSensor">class <strong>UltraSonicSensor</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#B9D8C2"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>This&nbsp;class&nbsp;is&nbsp;used&nbsp;to&nbsp;interface&nbsp;with&nbsp;the<br>
+analog&nbsp;ultrasonic&nbsp;sensors&nbsp;from&nbsp;the&nbsp;MB&nbsp;series<br>
+(like&nbsp;the&nbsp;MB1010,&nbsp;MB1200,&nbsp;etc.)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="UltraSonicSensor-AvgInchesAway"><strong>AvgInchesAway</strong></a>(self)</dt><dd><tt>This&nbsp;function&nbsp;takes&nbsp;a&nbsp;rolling&nbsp;average&nbsp;of&nbsp;the&nbsp;distance<br>
+measured&nbsp;by&nbsp;the&nbsp;sensor.&nbsp;The&nbsp;units&nbsp;of&nbsp;the&nbsp;returned&nbsp;value&nbsp;are&nbsp;inches.</tt></dd></dl>
+
+<dl><dt><a name="UltraSonicSensor-InchesAway"><strong>InchesAway</strong></a>(self)</dt><dd><tt>This&nbsp;function&nbsp;takes&nbsp;the&nbsp;current&nbsp;distance<br>
+measured&nbsp;by&nbsp;the&nbsp;sensor.&nbsp;The&nbsp;units&nbsp;of&nbsp;the&nbsp;returned&nbsp;value&nbsp;are&nbsp;inches.</tt></dd></dl>
+
+<dl><dt><a name="UltraSonicSensor-__init__"><strong>__init__</strong></a>(self, channel)</dt><dd><tt>The&nbsp;class&nbsp;takes&nbsp;one&nbsp;parameter,&nbsp;the&nbsp;analog-input<br>
+channel&nbsp;number&nbsp;of&nbsp;the&nbsp;ultrasonic&nbsp;sensor.</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>

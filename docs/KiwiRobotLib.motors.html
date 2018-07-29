@@ -1,0 +1,1266 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module KiwiRobotLib.motors</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="KiwiRobotLib.html"><font color="#ffffff">KiwiRobotLib</font></a>.motors</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cmurp9%5Cdocuments%5Cprogramming%5Crobotics%5Cpython%5Ckiwirobotics%5Ckiwirobotlib%5Cmotors.py">c:\users\murp9\documents\programming\robotics\python\kiwirobotics\kiwirobotlib\motors.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#9AC2C9">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#9AC2C9"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="ctre.html">ctre</a><br>
+</td><td width="25%" valign=top><a href="time.html">time</a><br>
+</td><td width="25%" valign=top><a href="wpilib.html">wpilib</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#8AA1B1">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#8AA1B1"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="ctre.wpi_talonsrx.html#WPI_TalonSRX">ctre.wpi_talonsrx.WPI_TalonSRX</a>(<a href="ctre.talonsrx.html#TalonSRX">ctre.talonsrx.TalonSRX</a>, <a href="wpilib.sendablebase.html#SendableBase">wpilib.sendablebase.SendableBase</a>, <a href="wpilib.motorsafety.html#MotorSafety">wpilib.motorsafety.MotorSafety</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="KiwiRobotLib.motors.html#TalonMotor">TalonMotor</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#B9D8C2">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="TalonMotor">class <strong>TalonMotor</strong></a>(<a href="ctre.wpi_talonsrx.html#WPI_TalonSRX">ctre.wpi_talonsrx.WPI_TalonSRX</a>)</font></td></tr>
+    
+<tr bgcolor="#B9D8C2"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>This&nbsp;class&nbsp;is&nbsp;used&nbsp;to&nbsp;interface&nbsp;with&nbsp;the&nbsp;TalonSRX<br>
+motor&nbsp;controller.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="KiwiRobotLib.motors.html#TalonMotor">TalonMotor</a></dd>
+<dd><a href="ctre.wpi_talonsrx.html#WPI_TalonSRX">ctre.wpi_talonsrx.WPI_TalonSRX</a></dd>
+<dd><a href="ctre.talonsrx.html#TalonSRX">ctre.talonsrx.TalonSRX</a></dd>
+<dd><a href="ctre.basemotorcontroller.html#BaseMotorController">ctre.basemotorcontroller.BaseMotorController</a></dd>
+<dd><a href="ctre._impl.autogen.motcontroller_sim.html#MotController">ctre._impl.autogen.motcontroller_sim.MotController</a></dd>
+<dd><a href="wpilib.sendablebase.html#SendableBase">wpilib.sendablebase.SendableBase</a></dd>
+<dd><a href="wpilib.sendable.html#Sendable">wpilib.sendable.Sendable</a></dd>
+<dd><a href="wpilib.motorsafety.html#MotorSafety">wpilib.motorsafety.MotorSafety</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="TalonMotor-__init__"><strong>__init__</strong></a>(self, CAN_Id)</dt><dd><tt>Constructor&nbsp;for&nbsp;motor&nbsp;controllers.<br>
+&nbsp;<br>
+:param&nbsp;arbId:</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-getPosition"><strong>getPosition</strong></a>(self)</dt><dd><tt>This&nbsp;function&nbsp;returns&nbsp;the&nbsp;distance&nbsp;travelled&nbsp;in&nbsp;inches.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-getRawPosition"><strong>getRawPosition</strong></a>(self)</dt><dd><tt>This&nbsp;function&nbsp;returns&nbsp;the&nbsp;distance&nbsp;travelled&nbsp;using:&nbsp;4096&nbsp;units&nbsp;=&nbsp;1&nbsp;rotation</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-getSpeed"><strong>getSpeed</strong></a>(self)</dt><dd><tt>This&nbsp;function&nbsp;returns&nbsp;the&nbsp;speed&nbsp;in&nbsp;inches&nbsp;per&nbsp;second.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-invert"><strong>invert</strong></a>(self)</dt><dd><tt>This&nbsp;function&nbsp;inverts&nbsp;the&nbsp;motor.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-resetPosition"><strong>resetPosition</strong></a>(self)</dt><dd><tt>This&nbsp;function&nbsp;resets&nbsp;the&nbsp;encoder&nbsp;position&nbsp;to&nbsp;0</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="ctre.wpi_talonsrx.html#WPI_TalonSRX">ctre.wpi_talonsrx.WPI_TalonSRX</a>:<br>
+<dl><dt><a name="TalonMotor-disable"><strong>disable</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="TalonMotor-get"><strong>get</strong></a>(self)</dt><dd><tt>Common&nbsp;interface&nbsp;for&nbsp;getting&nbsp;the&nbsp;current&nbsp;set&nbsp;speed&nbsp;of&nbsp;a&nbsp;speed&nbsp;controller.<br>
+&nbsp;<br>
+:returns:&nbsp;The&nbsp;current&nbsp;set&nbsp;speed.&nbsp;Value&nbsp;is&nbsp;between&nbsp;-1.0&nbsp;and&nbsp;1.0.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-getDescription"><strong>getDescription</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="TalonMotor-initSendable"><strong>initSendable</strong></a>(self, builder)</dt><dd><tt>Initializes&nbsp;this&nbsp;Sendable&nbsp;object.<br>
+&nbsp;<br>
+:param&nbsp;builder:&nbsp;sendable&nbsp;builder</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-pidWrite"><strong>pidWrite</strong></a>(self, output:float)</dt></dl>
+
+<dl><dt><a name="TalonMotor-set"><strong>set</strong></a>(self, *args, **kwargs)</dt><dd><tt>Can&nbsp;be&nbsp;called&nbsp;either&nbsp;with&nbsp;a&nbsp;single&nbsp;unnamed&nbsp;parameter&nbsp;representing&nbsp;the<br>
+percentage&nbsp;of&nbsp;output,&nbsp;or&nbsp;with&nbsp;up&nbsp;to&nbsp;4&nbsp;arguments:<br>
+&nbsp;<br>
+:param&nbsp;mode:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;output&nbsp;mode&nbsp;to&nbsp;apply.<br>
+:param&nbsp;demand0:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;output&nbsp;value&nbsp;to&nbsp;apply.&nbsp;such&nbsp;as&nbsp;advanced&nbsp;feed&nbsp;forward&nbsp;and/or&nbsp;auxiliary&nbsp;close-looping&nbsp;in&nbsp;firmware.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;In&nbsp;:attr:`.ControlMode.PercentOutput`,&nbsp;the&nbsp;output&nbsp;is&nbsp;between&nbsp;-1.0&nbsp;and&nbsp;1.0,&nbsp;with&nbsp;0.0&nbsp;as<br>
+&nbsp;&nbsp;&nbsp;&nbsp;stopped.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;In&nbsp;:attr:`.ControlMode.Voltage`&nbsp;mode,&nbsp;output&nbsp;value&nbsp;is&nbsp;in&nbsp;volts.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;In&nbsp;:attr:`.ControlMode.Current`&nbsp;mode,&nbsp;output&nbsp;value&nbsp;is&nbsp;in&nbsp;amperes.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;In&nbsp;:attr:`.ControlMode.Speed`&nbsp;mode,&nbsp;output&nbsp;value&nbsp;is&nbsp;in&nbsp;position&nbsp;change&nbsp;/&nbsp;100ms.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;In&nbsp;:attr:`.ControlMode.Position`&nbsp;mode,&nbsp;output&nbsp;value&nbsp;is&nbsp;in&nbsp;encoder&nbsp;ticks&nbsp;or&nbsp;an&nbsp;analog&nbsp;value,&nbsp;depending&nbsp;on&nbsp;the&nbsp;sensor.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;In&nbsp;:attr:`.ControlMode.Follower`&nbsp;mode,&nbsp;the&nbsp;output&nbsp;value&nbsp;is&nbsp;the&nbsp;integer&nbsp;device&nbsp;ID&nbsp;of&nbsp;the&nbsp;talon&nbsp;to&nbsp;duplicate.<br>
+:param&nbsp;demand1Type:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;demand&nbsp;type&nbsp;for&nbsp;demand1.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;Neutral:&nbsp;Ignore&nbsp;demand1&nbsp;and&nbsp;apply&nbsp;no&nbsp;change&nbsp;to&nbsp;the&nbsp;demand0&nbsp;output.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;AuxPID:&nbsp;Use&nbsp;demand1&nbsp;to&nbsp;set&nbsp;the&nbsp;target&nbsp;for&nbsp;the&nbsp;auxiliary&nbsp;PID&nbsp;1.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;ArbitraryFeedForward:&nbsp;Use&nbsp;demand1&nbsp;as&nbsp;an&nbsp;arbitrary&nbsp;additive&nbsp;value&nbsp;to&nbsp;the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;demand0&nbsp;output.&nbsp;&nbsp;In&nbsp;PercentOutput&nbsp;the&nbsp;demand0&nbsp;output&nbsp;is&nbsp;the&nbsp;motor&nbsp;output,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and&nbsp;in&nbsp;closed-loop&nbsp;modes&nbsp;the&nbsp;demand0&nbsp;output&nbsp;is&nbsp;the&nbsp;output&nbsp;of&nbsp;PID0.<br>
+:param&nbsp;demand1:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Supplemental&nbsp;value.&nbsp;&nbsp;This&nbsp;will&nbsp;also&nbsp;be&nbsp;control&nbsp;mode&nbsp;specific&nbsp;for&nbsp;future&nbsp;features.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-stopMotor"><strong>stopMotor</strong></a>(self)</dt><dd><tt>Common&nbsp;interface&nbsp;to&nbsp;stop&nbsp;the&nbsp;motor&nbsp;until&nbsp;:meth:`.set`&nbsp;is&nbsp;called&nbsp;again.</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="ctre.basemotorcontroller.html#BaseMotorController">ctre.basemotorcontroller.BaseMotorController</a>:<br>
+<dl><dt><a name="TalonMotor-configAuxPIDPolarity"><strong>configAuxPIDPolarity</strong></a>(self, invert:bool, timeoutMs:int) -&gt; ctre._impl.autogen.ctre_sim_enums.ErrorCode</dt><dd><tt>Configures&nbsp;the&nbsp;Polarity&nbsp;of&nbsp;the&nbsp;Auxiliary&nbsp;PID&nbsp;(PID1).<br>
+&nbsp;<br>
+Standard&nbsp;Polarity:<br>
+&nbsp;<br>
+*&nbsp;Primary&nbsp;Output&nbsp;=&nbsp;PID0&nbsp;+&nbsp;PID1<br>
+*&nbsp;Auxiliary&nbsp;Output&nbsp;=&nbsp;PID0&nbsp;-&nbsp;PID1<br>
+&nbsp;<br>
+Inverted&nbsp;Polarity:<br>
+&nbsp;<br>
+*&nbsp;Primary&nbsp;Output&nbsp;=&nbsp;PID0&nbsp;-&nbsp;PID1<br>
+*&nbsp;Auxiliary&nbsp;Output&nbsp;=&nbsp;PID0&nbsp;+&nbsp;PID1<br>
+&nbsp;<br>
+:param&nbsp;invert:&nbsp;&nbsp;&nbsp;&nbsp;If&nbsp;true,&nbsp;use&nbsp;inverted&nbsp;PID1&nbsp;output&nbsp;polarity.<br>
+&nbsp;<br>
+:param&nbsp;timeoutMs:&nbsp;Timeout&nbsp;value&nbsp;in&nbsp;ms.&nbsp;If&nbsp;nonzero,&nbsp;function&nbsp;will&nbsp;wait&nbsp;for&nbsp;config<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;success&nbsp;and&nbsp;report&nbsp;an&nbsp;error&nbsp;if&nbsp;it&nbsp;times&nbsp;out.&nbsp;If&nbsp;zero,&nbsp;no<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;blocking&nbsp;or&nbsp;checking&nbsp;is&nbsp;performed.<br>
+&nbsp;<br>
+:returns:&nbsp;Error&nbsp;Code</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-follow"><strong>follow</strong></a>(self, masterToFollow:'BaseMotorController', followerType:ctre._impl.autogen.ctre_sim_enums.FollowerType=&lt;FollowerType.PercentOutput: 0&gt;)</dt><dd><tt>Set&nbsp;the&nbsp;control&nbsp;mode&nbsp;and&nbsp;output&nbsp;value&nbsp;so&nbsp;that&nbsp;this&nbsp;motor&nbsp;controller&nbsp;will<br>
+follow&nbsp;another&nbsp;motor&nbsp;controller.&nbsp;Currently&nbsp;supports&nbsp;following&nbsp;Victor&nbsp;SPX<br>
+and&nbsp;Talon&nbsp;SRX.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-getBaseID"><strong>getBaseID</strong></a>(self) -&gt; int</dt></dl>
+
+<dl><dt><a name="TalonMotor-getControlMode"><strong>getControlMode</strong></a>(self) -&gt; ctre._impl.autogen.ctre_sim_enums.ControlMode</dt><dd><tt>:returns:&nbsp;control&nbsp;mode&nbsp;motor&nbsp;controller&nbsp;is&nbsp;in</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-getDeviceID"><strong>getDeviceID</strong></a>(self) -&gt; int</dt><dd><tt>Returns&nbsp;the&nbsp;Device&nbsp;ID<br>
+&nbsp;<br>
+:returns:&nbsp;Device&nbsp;number.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-getFaults"><strong>getFaults</strong></a>(self) -&gt; ctre._impl.faults.Faults</dt><dd><tt>Gets&nbsp;the&nbsp;last&nbsp;error&nbsp;generated&nbsp;by&nbsp;this&nbsp;object.<br>
+&nbsp;<br>
+Not&nbsp;all&nbsp;functions&nbsp;return&nbsp;an&nbsp;error&nbsp;code&nbsp;but&nbsp;can&nbsp;potentially&nbsp;report&nbsp;errors.<br>
+This&nbsp;function&nbsp;can&nbsp;be&nbsp;used&nbsp;to&nbsp;retrieve&nbsp;those&nbsp;error&nbsp;codes.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-getInverted"><strong>getInverted</strong></a>(self) -&gt; bool</dt><dd><tt>:returns:&nbsp;invert&nbsp;setting&nbsp;of&nbsp;motor&nbsp;output</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-getMotionProfileStatus"><strong>getMotionProfileStatus</strong></a>(self) -&gt; ctre._impl.motionprofilestatus.MotionProfileStatus</dt><dd><tt>Retrieve&nbsp;all&nbsp;status&nbsp;information.<br>
+For&nbsp;best&nbsp;performance,&nbsp;Caller&nbsp;can&nbsp;snapshot&nbsp;all&nbsp;status&nbsp;information&nbsp;regarding&nbsp;the<br>
+motion&nbsp;profile&nbsp;executer.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-getMotorOutputVoltage"><strong>getMotorOutputVoltage</strong></a>(self) -&gt; float</dt><dd><tt>:returns:&nbsp;applied&nbsp;voltage&nbsp;to&nbsp;motor&nbsp;in&nbsp;volts</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-getSensorCollection"><strong>getSensorCollection</strong></a>(self) -&gt; ctre.sensorcollection.SensorCollection</dt><dd><tt>:returns:&nbsp;object&nbsp;that&nbsp;can&nbsp;get/set&nbsp;individual&nbsp;raw&nbsp;sensor&nbsp;values.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-getStickyFaults"><strong>getStickyFaults</strong></a>(self) -&gt; ctre._impl.stickyfaults.StickyFaults</dt><dd><tt>Polls&nbsp;the&nbsp;various&nbsp;sticky&nbsp;fault&nbsp;flags.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-neutralOutput"><strong>neutralOutput</strong></a>(self)</dt><dd><tt>Neutral&nbsp;the&nbsp;motor&nbsp;output&nbsp;by&nbsp;setting&nbsp;control&nbsp;mode&nbsp;to&nbsp;disabled.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-pushMotionProfileTrajectory"><strong>pushMotionProfileTrajectory</strong></a>(self, trajPt:ctre.trajectorypoint.TrajectoryPoint) -&gt; ctre._impl.autogen.ctre_sim_enums.ErrorCode</dt><dd><tt>Push&nbsp;another&nbsp;trajectory&nbsp;point&nbsp;into&nbsp;the&nbsp;top&nbsp;level&nbsp;buffer&nbsp;(which&nbsp;is&nbsp;emptied<br>
+into&nbsp;the&nbsp;motor&nbsp;controller's&nbsp;bottom&nbsp;buffer&nbsp;as&nbsp;room&nbsp;allows).<br>
+&nbsp;<br>
+:param&nbsp;trajPt:&nbsp;to&nbsp;push&nbsp;into&nbsp;buffer.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;members&nbsp;should&nbsp;be&nbsp;filled&nbsp;in&nbsp;with&nbsp;these&nbsp;values...<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;&nbsp;servo&nbsp;position&nbsp;in&nbsp;sensor&nbsp;units.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;velocity:&nbsp;&nbsp;velocity&nbsp;to&nbsp;feed-forward&nbsp;in&nbsp;sensor&nbsp;units&nbsp;per&nbsp;100ms.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;profileSlotSelect0:&nbsp;&nbsp;Which&nbsp;slot&nbsp;to&nbsp;get&nbsp;PIDF&nbsp;gains.&nbsp;PID&nbsp;is&nbsp;used&nbsp;for&nbsp;position&nbsp;servo.&nbsp;F&nbsp;is&nbsp;used<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;as&nbsp;the&nbsp;Kv&nbsp;constant&nbsp;for&nbsp;velocity&nbsp;feed-forward.&nbsp;Typically&nbsp;this&nbsp;is&nbsp;hardcoded<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to&nbsp;the&nbsp;a&nbsp;particular&nbsp;slot,&nbsp;but&nbsp;you&nbsp;are&nbsp;free&nbsp;gain&nbsp;schedule&nbsp;if&nbsp;need&nbsp;be.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Choose&nbsp;from&nbsp;[0,3]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;profileSlotSelect1:&nbsp;Which&nbsp;slot&nbsp;to&nbsp;get&nbsp;PIDF&nbsp;gains&nbsp;for&nbsp;auxiliary&nbsp;PId.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This&nbsp;only&nbsp;has&nbsp;impact&nbsp;during&nbsp;MotionProfileArc&nbsp;Control&nbsp;mode.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Choose&nbsp;from&nbsp;[0,1].<br>
+&nbsp;&nbsp;&nbsp;&nbsp;isLastPoint:&nbsp;&nbsp;set&nbsp;to&nbsp;nonzero&nbsp;to&nbsp;signal&nbsp;motor&nbsp;controller&nbsp;to&nbsp;keep&nbsp;processing&nbsp;this<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;trajectory&nbsp;point,&nbsp;instead&nbsp;of&nbsp;jumping&nbsp;to&nbsp;the&nbsp;next&nbsp;one<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;when&nbsp;timeDurMs&nbsp;expires.&nbsp;&nbsp;Otherwise&nbsp;MP&nbsp;executer&nbsp;will<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eventually&nbsp;see&nbsp;an&nbsp;empty&nbsp;buffer&nbsp;after&nbsp;the&nbsp;last&nbsp;point<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;expires,&nbsp;causing&nbsp;it&nbsp;to&nbsp;assert&nbsp;the&nbsp;IsUnderRun&nbsp;flag.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;However&nbsp;this&nbsp;may&nbsp;be&nbsp;desired&nbsp;if&nbsp;calling&nbsp;application<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;never&nbsp;wants&nbsp;to&nbsp;terminate&nbsp;the&nbsp;MP.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;zeroPos:&nbsp;&nbsp;set&nbsp;to&nbsp;nonzero&nbsp;to&nbsp;signal&nbsp;motor&nbsp;controller&nbsp;to&nbsp;"zero"&nbsp;the&nbsp;selected<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;position&nbsp;sensor&nbsp;before&nbsp;executing&nbsp;this&nbsp;trajectory&nbsp;point.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Typically&nbsp;the&nbsp;first&nbsp;point&nbsp;should&nbsp;have&nbsp;this&nbsp;set&nbsp;only&nbsp;thus<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;allowing&nbsp;the&nbsp;remainder&nbsp;of&nbsp;the&nbsp;MP&nbsp;positions&nbsp;to&nbsp;be&nbsp;relative&nbsp;to<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;zero.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;timeDur:&nbsp;Duration&nbsp;to&nbsp;apply&nbsp;this&nbsp;trajectory&nbsp;pt.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This&nbsp;time&nbsp;unit&nbsp;is&nbsp;ADDED&nbsp;to&nbsp;the&nbsp;exising&nbsp;base&nbsp;time&nbsp;set&nbsp;by<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#TalonMotor-configMotionProfileTrajectoryPeriod">configMotionProfileTrajectoryPeriod</a>().<br>
+&nbsp;<br>
+:returns:&nbsp;CTR_OKAY&nbsp;if&nbsp;trajectory&nbsp;point&nbsp;push&nbsp;ok.&nbsp;ErrorCode&nbsp;if&nbsp;buffer&nbsp;is<br>
+&nbsp;&nbsp;&nbsp;&nbsp;full&nbsp;due&nbsp;to&nbsp;kMotionProfileTopBufferCapacity.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-setInverted"><strong>setInverted</strong></a>(self, invert:bool)</dt><dd><tt>Inverts&nbsp;the&nbsp;hbridge&nbsp;output&nbsp;of&nbsp;the&nbsp;motor&nbsp;controller.<br>
+&nbsp;<br>
+This&nbsp;does&nbsp;not&nbsp;impact&nbsp;sensor&nbsp;phase&nbsp;and&nbsp;should&nbsp;not&nbsp;be&nbsp;used&nbsp;to&nbsp;correct&nbsp;sensor&nbsp;polarity.<br>
+&nbsp;<br>
+This&nbsp;will&nbsp;invert&nbsp;the&nbsp;hbridge&nbsp;output&nbsp;but&nbsp;NOT&nbsp;the&nbsp;LEDs.<br>
+This&nbsp;ensures....<br>
+&nbsp;<br>
+-&nbsp;Green&nbsp;LEDs&nbsp;always&nbsp;represents&nbsp;positive&nbsp;request&nbsp;from&nbsp;robot-controller/closed-looping&nbsp;mode.<br>
+-&nbsp;Green&nbsp;LEDs&nbsp;correlates&nbsp;to&nbsp;forward&nbsp;limit&nbsp;switch.<br>
+-&nbsp;Green&nbsp;LEDs&nbsp;correlates&nbsp;to&nbsp;forward&nbsp;soft&nbsp;limit.<br>
+&nbsp;<br>
+:param&nbsp;invert:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Invert&nbsp;state&nbsp;to&nbsp;set.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-valueUpdated"><strong>valueUpdated</strong></a>(self)</dt><dd><tt>When&nbsp;master&nbsp;makes&nbsp;a&nbsp;device,&nbsp;this&nbsp;routine&nbsp;is&nbsp;called&nbsp;to&nbsp;signal&nbsp;the&nbsp;update.</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="ctre.basemotorcontroller.html#BaseMotorController">ctre.basemotorcontroller.BaseMotorController</a>:<br>
+<dl><dt><strong>ControlMode</strong> = &lt;enum 'ControlMode'&gt;<dd><tt>An&nbsp;enumeration.</tt></dl>
+
+<dl><dt><strong>DemandType</strong> = &lt;enum 'DemandType'&gt;<dd><tt>An&nbsp;enumeration.</tt></dl>
+
+<dl><dt><strong>FeedbackDevice</strong> = &lt;enum 'FeedbackDevice'&gt;<dd><tt>An&nbsp;enumeration.</tt></dl>
+
+<dl><dt><strong>LimitSwitchNormal</strong> = &lt;enum 'LimitSwitchNormal'&gt;<dd><tt>An&nbsp;enumeration.</tt></dl>
+
+<dl><dt><strong>LimitSwitchSource</strong> = &lt;enum 'LimitSwitchSource'&gt;<dd><tt>An&nbsp;enumeration.</tt></dl>
+
+<dl><dt><strong>NeutralMode</strong> = &lt;enum 'NeutralMode'&gt;<dd><tt>An&nbsp;enumeration.</tt></dl>
+
+<dl><dt><strong>ParamEnum</strong> = &lt;enum 'ParamEnum'&gt;<dd><tt>An&nbsp;enumeration.</tt></dl>
+
+<dl><dt><strong>RemoteFeedbackDevice</strong> = &lt;enum 'RemoteFeedbackDevice'&gt;<dd><tt>An&nbsp;enumeration.</tt></dl>
+
+<dl><dt><strong>RemoteLimitSwitchSource</strong> = &lt;enum 'RemoteLimitSwitchSource'&gt;<dd><tt>An&nbsp;enumeration.</tt></dl>
+
+<dl><dt><strong>RemoteSensorSource</strong> = &lt;enum 'RemoteSensorSource'&gt;<dd><tt>An&nbsp;enumeration.</tt></dl>
+
+<dl><dt><strong>StatusFrame</strong> = &lt;enum 'StatusFrame'&gt;<dd><tt>An&nbsp;enumeration.</tt></dl>
+
+<dl><dt><strong>StatusFrameEnhanced</strong> = &lt;enum 'StatusFrameEnhanced'&gt;<dd><tt>An&nbsp;enumeration.</tt></dl>
+
+<dl><dt><strong>VelocityMeasPeriod</strong> = &lt;enum 'VelocityMeasPeriod'&gt;<dd><tt>An&nbsp;enumeration.</tt></dl>
+
+<hr>
+Methods inherited from <a href="ctre._impl.autogen.motcontroller_sim.html#MotController">ctre._impl.autogen.motcontroller_sim.MotController</a>:<br>
+<dl><dt><a name="TalonMotor-changeMotionControlFramePeriod"><strong>changeMotionControlFramePeriod</strong></a>(self, periodMs:int) -&gt; ctre._impl.autogen.ctre_sim_enums.ErrorCode</dt><dd><tt>Calling&nbsp;application&nbsp;can&nbsp;opt&nbsp;to&nbsp;speed&nbsp;up&nbsp;the&nbsp;handshaking&nbsp;between&nbsp;the&nbsp;robot<br>
+API&nbsp;and&nbsp;the&nbsp;controller&nbsp;to&nbsp;increase&nbsp;the&nbsp;download&nbsp;rate&nbsp;of&nbsp;the&nbsp;controller's&nbsp;Motion<br>
+Profile.&nbsp;Ideally&nbsp;the&nbsp;period&nbsp;should&nbsp;be&nbsp;no&nbsp;more&nbsp;than&nbsp;half&nbsp;the&nbsp;period&nbsp;of&nbsp;a<br>
+trajectory&nbsp;point.<br>
+&nbsp;<br>
+:param&nbsp;periodMs:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;transmit&nbsp;period&nbsp;in&nbsp;ms.<br>
+:returns:&nbsp;Error&nbsp;Code&nbsp;generated&nbsp;by&nbsp;function.&nbsp;0&nbsp;indicates&nbsp;no&nbsp;error.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-clearMotionProfileHasUnderrun"><strong>clearMotionProfileHasUnderrun</strong></a>(self, timeoutMs:int) -&gt; ctre._impl.autogen.ctre_sim_enums.ErrorCode</dt><dd><tt>Clear&nbsp;the&nbsp;"Has&nbsp;Underrun"&nbsp;flag.&nbsp;Typically&nbsp;this&nbsp;is&nbsp;called&nbsp;after&nbsp;application<br>
+has&nbsp;confirmed&nbsp;an&nbsp;underrun&nbsp;had&nbsp;occured.<br>
+&nbsp;<br>
+:param&nbsp;timeoutMs:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Timeout&nbsp;value&nbsp;in&nbsp;ms.&nbsp;If&nbsp;nonzero,&nbsp;function&nbsp;will&nbsp;wait&nbsp;for&nbsp;config<br>
+&nbsp;&nbsp;&nbsp;&nbsp;success&nbsp;and&nbsp;report&nbsp;an&nbsp;error&nbsp;if&nbsp;it&nbsp;times&nbsp;out.&nbsp;If&nbsp;zero,&nbsp;no<br>
+&nbsp;&nbsp;&nbsp;&nbsp;blocking&nbsp;or&nbsp;checking&nbsp;is&nbsp;performed.<br>
+:returns:&nbsp;Error&nbsp;Code&nbsp;generated&nbsp;by&nbsp;function.&nbsp;0&nbsp;indicates&nbsp;no&nbsp;error.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-clearMotionProfileTrajectories"><strong>clearMotionProfileTrajectories</strong></a>(self) -&gt; ctre._impl.autogen.ctre_sim_enums.ErrorCode</dt><dd><tt>Clear&nbsp;the&nbsp;buffered&nbsp;motion&nbsp;profile&nbsp;in&nbsp;both&nbsp;controller's&nbsp;RAM&nbsp;(bottom),&nbsp;and&nbsp;in&nbsp;the<br>
+API&nbsp;(top).</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-clearStickyFaults"><strong>clearStickyFaults</strong></a>(self, timeoutMs:int) -&gt; ctre._impl.autogen.ctre_sim_enums.ErrorCode</dt><dd><tt>Clears&nbsp;all&nbsp;sticky&nbsp;faults.<br>
+&nbsp;<br>
+:param&nbsp;timeoutMs:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Timeout&nbsp;value&nbsp;in&nbsp;ms.&nbsp;If&nbsp;nonzero,&nbsp;function&nbsp;will&nbsp;wait&nbsp;for&nbsp;config<br>
+&nbsp;&nbsp;&nbsp;&nbsp;success&nbsp;and&nbsp;report&nbsp;an&nbsp;error&nbsp;if&nbsp;it&nbsp;times&nbsp;out.&nbsp;If&nbsp;zero,&nbsp;no<br>
+&nbsp;&nbsp;&nbsp;&nbsp;blocking&nbsp;or&nbsp;checking&nbsp;is&nbsp;performed.<br>
+:returns:&nbsp;Last&nbsp;Error&nbsp;Code&nbsp;generated&nbsp;by&nbsp;a&nbsp;function.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-configAllowableClosedloopError"><strong>configAllowableClosedloopError</strong></a>(self, slotIdx:int, allowableClosedLoopError:int, timeoutMs:int) -&gt; ctre._impl.autogen.ctre_sim_enums.ErrorCode</dt><dd><tt>Sets&nbsp;the&nbsp;allowable&nbsp;closed-loop&nbsp;error&nbsp;in&nbsp;the&nbsp;given&nbsp;parameter&nbsp;slot.<br>
+&nbsp;<br>
+:param&nbsp;slotIdx:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Parameter&nbsp;slot&nbsp;for&nbsp;the&nbsp;constant.<br>
+:param&nbsp;allowableClosedLoopError:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Value&nbsp;of&nbsp;the&nbsp;allowable&nbsp;closed-loop&nbsp;error.<br>
+:param&nbsp;timeoutMs:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Timeout&nbsp;value&nbsp;in&nbsp;ms.&nbsp;If&nbsp;nonzero,&nbsp;function&nbsp;will&nbsp;wait&nbsp;for&nbsp;config<br>
+&nbsp;&nbsp;&nbsp;&nbsp;success&nbsp;and&nbsp;report&nbsp;an&nbsp;error&nbsp;if&nbsp;it&nbsp;times&nbsp;out.&nbsp;If&nbsp;zero,&nbsp;no<br>
+&nbsp;&nbsp;&nbsp;&nbsp;blocking&nbsp;or&nbsp;checking&nbsp;is&nbsp;performed.<br>
+:returns:&nbsp;Error&nbsp;Code&nbsp;generated&nbsp;by&nbsp;function.&nbsp;0&nbsp;indicates&nbsp;no&nbsp;error.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-configClosedLoopPeakOutput"><strong>configClosedLoopPeakOutput</strong></a>(self, slotIdx:int, percentOut:float, timeoutMs:int) -&gt; ctre._impl.autogen.ctre_sim_enums.ErrorCode</dt><dd><tt>Sets&nbsp;the&nbsp;peak&nbsp;closed-loop&nbsp;output.&nbsp;&nbsp;This&nbsp;peak&nbsp;output&nbsp;is&nbsp;slot-specific&nbsp;and<br>
+is&nbsp;applied&nbsp;to&nbsp;the&nbsp;output&nbsp;of&nbsp;the&nbsp;associated&nbsp;PID&nbsp;loop.<br>
+This&nbsp;setting&nbsp;is&nbsp;seperate&nbsp;from&nbsp;the&nbsp;generic&nbsp;Peak&nbsp;Output&nbsp;setting.<br>
+&nbsp;<br>
+:param&nbsp;slotIdx:&nbsp;&nbsp;&nbsp;&nbsp;Parameter&nbsp;slot&nbsp;for&nbsp;the&nbsp;constant.<br>
+&nbsp;<br>
+:param&nbsp;percentOut:&nbsp;Peak&nbsp;Percent&nbsp;Output&nbsp;from&nbsp;0&nbsp;to&nbsp;1.&nbsp;&nbsp;This&nbsp;value&nbsp;is&nbsp;absolute&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;magnitude&nbsp;will&nbsp;apply&nbsp;in&nbsp;both&nbsp;forward&nbsp;and&nbsp;reverse&nbsp;directions.<br>
+&nbsp;<br>
+:param&nbsp;timeoutMs:&nbsp;&nbsp;Timeout&nbsp;value&nbsp;in&nbsp;ms.&nbsp;If&nbsp;nonzero,&nbsp;function&nbsp;will&nbsp;wait&nbsp;for<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;config&nbsp;success&nbsp;and&nbsp;report&nbsp;an&nbsp;error&nbsp;if&nbsp;it&nbsp;times&nbsp;out.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If&nbsp;zero,&nbsp;no&nbsp;blocking&nbsp;or&nbsp;checking&nbsp;is&nbsp;performed.<br>
+&nbsp;<br>
+:returns:&nbsp;Error&nbsp;Code&nbsp;generated&nbsp;by&nbsp;function.&nbsp;0&nbsp;indicates&nbsp;no&nbsp;error.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-configClosedLoopPeriod"><strong>configClosedLoopPeriod</strong></a>(self, slotIdx:int, loopTimeMs:int, timeoutMs:int) -&gt; ctre._impl.autogen.ctre_sim_enums.ErrorCode</dt><dd><tt>Sets&nbsp;the&nbsp;loop&nbsp;time&nbsp;(in&nbsp;milliseconds)&nbsp;of&nbsp;the&nbsp;PID&nbsp;closed-loop&nbsp;calculations.<br>
+Default&nbsp;value&nbsp;is&nbsp;1&nbsp;ms.<br>
+&nbsp;<br>
+:param&nbsp;slotIdx:&nbsp;&nbsp;&nbsp;&nbsp;Parameter&nbsp;slot&nbsp;for&nbsp;the&nbsp;constant.<br>
+&nbsp;<br>
+:param&nbsp;loopTimeMs:&nbsp;Loop&nbsp;timing&nbsp;of&nbsp;the&nbsp;closed-loop&nbsp;calculations.&nbsp;&nbsp;Minimum&nbsp;value&nbsp;of<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;ms,&nbsp;maximum&nbsp;of&nbsp;64&nbsp;ms.<br>
+&nbsp;<br>
+:param&nbsp;timeoutMs:&nbsp;&nbsp;Timeout&nbsp;value&nbsp;in&nbsp;ms.&nbsp;If&nbsp;nonzero,&nbsp;function&nbsp;will&nbsp;wait&nbsp;for<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;config&nbsp;success&nbsp;and&nbsp;report&nbsp;an&nbsp;error&nbsp;if&nbsp;it&nbsp;times&nbsp;out.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If&nbsp;zero,&nbsp;no&nbsp;blocking&nbsp;or&nbsp;checking&nbsp;is&nbsp;performed.<br>
+&nbsp;<br>
+:returns:&nbsp;Error&nbsp;Code&nbsp;generated&nbsp;by&nbsp;function.&nbsp;0&nbsp;indicates&nbsp;no&nbsp;error.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-configClosedLoopRamp"><strong>configClosedLoopRamp</strong></a>(self, secondsFromNeutralToFull:float, timeoutMs:int) -&gt; ctre._impl.autogen.ctre_sim_enums.ErrorCode</dt><dd><tt>Configures&nbsp;the&nbsp;closed-loop&nbsp;ramp&nbsp;rate&nbsp;of&nbsp;throttle&nbsp;output.<br>
+&nbsp;<br>
+:param&nbsp;secondsFromNeutralToFull:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Minimum&nbsp;desired&nbsp;time&nbsp;to&nbsp;go&nbsp;from&nbsp;neutral&nbsp;to&nbsp;full&nbsp;throttle.&nbsp;A<br>
+&nbsp;&nbsp;&nbsp;&nbsp;value&nbsp;of&nbsp;'0'&nbsp;will&nbsp;disable&nbsp;the&nbsp;ramp.<br>
+:param&nbsp;timeoutMs:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Timeout&nbsp;value&nbsp;in&nbsp;ms.&nbsp;If&nbsp;nonzero,&nbsp;function&nbsp;will&nbsp;wait&nbsp;for&nbsp;config<br>
+&nbsp;&nbsp;&nbsp;&nbsp;success&nbsp;and&nbsp;report&nbsp;an&nbsp;error&nbsp;if&nbsp;it&nbsp;times&nbsp;out.&nbsp;If&nbsp;zero,&nbsp;no<br>
+&nbsp;&nbsp;&nbsp;&nbsp;blocking&nbsp;or&nbsp;checking&nbsp;is&nbsp;performed.<br>
+:returns:&nbsp;Error&nbsp;Code&nbsp;generated&nbsp;by&nbsp;function.&nbsp;0&nbsp;indicates&nbsp;no&nbsp;error.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-configContinuousCurrentLimit"><strong>configContinuousCurrentLimit</strong></a>(self, amps:int, timeoutMs:int) -&gt; ctre._impl.autogen.ctre_sim_enums.ErrorCode</dt><dd><tt>Configure&nbsp;the&nbsp;continuous&nbsp;allowable&nbsp;current-draw&nbsp;(when&nbsp;current&nbsp;limit&nbsp;is<br>
+enabled).<br>
+&nbsp;<br>
+Current&nbsp;limit&nbsp;is&nbsp;activated&nbsp;when&nbsp;current&nbsp;exceeds&nbsp;the&nbsp;peak&nbsp;limit&nbsp;for&nbsp;longer<br>
+than&nbsp;the&nbsp;peak&nbsp;duration.&nbsp;Then&nbsp;software&nbsp;will&nbsp;limit&nbsp;to&nbsp;the&nbsp;continuous&nbsp;limit.<br>
+This&nbsp;ensures&nbsp;current&nbsp;limiting&nbsp;while&nbsp;allowing&nbsp;for&nbsp;momentary&nbsp;excess&nbsp;current<br>
+events.<br>
+&nbsp;<br>
+For&nbsp;simpler&nbsp;current-limiting&nbsp;(single&nbsp;threshold)&nbsp;use<br>
+ConfigContinuousCurrentLimit()&nbsp;and&nbsp;set&nbsp;the&nbsp;peak&nbsp;to&nbsp;zero:<br>
+ConfigPeakCurrentLimit(0).<br>
+&nbsp;<br>
+Not&nbsp;available&nbsp;on&nbsp;the&nbsp;Victor&nbsp;SPX<br>
+&nbsp;<br>
+:param&nbsp;amps:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Amperes&nbsp;to&nbsp;limit.<br>
+:param&nbsp;timeoutMs:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Timeout&nbsp;value&nbsp;in&nbsp;ms.&nbsp;If&nbsp;nonzero,&nbsp;function&nbsp;will&nbsp;wait&nbsp;for&nbsp;config<br>
+&nbsp;&nbsp;&nbsp;&nbsp;success&nbsp;and&nbsp;report&nbsp;an&nbsp;error&nbsp;if&nbsp;it&nbsp;times&nbsp;out.&nbsp;If&nbsp;zero,&nbsp;no<br>
+&nbsp;&nbsp;&nbsp;&nbsp;blocking&nbsp;or&nbsp;checking&nbsp;is&nbsp;performed.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-configForwardLimitSwitchSource"><strong>configForwardLimitSwitchSource</strong></a>(self, type:int, normalOpenOrClose:int, deviceID:int, timeoutMs:int) -&gt; ctre._impl.autogen.ctre_sim_enums.ErrorCode</dt><dd><tt>Configures&nbsp;the&nbsp;forward&nbsp;limit&nbsp;switch&nbsp;for&nbsp;a&nbsp;local/remote&nbsp;source.&nbsp;For&nbsp;example,<br>
+a&nbsp;CAN&nbsp;motor&nbsp;controller&nbsp;may&nbsp;need&nbsp;to&nbsp;monitor&nbsp;the&nbsp;Limit-F&nbsp;pin&nbsp;of&nbsp;another&nbsp;Talon,<br>
+CANifier,&nbsp;or&nbsp;local&nbsp;Gadgeteer&nbsp;feedback&nbsp;connector.<br>
+&nbsp;<br>
+:param&nbsp;type:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Limit&nbsp;switch&nbsp;source.&nbsp;User&nbsp;can&nbsp;choose&nbsp;between&nbsp;the&nbsp;feedback&nbsp;connector,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;a&nbsp;remote&nbsp;Talon&nbsp;SRX,&nbsp;CANifier,&nbsp;or&nbsp;deactivate&nbsp;the&nbsp;feature.<br>
+:type&nbsp;type:&nbsp;:class:`LimitSwitchSource`<br>
+:param&nbsp;normalOpenOrClose:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Setting&nbsp;for&nbsp;normally&nbsp;open,&nbsp;normally&nbsp;closed,&nbsp;or&nbsp;disabled.&nbsp;This<br>
+&nbsp;&nbsp;&nbsp;&nbsp;setting&nbsp;matches&nbsp;the&nbsp;web-based&nbsp;configuration&nbsp;drop&nbsp;down.<br>
+:type&nbsp;normalOpenOrClose:&nbsp;:class:`LimitSwitchNormal`<br>
+:param&nbsp;deviceID:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Device&nbsp;ID&nbsp;of&nbsp;remote&nbsp;source&nbsp;(Talon&nbsp;SRX&nbsp;or&nbsp;CANifier&nbsp;device&nbsp;ID).<br>
+:param&nbsp;timeoutMs:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Timeout&nbsp;value&nbsp;in&nbsp;ms.&nbsp;If&nbsp;nonzero,&nbsp;function&nbsp;will&nbsp;wait&nbsp;for&nbsp;config<br>
+&nbsp;&nbsp;&nbsp;&nbsp;success&nbsp;and&nbsp;report&nbsp;an&nbsp;error&nbsp;if&nbsp;it&nbsp;times&nbsp;out.&nbsp;If&nbsp;zero,&nbsp;no<br>
+&nbsp;&nbsp;&nbsp;&nbsp;blocking&nbsp;or&nbsp;checking&nbsp;is&nbsp;performed.<br>
+:returns:&nbsp;Error&nbsp;Code&nbsp;generated&nbsp;by&nbsp;function.&nbsp;0&nbsp;indicates&nbsp;no&nbsp;error.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-configForwardSoftLimitEnable"><strong>configForwardSoftLimitEnable</strong></a>(self, enable:bool, timeoutMs:int) -&gt; ctre._impl.autogen.ctre_sim_enums.ErrorCode</dt><dd><tt>Configures&nbsp;the&nbsp;forward&nbsp;soft&nbsp;limit&nbsp;enable.<br>
+&nbsp;<br>
+:param&nbsp;enable:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Forward&nbsp;Sensor&nbsp;Position&nbsp;Limit&nbsp;Enable.<br>
+:param&nbsp;timeoutMs:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Timeout&nbsp;value&nbsp;in&nbsp;ms.&nbsp;If&nbsp;nonzero,&nbsp;function&nbsp;will&nbsp;wait&nbsp;for&nbsp;config<br>
+&nbsp;&nbsp;&nbsp;&nbsp;success&nbsp;and&nbsp;report&nbsp;an&nbsp;error&nbsp;if&nbsp;it&nbsp;times&nbsp;out.&nbsp;If&nbsp;zero,&nbsp;no<br>
+&nbsp;&nbsp;&nbsp;&nbsp;blocking&nbsp;or&nbsp;checking&nbsp;is&nbsp;performed.<br>
+:returns:&nbsp;Error&nbsp;Code&nbsp;generated&nbsp;by&nbsp;function.&nbsp;0&nbsp;indicates&nbsp;no&nbsp;error.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-configForwardSoftLimitThreshold"><strong>configForwardSoftLimitThreshold</strong></a>(self, forwardSensorLimit:int, timeoutMs:int) -&gt; ctre._impl.autogen.ctre_sim_enums.ErrorCode</dt><dd><tt>Configures&nbsp;the&nbsp;forward&nbsp;soft&nbsp;limit&nbsp;threhold.<br>
+&nbsp;<br>
+:param&nbsp;forwardSensorLimit:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Forward&nbsp;Sensor&nbsp;Position&nbsp;Limit&nbsp;(in&nbsp;raw&nbsp;Sensor&nbsp;Units).<br>
+:param&nbsp;timeoutMs:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Timeout&nbsp;value&nbsp;in&nbsp;ms.&nbsp;If&nbsp;nonzero,&nbsp;function&nbsp;will&nbsp;wait&nbsp;for&nbsp;config<br>
+&nbsp;&nbsp;&nbsp;&nbsp;success&nbsp;and&nbsp;report&nbsp;an&nbsp;error&nbsp;if&nbsp;it&nbsp;times&nbsp;out.&nbsp;If&nbsp;zero,&nbsp;no<br>
+&nbsp;&nbsp;&nbsp;&nbsp;blocking&nbsp;or&nbsp;checking&nbsp;is&nbsp;performed.<br>
+:returns:&nbsp;Error&nbsp;Code&nbsp;generated&nbsp;by&nbsp;function.&nbsp;0&nbsp;indicates&nbsp;no&nbsp;error.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-configGetCustomParam"><strong>configGetCustomParam</strong></a>(self, paramIndex:int, timoutMs:int) -&gt; int</dt><dd><tt>Gets&nbsp;the&nbsp;value&nbsp;of&nbsp;a&nbsp;custom&nbsp;parameter.<br>
+&nbsp;<br>
+:param&nbsp;paramIndex:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Index&nbsp;of&nbsp;custom&nbsp;parameter&nbsp;[0,1].<br>
+:param&nbsp;timeoutMs:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Timeout&nbsp;value&nbsp;in&nbsp;ms.&nbsp;If&nbsp;nonzero,&nbsp;function&nbsp;will&nbsp;wait&nbsp;for<br>
+&nbsp;&nbsp;&nbsp;&nbsp;config&nbsp;success&nbsp;and&nbsp;report&nbsp;an&nbsp;error&nbsp;if&nbsp;it&nbsp;times&nbsp;out.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;If&nbsp;zero,&nbsp;no&nbsp;blocking&nbsp;or&nbsp;checking&nbsp;is&nbsp;performed.<br>
+:returns:&nbsp;Value&nbsp;of&nbsp;the&nbsp;custom&nbsp;param.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-configGetParameter"><strong>configGetParameter</strong></a>(self, param:int, ordinal:int, timeoutMs:int) -&gt; float</dt><dd><tt>Gets&nbsp;a&nbsp;parameter.<br>
+&nbsp;<br>
+:param&nbsp;param:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Parameter&nbsp;enumeration.<br>
+:param&nbsp;ordinal:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Ordinal&nbsp;of&nbsp;parameter.<br>
+:param&nbsp;timeoutMs:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Timeout&nbsp;value&nbsp;in&nbsp;ms.&nbsp;If&nbsp;nonzero,&nbsp;function&nbsp;will&nbsp;wait&nbsp;for<br>
+&nbsp;&nbsp;&nbsp;&nbsp;config&nbsp;success&nbsp;and&nbsp;report&nbsp;an&nbsp;error&nbsp;if&nbsp;it&nbsp;times&nbsp;out.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;If&nbsp;zero,&nbsp;no&nbsp;blocking&nbsp;or&nbsp;checking&nbsp;is&nbsp;performed.<br>
+&nbsp;<br>
+:returns:&nbsp;Value&nbsp;of&nbsp;parameter.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-configMaxIntegralAccumulator"><strong>configMaxIntegralAccumulator</strong></a>(self, slotIdx:int, iaccum:float, timeoutMs:int) -&gt; ctre._impl.autogen.ctre_sim_enums.ErrorCode</dt><dd><tt>Sets&nbsp;the&nbsp;maximum&nbsp;integral&nbsp;accumulator&nbsp;in&nbsp;the&nbsp;given&nbsp;parameter&nbsp;slot.<br>
+&nbsp;<br>
+:param&nbsp;slotIdx:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Parameter&nbsp;slot&nbsp;for&nbsp;the&nbsp;constant.<br>
+:param&nbsp;iaccum:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Value&nbsp;to&nbsp;set&nbsp;for&nbsp;the&nbsp;integral&nbsp;accumulator&nbsp;(closed&nbsp;loop&nbsp;error<br>
+&nbsp;&nbsp;&nbsp;&nbsp;units&nbsp;X&nbsp;1ms).<br>
+:param&nbsp;timeoutMs:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Timeout&nbsp;value&nbsp;in&nbsp;ms.&nbsp;If&nbsp;nonzero,&nbsp;function&nbsp;will&nbsp;wait&nbsp;for&nbsp;config<br>
+&nbsp;&nbsp;&nbsp;&nbsp;success&nbsp;and&nbsp;report&nbsp;an&nbsp;error&nbsp;if&nbsp;it&nbsp;times&nbsp;out.&nbsp;If&nbsp;zero,&nbsp;no<br>
+&nbsp;&nbsp;&nbsp;&nbsp;blocking&nbsp;or&nbsp;checking&nbsp;is&nbsp;performed.<br>
+:returns:&nbsp;Error&nbsp;Code&nbsp;generated&nbsp;by&nbsp;function.&nbsp;0&nbsp;indicates&nbsp;no&nbsp;error.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-configMotionAcceleration"><strong>configMotionAcceleration</strong></a>(self, sensorUnitsPer100msPerSec:int, timeoutMs:int) -&gt; ctre._impl.autogen.ctre_sim_enums.ErrorCode</dt><dd><tt>Sets&nbsp;the&nbsp;Motion&nbsp;Magic&nbsp;Acceleration.&nbsp;This&nbsp;is&nbsp;the&nbsp;target&nbsp;acceleration&nbsp;that<br>
+the&nbsp;motion&nbsp;magic&nbsp;curve&nbsp;generator&nbsp;can&nbsp;use.<br>
+&nbsp;<br>
+:param&nbsp;sensorUnitsPer100msPerSec:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Motion&nbsp;Magic&nbsp;Acceleration&nbsp;(in&nbsp;raw&nbsp;sensor&nbsp;units&nbsp;per&nbsp;100&nbsp;ms&nbsp;per<br>
+&nbsp;&nbsp;&nbsp;&nbsp;second).<br>
+:param&nbsp;timeoutMs:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Timeout&nbsp;value&nbsp;in&nbsp;ms.&nbsp;If&nbsp;nonzero,&nbsp;function&nbsp;will&nbsp;wait&nbsp;for&nbsp;config<br>
+&nbsp;&nbsp;&nbsp;&nbsp;success&nbsp;and&nbsp;report&nbsp;an&nbsp;error&nbsp;if&nbsp;it&nbsp;times&nbsp;out.&nbsp;If&nbsp;zero,&nbsp;no<br>
+&nbsp;&nbsp;&nbsp;&nbsp;blocking&nbsp;or&nbsp;checking&nbsp;is&nbsp;performed.<br>
+:returns:&nbsp;Error&nbsp;Code&nbsp;generated&nbsp;by&nbsp;function.&nbsp;0&nbsp;indicates&nbsp;no&nbsp;error.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-configMotionCruiseVelocity"><strong>configMotionCruiseVelocity</strong></a>(self, sensorUnitsPer100ms:int, timeoutMs:int) -&gt; ctre._impl.autogen.ctre_sim_enums.ErrorCode</dt><dd><tt>Sets&nbsp;the&nbsp;Motion&nbsp;Magic&nbsp;Cruise&nbsp;Velocity.&nbsp;&nbsp;This&nbsp;is&nbsp;the&nbsp;peak&nbsp;target&nbsp;velocity<br>
+that&nbsp;the&nbsp;motion&nbsp;magic&nbsp;curve&nbsp;generator&nbsp;can&nbsp;use.<br>
+&nbsp;<br>
+:param&nbsp;sensorUnitsPer100ms:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Motion&nbsp;Magic&nbsp;Cruise&nbsp;Velocity&nbsp;(in&nbsp;raw&nbsp;Sensor&nbsp;Units&nbsp;per&nbsp;100&nbsp;ms).<br>
+:param&nbsp;timeoutMs:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Timeout&nbsp;value&nbsp;in&nbsp;ms.&nbsp;If&nbsp;nonzero,&nbsp;function&nbsp;will&nbsp;wait&nbsp;for&nbsp;config<br>
+&nbsp;&nbsp;&nbsp;&nbsp;success&nbsp;and&nbsp;report&nbsp;an&nbsp;error&nbsp;if&nbsp;it&nbsp;times&nbsp;out.&nbsp;If&nbsp;zero,&nbsp;no<br>
+&nbsp;&nbsp;&nbsp;&nbsp;blocking&nbsp;or&nbsp;checking&nbsp;is&nbsp;performed.<br>
+:returns:&nbsp;Error&nbsp;Code&nbsp;generated&nbsp;by&nbsp;function.&nbsp;0&nbsp;indicates&nbsp;no&nbsp;error.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-configMotionProfileTrajectoryPeriod"><strong>configMotionProfileTrajectoryPeriod</strong></a>(self, durationMs:int, timeoutMs:int) -&gt; ctre._impl.autogen.ctre_sim_enums.ErrorCode</dt><dd><tt>When&nbsp;trajectory&nbsp;points&nbsp;are&nbsp;processed&nbsp;in&nbsp;the&nbsp;motion&nbsp;profile&nbsp;executer,&nbsp;the&nbsp;MPE&nbsp;determines<br>
+how&nbsp;long&nbsp;to&nbsp;apply&nbsp;the&nbsp;active&nbsp;trajectory&nbsp;point&nbsp;by&nbsp;summing&nbsp;baseTrajDurationMs&nbsp;with&nbsp;the<br>
+timeDur&nbsp;of&nbsp;the&nbsp;trajectory&nbsp;point&nbsp;(see&nbsp;TrajectoryPoint).<br>
+&nbsp;<br>
+This&nbsp;allows&nbsp;general&nbsp;selection&nbsp;of&nbsp;the&nbsp;execution&nbsp;rate&nbsp;of&nbsp;the&nbsp;points&nbsp;with&nbsp;1ms&nbsp;resolution,<br>
+while&nbsp;allowing&nbsp;some&nbsp;degree&nbsp;of&nbsp;change&nbsp;from&nbsp;point&nbsp;to&nbsp;point.<br>
+&nbsp;<br>
+:param&nbsp;baseTrajDurationMs:&nbsp;The&nbsp;base&nbsp;duration&nbsp;time&nbsp;of&nbsp;every&nbsp;trajectory&nbsp;point.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This&nbsp;is&nbsp;summed&nbsp;with&nbsp;the&nbsp;trajectory&nbsp;points&nbsp;unique&nbsp;timeDur.<br>
+:param&nbsp;timeoutMs:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Timeout&nbsp;value&nbsp;in&nbsp;ms.&nbsp;If&nbsp;nonzero,&nbsp;function&nbsp;will&nbsp;wait&nbsp;for<br>
+&nbsp;&nbsp;&nbsp;&nbsp;config&nbsp;success&nbsp;and&nbsp;report&nbsp;an&nbsp;error&nbsp;if&nbsp;it&nbsp;times&nbsp;out.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;If&nbsp;zero,&nbsp;no&nbsp;blocking&nbsp;or&nbsp;checking&nbsp;is&nbsp;performed.<br>
+:returns:&nbsp;Error&nbsp;Code&nbsp;generated&nbsp;by&nbsp;function.&nbsp;0&nbsp;indicates&nbsp;no&nbsp;error.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-configNeutralDeadband"><strong>configNeutralDeadband</strong></a>(self, percentDeadband:float, timeoutMs:int) -&gt; ctre._impl.autogen.ctre_sim_enums.ErrorCode</dt><dd><tt>Configures&nbsp;the&nbsp;output&nbsp;deadband&nbsp;percentage.<br>
+&nbsp;<br>
+:param&nbsp;percentDeadband:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Desired&nbsp;deadband&nbsp;percentage.&nbsp;Minimum&nbsp;is&nbsp;0.1%,&nbsp;Maximum&nbsp;is&nbsp;25%.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Pass&nbsp;0.04&nbsp;for&nbsp;4%&nbsp;(factory&nbsp;default).<br>
+:param&nbsp;timeoutMs:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Timeout&nbsp;value&nbsp;in&nbsp;ms.&nbsp;If&nbsp;nonzero,&nbsp;function&nbsp;will&nbsp;wait&nbsp;for&nbsp;config<br>
+&nbsp;&nbsp;&nbsp;&nbsp;success&nbsp;and&nbsp;report&nbsp;an&nbsp;error&nbsp;if&nbsp;it&nbsp;times&nbsp;out.&nbsp;If&nbsp;zero,&nbsp;no<br>
+&nbsp;&nbsp;&nbsp;&nbsp;blocking&nbsp;or&nbsp;checking&nbsp;is&nbsp;performed.<br>
+:returns:&nbsp;Error&nbsp;Code&nbsp;generated&nbsp;by&nbsp;function.&nbsp;0&nbsp;indicates&nbsp;no&nbsp;error.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-configNominalOutputForward"><strong>configNominalOutputForward</strong></a>(self, percentOut:float, timeoutMs:int) -&gt; ctre._impl.autogen.ctre_sim_enums.ErrorCode</dt><dd><tt>Configures&nbsp;the&nbsp;forward&nbsp;nominal&nbsp;output&nbsp;percentage.<br>
+&nbsp;<br>
+:param&nbsp;percentOut:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Nominal&nbsp;(minimum)&nbsp;percent&nbsp;output&nbsp;[0,+1].<br>
+:param&nbsp;timeoutMs:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Timeout&nbsp;value&nbsp;in&nbsp;ms.&nbsp;If&nbsp;nonzero,&nbsp;function&nbsp;will&nbsp;wait&nbsp;for&nbsp;config<br>
+&nbsp;&nbsp;&nbsp;&nbsp;success&nbsp;and&nbsp;report&nbsp;an&nbsp;error&nbsp;if&nbsp;it&nbsp;times&nbsp;out.&nbsp;If&nbsp;zero,&nbsp;no<br>
+&nbsp;&nbsp;&nbsp;&nbsp;blocking&nbsp;or&nbsp;checking&nbsp;is&nbsp;performed.<br>
+:returns:&nbsp;Error&nbsp;Code&nbsp;generated&nbsp;by&nbsp;function.&nbsp;0&nbsp;indicates&nbsp;no&nbsp;error.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-configNominalOutputReverse"><strong>configNominalOutputReverse</strong></a>(self, percentOut:float, timeoutMs:int) -&gt; ctre._impl.autogen.ctre_sim_enums.ErrorCode</dt><dd><tt>Configures&nbsp;the&nbsp;reverse&nbsp;nominal&nbsp;output&nbsp;percentage.<br>
+&nbsp;<br>
+:param&nbsp;percentOut:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Nominal&nbsp;(minimum)&nbsp;percent&nbsp;output&nbsp;[-1,0].<br>
+:param&nbsp;timeoutMs:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Timeout&nbsp;value&nbsp;in&nbsp;ms.&nbsp;If&nbsp;nonzero,&nbsp;function&nbsp;will&nbsp;wait&nbsp;for&nbsp;config<br>
+&nbsp;&nbsp;&nbsp;&nbsp;success&nbsp;and&nbsp;report&nbsp;an&nbsp;error&nbsp;if&nbsp;it&nbsp;times&nbsp;out.&nbsp;If&nbsp;zero,&nbsp;no<br>
+&nbsp;&nbsp;&nbsp;&nbsp;blocking&nbsp;or&nbsp;checking&nbsp;is&nbsp;performed.<br>
+:returns:&nbsp;Error&nbsp;Code&nbsp;generated&nbsp;by&nbsp;function.&nbsp;0&nbsp;indicates&nbsp;no&nbsp;error.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-configOpenLoopRamp"><strong>configOpenLoopRamp</strong></a>(self, secondsFromNeutralToFull:float, timeoutMs:int) -&gt; ctre._impl.autogen.ctre_sim_enums.ErrorCode</dt><dd><tt>Configures&nbsp;the&nbsp;open-loop&nbsp;ramp&nbsp;rate&nbsp;of&nbsp;throttle&nbsp;output.<br>
+&nbsp;<br>
+:param&nbsp;secondsFromNeutralToFull:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Minimum&nbsp;desired&nbsp;time&nbsp;to&nbsp;go&nbsp;from&nbsp;neutral&nbsp;to&nbsp;full&nbsp;throttle.&nbsp;A<br>
+&nbsp;&nbsp;&nbsp;&nbsp;value&nbsp;of&nbsp;'0'&nbsp;will&nbsp;disable&nbsp;the&nbsp;ramp.<br>
+:param&nbsp;timeoutMs:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Timeout&nbsp;value&nbsp;in&nbsp;ms.&nbsp;Function&nbsp;will&nbsp;generate&nbsp;error&nbsp;if&nbsp;config&nbsp;is<br>
+&nbsp;&nbsp;&nbsp;&nbsp;not&nbsp;successful&nbsp;within&nbsp;timeout.<br>
+:returns:&nbsp;Error&nbsp;Code&nbsp;generated&nbsp;by&nbsp;function.&nbsp;0&nbsp;indicates&nbsp;no&nbsp;error.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-configPeakCurrentDuration"><strong>configPeakCurrentDuration</strong></a>(self, milliseconds:int, timeoutMs:int) -&gt; ctre._impl.autogen.ctre_sim_enums.ErrorCode</dt><dd><tt>Configure&nbsp;the&nbsp;peak&nbsp;allowable&nbsp;duration&nbsp;(when&nbsp;current&nbsp;limit&nbsp;is&nbsp;enabled).<br>
+&nbsp;<br>
+Current&nbsp;limit&nbsp;is&nbsp;activated&nbsp;when&nbsp;current&nbsp;exceeds&nbsp;the&nbsp;peak&nbsp;limit&nbsp;for&nbsp;longer<br>
+than&nbsp;the&nbsp;peak&nbsp;duration.&nbsp;Then&nbsp;software&nbsp;will&nbsp;limit&nbsp;to&nbsp;the&nbsp;continuous&nbsp;limit.<br>
+This&nbsp;ensures&nbsp;current&nbsp;limiting&nbsp;while&nbsp;allowing&nbsp;for&nbsp;momentary&nbsp;excess&nbsp;current<br>
+events.<br>
+&nbsp;<br>
+For&nbsp;simpler&nbsp;current-limiting&nbsp;(single&nbsp;threshold)&nbsp;use<br>
+ConfigContinuousCurrentLimit()&nbsp;and&nbsp;set&nbsp;the&nbsp;peak&nbsp;to&nbsp;zero:<br>
+ConfigPeakCurrentLimit(0).<br>
+&nbsp;<br>
+Not&nbsp;available&nbsp;on&nbsp;the&nbsp;Victor&nbsp;SPX<br>
+&nbsp;<br>
+:param&nbsp;milliseconds:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;How&nbsp;long&nbsp;to&nbsp;allow&nbsp;current-draw&nbsp;past&nbsp;peak&nbsp;limit.<br>
+:param&nbsp;timeoutMs:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Timeout&nbsp;value&nbsp;in&nbsp;ms.&nbsp;If&nbsp;nonzero,&nbsp;function&nbsp;will&nbsp;wait&nbsp;for&nbsp;config<br>
+&nbsp;&nbsp;&nbsp;&nbsp;success&nbsp;and&nbsp;report&nbsp;an&nbsp;error&nbsp;if&nbsp;it&nbsp;times&nbsp;out.&nbsp;If&nbsp;zero,&nbsp;no<br>
+&nbsp;&nbsp;&nbsp;&nbsp;blocking&nbsp;or&nbsp;checking&nbsp;is&nbsp;performed.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-configPeakCurrentLimit"><strong>configPeakCurrentLimit</strong></a>(self, amps:int, timeoutMs:int) -&gt; ctre._impl.autogen.ctre_sim_enums.ErrorCode</dt><dd><tt>Configure&nbsp;the&nbsp;peak&nbsp;allowable&nbsp;current&nbsp;(when&nbsp;current&nbsp;limit&nbsp;is&nbsp;enabled).<br>
+&nbsp;<br>
+Current&nbsp;limit&nbsp;is&nbsp;activated&nbsp;when&nbsp;current&nbsp;exceeds&nbsp;the&nbsp;peak&nbsp;limit&nbsp;for&nbsp;longer<br>
+than&nbsp;the&nbsp;peak&nbsp;duration.&nbsp;Then&nbsp;software&nbsp;will&nbsp;limit&nbsp;to&nbsp;the&nbsp;continuous&nbsp;limit.<br>
+This&nbsp;ensures&nbsp;current&nbsp;limiting&nbsp;while&nbsp;allowing&nbsp;for&nbsp;momentary&nbsp;excess&nbsp;current<br>
+events.<br>
+&nbsp;<br>
+For&nbsp;simpler&nbsp;current-limiting&nbsp;(single&nbsp;threshold)&nbsp;use<br>
+ConfigContinuousCurrentLimit()&nbsp;and&nbsp;set&nbsp;the&nbsp;peak&nbsp;to&nbsp;zero:<br>
+ConfigPeakCurrentLimit(0).<br>
+&nbsp;<br>
+Not&nbsp;available&nbsp;on&nbsp;the&nbsp;Victor&nbsp;SPX<br>
+&nbsp;<br>
+:param&nbsp;amps:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Amperes&nbsp;to&nbsp;limit.<br>
+:param&nbsp;timeoutMs:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Timeout&nbsp;value&nbsp;in&nbsp;ms.&nbsp;If&nbsp;nonzero,&nbsp;function&nbsp;will&nbsp;wait&nbsp;for&nbsp;config<br>
+&nbsp;&nbsp;&nbsp;&nbsp;success&nbsp;and&nbsp;report&nbsp;an&nbsp;error&nbsp;if&nbsp;it&nbsp;times&nbsp;out.&nbsp;If&nbsp;zero,&nbsp;no<br>
+&nbsp;&nbsp;&nbsp;&nbsp;blocking&nbsp;or&nbsp;checking&nbsp;is&nbsp;performed.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-configPeakOutputForward"><strong>configPeakOutputForward</strong></a>(self, percentOut:float, timeoutMs:int) -&gt; ctre._impl.autogen.ctre_sim_enums.ErrorCode</dt><dd><tt>Configures&nbsp;the&nbsp;forward&nbsp;peak&nbsp;output&nbsp;percentage.<br>
+&nbsp;<br>
+:param&nbsp;percentOut:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Desired&nbsp;peak&nbsp;output&nbsp;percentage&nbsp;[0,1].<br>
+:param&nbsp;timeoutMs:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Timeout&nbsp;value&nbsp;in&nbsp;ms.&nbsp;If&nbsp;nonzero,&nbsp;function&nbsp;will&nbsp;wait&nbsp;for&nbsp;config<br>
+&nbsp;&nbsp;&nbsp;&nbsp;success&nbsp;and&nbsp;report&nbsp;an&nbsp;error&nbsp;if&nbsp;it&nbsp;times&nbsp;out.&nbsp;If&nbsp;zero,&nbsp;no<br>
+&nbsp;&nbsp;&nbsp;&nbsp;blocking&nbsp;or&nbsp;checking&nbsp;is&nbsp;performed.<br>
+:returns:&nbsp;Error&nbsp;Code&nbsp;generated&nbsp;by&nbsp;function.&nbsp;0&nbsp;indicates&nbsp;no&nbsp;error.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-configPeakOutputReverse"><strong>configPeakOutputReverse</strong></a>(self, percentOut:float, timeoutMs:int) -&gt; ctre._impl.autogen.ctre_sim_enums.ErrorCode</dt><dd><tt>Configures&nbsp;the&nbsp;reverse&nbsp;peak&nbsp;output&nbsp;percentage.<br>
+&nbsp;<br>
+:param&nbsp;percentOut:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Desired&nbsp;peak&nbsp;output&nbsp;percentage.<br>
+:param&nbsp;timeoutMs:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Timeout&nbsp;value&nbsp;in&nbsp;ms.&nbsp;If&nbsp;nonzero,&nbsp;function&nbsp;will&nbsp;wait&nbsp;for&nbsp;config<br>
+&nbsp;&nbsp;&nbsp;&nbsp;success&nbsp;and&nbsp;report&nbsp;an&nbsp;error&nbsp;if&nbsp;it&nbsp;times&nbsp;out.&nbsp;If&nbsp;zero,&nbsp;no<br>
+&nbsp;&nbsp;&nbsp;&nbsp;blocking&nbsp;or&nbsp;checking&nbsp;is&nbsp;performed.<br>
+:returns:&nbsp;Error&nbsp;Code&nbsp;generated&nbsp;by&nbsp;function.&nbsp;0&nbsp;indicates&nbsp;no&nbsp;error.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-configRemoteFeedbackFilter"><strong>configRemoteFeedbackFilter</strong></a>(self, deviceID:int, remoteSensorSource:int, remoteOrdinal:int, timeoutMs:int) -&gt; ctre._impl.autogen.ctre_sim_enums.ErrorCode</dt><dd><tt>Select&nbsp;what&nbsp;remote&nbsp;device&nbsp;and&nbsp;signal&nbsp;to&nbsp;assign&nbsp;to&nbsp;Remote&nbsp;Sensor&nbsp;0&nbsp;or&nbsp;Remote&nbsp;Sensor&nbsp;1.<br>
+After&nbsp;binding&nbsp;a&nbsp;remote&nbsp;device&nbsp;and&nbsp;signal&nbsp;to&nbsp;Remote&nbsp;Sensor&nbsp;X,&nbsp;you&nbsp;may&nbsp;select&nbsp;Remote&nbsp;Sensor&nbsp;X<br>
+as&nbsp;a&nbsp;PID&nbsp;source&nbsp;for&nbsp;closed-loop&nbsp;features.<br>
+&nbsp;<br>
+:param&nbsp;deviceID:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;CAN&nbsp;ID&nbsp;of&nbsp;the&nbsp;remote&nbsp;sensor&nbsp;device.<br>
+:param&nbsp;remoteSensorSource:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;remote&nbsp;sensor&nbsp;device&nbsp;and&nbsp;signal&nbsp;type&nbsp;to&nbsp;bind.<br>
+:param&nbsp;remoteOrdinal:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;for&nbsp;configuring&nbsp;Remote&nbsp;Sensor&nbsp;0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;for&nbsp;configuring&nbsp;Remote&nbsp;Sensor&nbsp;1<br>
+:param&nbsp;timeoutMs:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Timeout&nbsp;value&nbsp;in&nbsp;ms.&nbsp;If&nbsp;nonzero,&nbsp;function&nbsp;will&nbsp;wait&nbsp;for<br>
+&nbsp;&nbsp;&nbsp;&nbsp;config&nbsp;success&nbsp;and&nbsp;report&nbsp;an&nbsp;error&nbsp;if&nbsp;it&nbsp;times&nbsp;out.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;If&nbsp;zero,&nbsp;no&nbsp;blocking&nbsp;or&nbsp;checking&nbsp;is&nbsp;performed.<br>
+:returns:&nbsp;Error&nbsp;Code&nbsp;generated&nbsp;by&nbsp;function.&nbsp;0&nbsp;indicates&nbsp;no&nbsp;error.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-configReverseLimitSwitchSource"><strong>configReverseLimitSwitchSource</strong></a>(self, type:int, normalOpenOrClose:int, deviceID:int, timeoutMs:int) -&gt; ctre._impl.autogen.ctre_sim_enums.ErrorCode</dt><dd><tt>Configures&nbsp;the&nbsp;reverse&nbsp;limit&nbsp;switch&nbsp;for&nbsp;a&nbsp;local/remote&nbsp;source.&nbsp;For&nbsp;example,<br>
+a&nbsp;CAN&nbsp;motor&nbsp;controller&nbsp;may&nbsp;need&nbsp;to&nbsp;monitor&nbsp;the&nbsp;Limit-R&nbsp;pin&nbsp;of&nbsp;another&nbsp;Talon,<br>
+CANifier,&nbsp;or&nbsp;local&nbsp;Gadgeteer&nbsp;feedback&nbsp;connector.<br>
+&nbsp;<br>
+:param&nbsp;type:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Limit&nbsp;switch&nbsp;source.&nbsp;User&nbsp;can&nbsp;choose&nbsp;between&nbsp;the&nbsp;feedback&nbsp;connector,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;a&nbsp;remote&nbsp;Talon&nbsp;SRX,&nbsp;CANifier,&nbsp;or&nbsp;deactivate&nbsp;the&nbsp;feature.<br>
+:type&nbsp;type:&nbsp;:class:`LimitSwitchSource`<br>
+:param&nbsp;normalOpenOrClose:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Setting&nbsp;for&nbsp;normally&nbsp;open,&nbsp;normally&nbsp;closed,&nbsp;or&nbsp;disabled.&nbsp;This<br>
+&nbsp;&nbsp;&nbsp;&nbsp;setting&nbsp;matches&nbsp;the&nbsp;web-based&nbsp;configuration&nbsp;drop&nbsp;down.<br>
+:type&nbsp;normalOpenOrClose:&nbsp;:class:`LimitSwitchNormal`<br>
+:param&nbsp;deviceID:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Device&nbsp;ID&nbsp;of&nbsp;remote&nbsp;source&nbsp;(Talon&nbsp;SRX&nbsp;or&nbsp;CANifier&nbsp;device&nbsp;ID).<br>
+:param&nbsp;timeoutMs:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Timeout&nbsp;value&nbsp;in&nbsp;ms.&nbsp;If&nbsp;nonzero,&nbsp;function&nbsp;will&nbsp;wait&nbsp;for&nbsp;config<br>
+&nbsp;&nbsp;&nbsp;&nbsp;success&nbsp;and&nbsp;report&nbsp;an&nbsp;error&nbsp;if&nbsp;it&nbsp;times&nbsp;out.&nbsp;If&nbsp;zero,&nbsp;no<br>
+&nbsp;&nbsp;&nbsp;&nbsp;blocking&nbsp;or&nbsp;checking&nbsp;is&nbsp;performed.<br>
+:returns:&nbsp;Error&nbsp;Code&nbsp;generated&nbsp;by&nbsp;function.&nbsp;0&nbsp;indicates&nbsp;no&nbsp;error.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-configReverseSoftLimitEnable"><strong>configReverseSoftLimitEnable</strong></a>(self, enable:bool, timeoutMs:int) -&gt; ctre._impl.autogen.ctre_sim_enums.ErrorCode</dt><dd><tt>Configures&nbsp;the&nbsp;reverse&nbsp;soft&nbsp;limit&nbsp;enable.<br>
+&nbsp;<br>
+:param&nbsp;enable:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Reverse&nbsp;Sensor&nbsp;Position&nbsp;Limit&nbsp;Enable.<br>
+:param&nbsp;timeoutMs:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Timeout&nbsp;value&nbsp;in&nbsp;ms.&nbsp;If&nbsp;nonzero,&nbsp;function&nbsp;will&nbsp;wait&nbsp;for&nbsp;config<br>
+&nbsp;&nbsp;&nbsp;&nbsp;success&nbsp;and&nbsp;report&nbsp;an&nbsp;error&nbsp;if&nbsp;it&nbsp;times&nbsp;out.&nbsp;If&nbsp;zero,&nbsp;no<br>
+&nbsp;&nbsp;&nbsp;&nbsp;blocking&nbsp;or&nbsp;checking&nbsp;is&nbsp;performed.<br>
+:returns:&nbsp;Error&nbsp;Code&nbsp;generated&nbsp;by&nbsp;function.&nbsp;0&nbsp;indicates&nbsp;no&nbsp;error.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-configReverseSoftLimitThreshold"><strong>configReverseSoftLimitThreshold</strong></a>(self, reverseSensorLimit:int, timeoutMs:int) -&gt; ctre._impl.autogen.ctre_sim_enums.ErrorCode</dt><dd><tt>Configures&nbsp;the&nbsp;reverse&nbsp;soft&nbsp;limit&nbsp;threshold.<br>
+&nbsp;<br>
+:param&nbsp;reverseSensorLimit:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Reverse&nbsp;Sensor&nbsp;Position&nbsp;Limit&nbsp;(in&nbsp;Raw&nbsp;Sensor&nbsp;Units).<br>
+:param&nbsp;timeoutMs:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Timeout&nbsp;value&nbsp;in&nbsp;ms.&nbsp;If&nbsp;nonzero,&nbsp;function&nbsp;will&nbsp;wait&nbsp;for&nbsp;config<br>
+&nbsp;&nbsp;&nbsp;&nbsp;success&nbsp;and&nbsp;report&nbsp;an&nbsp;error&nbsp;if&nbsp;it&nbsp;times&nbsp;out.&nbsp;If&nbsp;zero,&nbsp;no<br>
+&nbsp;&nbsp;&nbsp;&nbsp;blocking&nbsp;or&nbsp;checking&nbsp;is&nbsp;performed.<br>
+:returns:&nbsp;Error&nbsp;Code&nbsp;generated&nbsp;by&nbsp;function.&nbsp;0&nbsp;indicates&nbsp;no&nbsp;error.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-configSelectedFeedbackCoefficient"><strong>configSelectedFeedbackCoefficient</strong></a>(self, coefficient:float, pidIdx:int, timeoutMs:int) -&gt; ctre._impl.autogen.ctre_sim_enums.ErrorCode</dt><dd><tt>The&nbsp;Feedback&nbsp;Coefficient&nbsp;is&nbsp;a&nbsp;scalar&nbsp;applied&nbsp;to&nbsp;the&nbsp;value&nbsp;of&nbsp;the<br>
+feedback&nbsp;sensor.&nbsp;&nbsp;Useful&nbsp;when&nbsp;you&nbsp;need&nbsp;to&nbsp;scale&nbsp;your&nbsp;sensor&nbsp;values<br>
+within&nbsp;the&nbsp;closed-loop&nbsp;calculations.&nbsp;&nbsp;Default&nbsp;value&nbsp;is&nbsp;1.<br>
+&nbsp;<br>
+Selected&nbsp;Feedback&nbsp;Sensor&nbsp;register&nbsp;in&nbsp;firmware&nbsp;is&nbsp;the&nbsp;decoded&nbsp;sensor&nbsp;value<br>
+multiplied&nbsp;by&nbsp;the&nbsp;Feedback&nbsp;Coefficient.<br>
+&nbsp;<br>
+:param&nbsp;coefficient:&nbsp;Feedback&nbsp;Coefficient&nbsp;value.&nbsp;&nbsp;Maximum&nbsp;value&nbsp;of&nbsp;1.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Resolution&nbsp;is&nbsp;1/(2^16).&nbsp;&nbsp;Cannot&nbsp;be&nbsp;0.<br>
+&nbsp;<br>
+:param&nbsp;pidIdx:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;for&nbsp;Primary&nbsp;closed-loop.&nbsp;1&nbsp;for&nbsp;auxiliary&nbsp;closed-loop.<br>
+&nbsp;<br>
+:param&nbsp;timeoutMs:&nbsp;&nbsp;&nbsp;Timeout&nbsp;value&nbsp;in&nbsp;ms.&nbsp;If&nbsp;nonzero,&nbsp;function&nbsp;will&nbsp;wait&nbsp;for<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;config&nbsp;success&nbsp;and&nbsp;report&nbsp;an&nbsp;error&nbsp;if&nbsp;it&nbsp;times&nbsp;out.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If&nbsp;zero,&nbsp;no&nbsp;blocking&nbsp;or&nbsp;checking&nbsp;is&nbsp;performed.<br>
+&nbsp;<br>
+:returns:&nbsp;Error&nbsp;Code&nbsp;generated&nbsp;by&nbsp;function.&nbsp;0&nbsp;indicates&nbsp;no&nbsp;error.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-configSelectedFeedbackSensor"><strong>configSelectedFeedbackSensor</strong></a>(self, feedbackDevice:int, pidIdx:int, timeoutMs:int) -&gt; ctre._impl.autogen.ctre_sim_enums.ErrorCode</dt><dd><tt>Select&nbsp;the&nbsp;feedback&nbsp;device&nbsp;for&nbsp;the&nbsp;motor&nbsp;controller.<br>
+Most&nbsp;CTRE&nbsp;CAN&nbsp;motor&nbsp;controllers&nbsp;will&nbsp;support&nbsp;remote&nbsp;sensors&nbsp;over&nbsp;CAN.<br>
+&nbsp;<br>
+:param&nbsp;feedbackDevice:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Feedback&nbsp;Device&nbsp;to&nbsp;select.<br>
+:type:&nbsp;feedbackDevice:&nbsp;:class:`.FeedbackDevice`&nbsp;or&nbsp;:class:`.RemoteFeedbackDevice`<br>
+:param&nbsp;pidIdx:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;for&nbsp;Primary&nbsp;closed-loop.&nbsp;1&nbsp;for&nbsp;auxiliary&nbsp;closed-loop.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;See&nbsp;Phoenix-Documentation&nbsp;for&nbsp;how&nbsp;to&nbsp;interpret.<br>
+:param&nbsp;timeoutMs:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Timeout&nbsp;value&nbsp;in&nbsp;ms.&nbsp;If&nbsp;nonzero,&nbsp;function&nbsp;will&nbsp;wait&nbsp;for&nbsp;config<br>
+&nbsp;&nbsp;&nbsp;&nbsp;success&nbsp;and&nbsp;report&nbsp;an&nbsp;error&nbsp;if&nbsp;it&nbsp;times&nbsp;out.&nbsp;If&nbsp;zero,&nbsp;no<br>
+&nbsp;&nbsp;&nbsp;&nbsp;blocking&nbsp;or&nbsp;checking&nbsp;is&nbsp;performed.<br>
+:returns:&nbsp;Error&nbsp;Code&nbsp;generated&nbsp;by&nbsp;function.&nbsp;0&nbsp;indicates&nbsp;no&nbsp;error.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-configSensorTerm"><strong>configSensorTerm</strong></a>(self, sensorTerm:int, feedbackDevice:int, timeoutMs:int) -&gt; ctre._impl.autogen.ctre_sim_enums.ErrorCode</dt><dd><tt>Select&nbsp;what&nbsp;sensor&nbsp;term&nbsp;should&nbsp;be&nbsp;bound&nbsp;to&nbsp;switch&nbsp;feedback&nbsp;device.<br>
+&nbsp;<br>
+Sensor&nbsp;Sum&nbsp;=&nbsp;Sensor&nbsp;Sum&nbsp;Term&nbsp;0&nbsp;-&nbsp;Sensor&nbsp;Sum&nbsp;Term&nbsp;1<br>
+&nbsp;<br>
+Sensor&nbsp;Difference&nbsp;=&nbsp;Sensor&nbsp;Diff&nbsp;Term&nbsp;0&nbsp;-&nbsp;Sensor&nbsp;Diff&nbsp;Term&nbsp;1<br>
+&nbsp;<br>
+The&nbsp;four&nbsp;terms&nbsp;are&nbsp;specified&nbsp;with&nbsp;this&nbsp;routine.&nbsp;&nbsp;Then&nbsp;Sensor&nbsp;Sum/Difference<br>
+can&nbsp;be&nbsp;selected&nbsp;for&nbsp;closed-looping.<br>
+&nbsp;<br>
+:param&nbsp;sensorTerm:&nbsp;Which&nbsp;sensor&nbsp;term&nbsp;to&nbsp;bind&nbsp;to&nbsp;a&nbsp;feedback&nbsp;source.<br>
+:param&nbsp;feedbackDevice:&nbsp;The&nbsp;sensor&nbsp;signal&nbsp;to&nbsp;attach&nbsp;to&nbsp;sensorTerm.<br>
+:param&nbsp;timeoutMs:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Timeout&nbsp;value&nbsp;in&nbsp;ms.&nbsp;If&nbsp;nonzero,&nbsp;function&nbsp;will&nbsp;wait&nbsp;for<br>
+&nbsp;&nbsp;&nbsp;&nbsp;config&nbsp;success&nbsp;and&nbsp;report&nbsp;an&nbsp;error&nbsp;if&nbsp;it&nbsp;times&nbsp;out.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;If&nbsp;zero,&nbsp;no&nbsp;blocking&nbsp;or&nbsp;checking&nbsp;is&nbsp;performed.<br>
+:returns:&nbsp;Error&nbsp;Code&nbsp;generated&nbsp;by&nbsp;function.&nbsp;0&nbsp;indicates&nbsp;no&nbsp;error.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-configSetCustomParam"><strong>configSetCustomParam</strong></a>(self, newValue:int, paramIndex:int, timeoutMs:int) -&gt; ctre._impl.autogen.ctre_sim_enums.ErrorCode</dt><dd><tt>Sets&nbsp;the&nbsp;value&nbsp;of&nbsp;a&nbsp;custom&nbsp;parameter.&nbsp;This&nbsp;is&nbsp;for&nbsp;arbitrary&nbsp;use.<br>
+&nbsp;<br>
+Sometimes&nbsp;it&nbsp;is&nbsp;necessary&nbsp;to&nbsp;save&nbsp;calibration/limit/target&nbsp;information<br>
+in&nbsp;the&nbsp;device.&nbsp;Particularly&nbsp;if&nbsp;the&nbsp;device&nbsp;is&nbsp;part&nbsp;of&nbsp;a&nbsp;subsystem&nbsp;that<br>
+can&nbsp;be&nbsp;replaced.<br>
+&nbsp;<br>
+:param&nbsp;newValue:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Value&nbsp;for&nbsp;custom&nbsp;parameter.<br>
+:param&nbsp;paramIndex:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Index&nbsp;of&nbsp;custom&nbsp;parameter&nbsp;[0,1].<br>
+:param&nbsp;timeoutMs:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Timeout&nbsp;value&nbsp;in&nbsp;ms.&nbsp;If&nbsp;nonzero,&nbsp;function&nbsp;will&nbsp;wait&nbsp;for<br>
+&nbsp;&nbsp;&nbsp;&nbsp;config&nbsp;success&nbsp;and&nbsp;report&nbsp;an&nbsp;error&nbsp;if&nbsp;it&nbsp;times&nbsp;out.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;If&nbsp;zero,&nbsp;no&nbsp;blocking&nbsp;or&nbsp;checking&nbsp;is&nbsp;performed.<br>
+:returns:&nbsp;Error&nbsp;Code&nbsp;generated&nbsp;by&nbsp;function.&nbsp;0&nbsp;indicates&nbsp;no&nbsp;error.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-configSetParameter"><strong>configSetParameter</strong></a>(self, param:int, value:float, subValue:int, ordinal:int, timeoutMs:int) -&gt; ctre._impl.autogen.ctre_sim_enums.ErrorCode</dt><dd><tt>Sets&nbsp;a&nbsp;parameter.<br>
+&nbsp;<br>
+:param&nbsp;param:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Parameter&nbsp;enumeration.<br>
+:param&nbsp;value:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Value&nbsp;of&nbsp;parameter.<br>
+:param&nbsp;subValue:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Subvalue&nbsp;for&nbsp;parameter.&nbsp;Maximum&nbsp;value&nbsp;of&nbsp;255.<br>
+:param&nbsp;ordinal:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Ordinal&nbsp;of&nbsp;parameter.<br>
+:param&nbsp;timeoutMs:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Timeout&nbsp;value&nbsp;in&nbsp;ms.&nbsp;If&nbsp;nonzero,&nbsp;function&nbsp;will&nbsp;wait&nbsp;for<br>
+&nbsp;&nbsp;&nbsp;&nbsp;config&nbsp;success&nbsp;and&nbsp;report&nbsp;an&nbsp;error&nbsp;if&nbsp;it&nbsp;times&nbsp;out.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;If&nbsp;zero,&nbsp;no&nbsp;blocking&nbsp;or&nbsp;checking&nbsp;is&nbsp;performed.<br>
+:returns:&nbsp;Error&nbsp;Code&nbsp;generated&nbsp;by&nbsp;function.&nbsp;0&nbsp;indicates&nbsp;no&nbsp;error.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-configVelocityMeasurementPeriod"><strong>configVelocityMeasurementPeriod</strong></a>(self, period:int, timeoutMs:int) -&gt; ctre._impl.autogen.ctre_sim_enums.ErrorCode</dt><dd><tt>Sets&nbsp;the&nbsp;period&nbsp;over&nbsp;which&nbsp;velocity&nbsp;measurements&nbsp;are&nbsp;taken.<br>
+&nbsp;<br>
+:param&nbsp;period:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Desired&nbsp;period&nbsp;for&nbsp;the&nbsp;velocity&nbsp;measurement.&nbsp;see&nbsp;:class:`.VelocityMeasPeriod`<br>
+:param&nbsp;timeoutMs:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Timeout&nbsp;value&nbsp;in&nbsp;ms.&nbsp;If&nbsp;nonzero,&nbsp;function&nbsp;will&nbsp;wait&nbsp;for&nbsp;config<br>
+&nbsp;&nbsp;&nbsp;&nbsp;success&nbsp;and&nbsp;report&nbsp;an&nbsp;error&nbsp;if&nbsp;it&nbsp;times&nbsp;out.&nbsp;If&nbsp;zero,&nbsp;no<br>
+&nbsp;&nbsp;&nbsp;&nbsp;blocking&nbsp;or&nbsp;checking&nbsp;is&nbsp;performed.<br>
+:returns:&nbsp;Error&nbsp;Code&nbsp;generated&nbsp;by&nbsp;function.&nbsp;0&nbsp;indicates&nbsp;no&nbsp;error.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-configVelocityMeasurementWindow"><strong>configVelocityMeasurementWindow</strong></a>(self, windowSize:int, timeoutMs:int) -&gt; ctre._impl.autogen.ctre_sim_enums.ErrorCode</dt><dd><tt>Sets&nbsp;the&nbsp;number&nbsp;of&nbsp;velocity&nbsp;samples&nbsp;used&nbsp;in&nbsp;the&nbsp;rolling&nbsp;average&nbsp;velocity<br>
+measurement.<br>
+&nbsp;<br>
+:param&nbsp;windowSize:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Number&nbsp;of&nbsp;samples&nbsp;in&nbsp;the&nbsp;rolling&nbsp;average&nbsp;of&nbsp;velocity<br>
+&nbsp;&nbsp;&nbsp;&nbsp;measurement.&nbsp;Valid&nbsp;values&nbsp;are&nbsp;1,2,4,8,16,32.&nbsp;If&nbsp;another&nbsp;value<br>
+&nbsp;&nbsp;&nbsp;&nbsp;is&nbsp;specified,&nbsp;it&nbsp;will&nbsp;truncate&nbsp;to&nbsp;nearest&nbsp;support&nbsp;value.<br>
+:param&nbsp;timeoutMs:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Timeout&nbsp;value&nbsp;in&nbsp;ms.&nbsp;If&nbsp;nonzero,&nbsp;function&nbsp;will&nbsp;wait&nbsp;for&nbsp;config<br>
+&nbsp;&nbsp;&nbsp;&nbsp;success&nbsp;and&nbsp;report&nbsp;an&nbsp;error&nbsp;if&nbsp;it&nbsp;times&nbsp;out.&nbsp;If&nbsp;zero,&nbsp;no<br>
+&nbsp;&nbsp;&nbsp;&nbsp;blocking&nbsp;or&nbsp;checking&nbsp;is&nbsp;performed.<br>
+:returns:&nbsp;Error&nbsp;Code&nbsp;generated&nbsp;by&nbsp;function.&nbsp;0&nbsp;indicates&nbsp;no&nbsp;error.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-configVoltageCompSaturation"><strong>configVoltageCompSaturation</strong></a>(self, voltage:float, timeoutMs:int) -&gt; ctre._impl.autogen.ctre_sim_enums.ErrorCode</dt><dd><tt>Configures&nbsp;the&nbsp;Voltage&nbsp;Compensation&nbsp;saturation&nbsp;voltage.<br>
+&nbsp;<br>
+:param&nbsp;voltage:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;This&nbsp;is&nbsp;the&nbsp;max&nbsp;voltage&nbsp;to&nbsp;apply&nbsp;to&nbsp;the&nbsp;hbridge&nbsp;when&nbsp;voltage<br>
+&nbsp;&nbsp;&nbsp;&nbsp;compensation&nbsp;is&nbsp;enabled.&nbsp;&nbsp;For&nbsp;example,&nbsp;if&nbsp;10&nbsp;(volts)&nbsp;is&nbsp;specified<br>
+&nbsp;&nbsp;&nbsp;&nbsp;and&nbsp;a&nbsp;TalonSRX&nbsp;is&nbsp;commanded&nbsp;to&nbsp;0.5&nbsp;(PercentOutput,&nbsp;closed-loop,&nbsp;etc)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;then&nbsp;the&nbsp;TalonSRX&nbsp;will&nbsp;attempt&nbsp;to&nbsp;apply&nbsp;a&nbsp;duty-cycle&nbsp;to&nbsp;produce&nbsp;5V.<br>
+:param&nbsp;timeoutMs:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Timeout&nbsp;value&nbsp;in&nbsp;ms.&nbsp;If&nbsp;nonzero,&nbsp;function&nbsp;will&nbsp;wait&nbsp;for&nbsp;config<br>
+&nbsp;&nbsp;&nbsp;&nbsp;success&nbsp;and&nbsp;report&nbsp;an&nbsp;error&nbsp;if&nbsp;it&nbsp;times&nbsp;out.&nbsp;If&nbsp;zero,&nbsp;no<br>
+&nbsp;&nbsp;&nbsp;&nbsp;blocking&nbsp;or&nbsp;checking&nbsp;is&nbsp;performed.<br>
+:returns:&nbsp;Error&nbsp;Code&nbsp;generated&nbsp;by&nbsp;function.&nbsp;0&nbsp;indicates&nbsp;no&nbsp;error.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-configVoltageMeasurementFilter"><strong>configVoltageMeasurementFilter</strong></a>(self, filterWindowSamples:int, timeoutMs:int) -&gt; ctre._impl.autogen.ctre_sim_enums.ErrorCode</dt><dd><tt>Configures&nbsp;the&nbsp;voltage&nbsp;measurement&nbsp;filter.<br>
+&nbsp;<br>
+:param&nbsp;filterWindowSamples:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Number&nbsp;of&nbsp;samples&nbsp;in&nbsp;the&nbsp;rolling&nbsp;average&nbsp;of&nbsp;voltage<br>
+&nbsp;&nbsp;&nbsp;&nbsp;measurement.<br>
+:param&nbsp;timeoutMs:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Timeout&nbsp;value&nbsp;in&nbsp;ms.&nbsp;If&nbsp;nonzero,&nbsp;function&nbsp;will&nbsp;wait&nbsp;for&nbsp;config<br>
+&nbsp;&nbsp;&nbsp;&nbsp;success&nbsp;and&nbsp;report&nbsp;an&nbsp;error&nbsp;if&nbsp;it&nbsp;times&nbsp;out.&nbsp;If&nbsp;zero,&nbsp;no<br>
+&nbsp;&nbsp;&nbsp;&nbsp;blocking&nbsp;or&nbsp;checking&nbsp;is&nbsp;performed.<br>
+:returns:&nbsp;Error&nbsp;Code&nbsp;generated&nbsp;by&nbsp;function.&nbsp;0&nbsp;indicates&nbsp;no&nbsp;error.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-config_IntegralZone"><strong>config_IntegralZone</strong></a>(self, slotIdx:int, izone:float, timeoutMs:int) -&gt; ctre._impl.autogen.ctre_sim_enums.ErrorCode</dt><dd><tt>Sets&nbsp;the&nbsp;Integral&nbsp;Zone&nbsp;constant&nbsp;in&nbsp;the&nbsp;given&nbsp;parameter&nbsp;slot.&nbsp;If&nbsp;the<br>
+(absolute)&nbsp;closed-loop&nbsp;error&nbsp;is&nbsp;outside&nbsp;of&nbsp;this&nbsp;zone,&nbsp;integral<br>
+accumulator&nbsp;is&nbsp;automatically&nbsp;cleared.&nbsp;This&nbsp;ensures&nbsp;than&nbsp;integral&nbsp;wind&nbsp;up<br>
+events&nbsp;will&nbsp;stop&nbsp;after&nbsp;the&nbsp;sensor&nbsp;gets&nbsp;far&nbsp;enough&nbsp;from&nbsp;its&nbsp;target.<br>
+&nbsp;<br>
+:param&nbsp;slotIdx:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Parameter&nbsp;slot&nbsp;for&nbsp;the&nbsp;constant.<br>
+:param&nbsp;izone:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Value&nbsp;of&nbsp;the&nbsp;Integral&nbsp;Zone&nbsp;constant.&nbsp;(closed&nbsp;loop&nbsp;error&nbsp;units&nbsp;X&nbsp;1ms).<br>
+:param&nbsp;timeoutMs:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Timeout&nbsp;value&nbsp;in&nbsp;ms.&nbsp;If&nbsp;nonzero,&nbsp;function&nbsp;will&nbsp;wait&nbsp;for&nbsp;config<br>
+&nbsp;&nbsp;&nbsp;&nbsp;success&nbsp;and&nbsp;report&nbsp;an&nbsp;error&nbsp;if&nbsp;it&nbsp;times&nbsp;out.&nbsp;If&nbsp;zero,&nbsp;no<br>
+&nbsp;&nbsp;&nbsp;&nbsp;blocking&nbsp;or&nbsp;checking&nbsp;is&nbsp;performed.<br>
+:returns:&nbsp;Error&nbsp;Code&nbsp;generated&nbsp;by&nbsp;function.&nbsp;0&nbsp;indicates&nbsp;no&nbsp;error.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-config_kD"><strong>config_kD</strong></a>(self, slotIdx:int, value:float, timeoutMs:int) -&gt; ctre._impl.autogen.ctre_sim_enums.ErrorCode</dt><dd><tt>Sets&nbsp;the&nbsp;'D'&nbsp;constant&nbsp;in&nbsp;the&nbsp;given&nbsp;parameter&nbsp;slot.<br>
+&nbsp;<br>
+:param&nbsp;slotIdx:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Parameter&nbsp;slot&nbsp;for&nbsp;the&nbsp;constant.<br>
+:param&nbsp;value:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Value&nbsp;of&nbsp;the&nbsp;D&nbsp;constant.<br>
+:param&nbsp;timeoutMs:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Timeout&nbsp;value&nbsp;in&nbsp;ms.&nbsp;If&nbsp;nonzero,&nbsp;function&nbsp;will&nbsp;wait&nbsp;for&nbsp;config<br>
+&nbsp;&nbsp;&nbsp;&nbsp;success&nbsp;and&nbsp;report&nbsp;an&nbsp;error&nbsp;if&nbsp;it&nbsp;times&nbsp;out.&nbsp;If&nbsp;zero,&nbsp;no<br>
+&nbsp;&nbsp;&nbsp;&nbsp;blocking&nbsp;or&nbsp;checking&nbsp;is&nbsp;performed.<br>
+:returns:&nbsp;Error&nbsp;Code&nbsp;generated&nbsp;by&nbsp;function.&nbsp;0&nbsp;indicates&nbsp;no&nbsp;error.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-config_kF"><strong>config_kF</strong></a>(self, slotIdx:int, value:float, timeoutMs:int) -&gt; ctre._impl.autogen.ctre_sim_enums.ErrorCode</dt><dd><tt>Sets&nbsp;the&nbsp;'F'&nbsp;constant&nbsp;in&nbsp;the&nbsp;given&nbsp;parameter&nbsp;slot.<br>
+&nbsp;<br>
+:param&nbsp;slotIdx:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Parameter&nbsp;slot&nbsp;for&nbsp;the&nbsp;constant.<br>
+:param&nbsp;value:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Value&nbsp;of&nbsp;the&nbsp;F&nbsp;constant.<br>
+:param&nbsp;timeoutMs:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Timeout&nbsp;value&nbsp;in&nbsp;ms.&nbsp;If&nbsp;nonzero,&nbsp;function&nbsp;will&nbsp;wait&nbsp;for&nbsp;config<br>
+&nbsp;&nbsp;&nbsp;&nbsp;success&nbsp;and&nbsp;report&nbsp;an&nbsp;error&nbsp;if&nbsp;it&nbsp;times&nbsp;out.&nbsp;If&nbsp;zero,&nbsp;no<br>
+&nbsp;&nbsp;&nbsp;&nbsp;blocking&nbsp;or&nbsp;checking&nbsp;is&nbsp;performed.<br>
+:returns:&nbsp;Error&nbsp;Code&nbsp;generated&nbsp;by&nbsp;function.&nbsp;0&nbsp;indicates&nbsp;no&nbsp;error.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-config_kI"><strong>config_kI</strong></a>(self, slotIdx:int, value:float, timeoutMs:int) -&gt; ctre._impl.autogen.ctre_sim_enums.ErrorCode</dt><dd><tt>Sets&nbsp;the&nbsp;'I'&nbsp;constant&nbsp;in&nbsp;the&nbsp;given&nbsp;parameter&nbsp;slot.<br>
+&nbsp;<br>
+:param&nbsp;slotIdx:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Parameter&nbsp;slot&nbsp;for&nbsp;the&nbsp;constant.<br>
+:param&nbsp;value:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Value&nbsp;of&nbsp;the&nbsp;I&nbsp;constant.<br>
+:param&nbsp;timeoutMs:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Timeout&nbsp;value&nbsp;in&nbsp;ms.&nbsp;If&nbsp;nonzero,&nbsp;function&nbsp;will&nbsp;wait&nbsp;for&nbsp;config<br>
+&nbsp;&nbsp;&nbsp;&nbsp;success&nbsp;and&nbsp;report&nbsp;an&nbsp;error&nbsp;if&nbsp;it&nbsp;times&nbsp;out.&nbsp;If&nbsp;zero,&nbsp;no<br>
+&nbsp;&nbsp;&nbsp;&nbsp;blocking&nbsp;or&nbsp;checking&nbsp;is&nbsp;performed.<br>
+:returns:&nbsp;Error&nbsp;Code&nbsp;generated&nbsp;by&nbsp;function.&nbsp;0&nbsp;indicates&nbsp;no&nbsp;error.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-config_kP"><strong>config_kP</strong></a>(self, slotIdx:int, value:float, timeoutMs:int) -&gt; ctre._impl.autogen.ctre_sim_enums.ErrorCode</dt><dd><tt>Sets&nbsp;the&nbsp;'P'&nbsp;constant&nbsp;in&nbsp;the&nbsp;given&nbsp;parameter&nbsp;slot.<br>
+&nbsp;<br>
+:param&nbsp;slotIdx:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Parameter&nbsp;slot&nbsp;for&nbsp;the&nbsp;constant.<br>
+:param&nbsp;value:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Value&nbsp;of&nbsp;the&nbsp;P&nbsp;constant.<br>
+:param&nbsp;timeoutMs:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Timeout&nbsp;value&nbsp;in&nbsp;ms.&nbsp;If&nbsp;nonzero,&nbsp;function&nbsp;will&nbsp;wait&nbsp;for&nbsp;config<br>
+&nbsp;&nbsp;&nbsp;&nbsp;success&nbsp;and&nbsp;report&nbsp;an&nbsp;error&nbsp;if&nbsp;it&nbsp;times&nbsp;out.&nbsp;If&nbsp;zero,&nbsp;no<br>
+&nbsp;&nbsp;&nbsp;&nbsp;blocking&nbsp;or&nbsp;checking&nbsp;is&nbsp;performed.<br>
+:returns:&nbsp;Error&nbsp;Code&nbsp;generated&nbsp;by&nbsp;function.&nbsp;0&nbsp;indicates&nbsp;no&nbsp;error.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-enableCurrentLimit"><strong>enableCurrentLimit</strong></a>(self, enable:bool) -&gt; ctre._impl.autogen.ctre_sim_enums.ErrorCode</dt><dd><tt>Enable&nbsp;or&nbsp;disable&nbsp;Current&nbsp;Limit.<br>
+&nbsp;<br>
+:param&nbsp;enable:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Enable&nbsp;state&nbsp;of&nbsp;current&nbsp;limit.<br>
+&nbsp;<br>
+Not&nbsp;available&nbsp;on&nbsp;the&nbsp;Victor&nbsp;SPX<br>
+&nbsp;<br>
+see&nbsp;:meth:`.configPeakCurrentLimit`,&nbsp;:meth:`.configPeakCurrentDuration`,<br>
+:meth:`.configContinuousCurrentLimit`</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-enableHeadingHold"><strong>enableHeadingHold</strong></a>(self, enable:bool) -&gt; ctre._impl.autogen.ctre_sim_enums.ErrorCode</dt><dd><tt>Enables&nbsp;a&nbsp;future&nbsp;feature&nbsp;called&nbsp;"Heading&nbsp;Hold".<br>
+For&nbsp;now&nbsp;this&nbsp;simply&nbsp;updates&nbsp;the&nbsp;CAN&nbsp;signal&nbsp;to&nbsp;the&nbsp;motor&nbsp;controller.<br>
+Future&nbsp;firmware&nbsp;updates&nbsp;will&nbsp;use&nbsp;this.<br>
+&nbsp;<br>
+:param&nbsp;enable:&nbsp;true/false&nbsp;enable</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-enableVoltageCompensation"><strong>enableVoltageCompensation</strong></a>(self, enable:bool) -&gt; None</dt><dd><tt>Enables&nbsp;voltage&nbsp;compensation.&nbsp;If&nbsp;enabled,&nbsp;voltage&nbsp;compensation&nbsp;works&nbsp;in<br>
+all&nbsp;control&nbsp;modes.<br>
+&nbsp;<br>
+:param&nbsp;enable:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Enable&nbsp;state&nbsp;of&nbsp;voltage&nbsp;compensation.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-getActiveTrajectoryAll"><strong>getActiveTrajectoryAll</strong></a>(self) -&gt; Tuple[int, int, float]</dt></dl>
+
+<dl><dt><a name="TalonMotor-getActiveTrajectoryHeading"><strong>getActiveTrajectoryHeading</strong></a>(self) -&gt; float</dt><dd><tt>Gets&nbsp;the&nbsp;active&nbsp;trajectory&nbsp;target&nbsp;heading&nbsp;using<br>
+MotionMagicArc/MotionProfileArc&nbsp;control&nbsp;modes.<br>
+&nbsp;<br>
+:returns:&nbsp;The&nbsp;Active&nbsp;Trajectory&nbsp;Heading&nbsp;in&nbsp;degreees.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-getActiveTrajectoryPosition"><strong>getActiveTrajectoryPosition</strong></a>(self) -&gt; int</dt><dd><tt>Gets&nbsp;the&nbsp;active&nbsp;trajectory&nbsp;target&nbsp;position&nbsp;using<br>
+MotionMagic/MotionProfile&nbsp;control&nbsp;modes.<br>
+&nbsp;<br>
+:returns:&nbsp;The&nbsp;Active&nbsp;Trajectory&nbsp;Position&nbsp;in&nbsp;sensor&nbsp;units.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-getActiveTrajectoryVelocity"><strong>getActiveTrajectoryVelocity</strong></a>(self) -&gt; int</dt><dd><tt>Gets&nbsp;the&nbsp;active&nbsp;trajectory&nbsp;target&nbsp;velocity&nbsp;using<br>
+MotionMagic/MotionProfile&nbsp;control&nbsp;modes.<br>
+&nbsp;<br>
+:returns:&nbsp;The&nbsp;Active&nbsp;Trajectory&nbsp;Velocity&nbsp;in&nbsp;sensor&nbsp;units&nbsp;per&nbsp;100ms.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-getAnalogIn"><strong>getAnalogIn</strong></a>(self) -&gt; int</dt><dd><tt>Get&nbsp;the&nbsp;position&nbsp;of&nbsp;whatever&nbsp;is&nbsp;in&nbsp;the&nbsp;analog&nbsp;pin&nbsp;of&nbsp;the&nbsp;Talon,<br>
+regardless&nbsp;of&nbsp;whether&nbsp;it&nbsp;is&nbsp;actually&nbsp;being&nbsp;used&nbsp;for&nbsp;feedback.<br>
+&nbsp;<br>
+:returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;24bit&nbsp;analog&nbsp;value.&nbsp;The&nbsp;bottom&nbsp;ten&nbsp;bits&nbsp;is&nbsp;the&nbsp;ADC&nbsp;(0&nbsp;-&nbsp;1023)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;on&nbsp;the&nbsp;analog&nbsp;pin&nbsp;of&nbsp;the&nbsp;Talon.&nbsp;The&nbsp;upper&nbsp;14&nbsp;bits&nbsp;tracks&nbsp;the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;overflows&nbsp;and&nbsp;underflows&nbsp;(continuous&nbsp;sensor).</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-getAnalogInAll"><strong>getAnalogInAll</strong></a>(self) -&gt; Tuple[int, int, int]</dt></dl>
+
+<dl><dt><a name="TalonMotor-getAnalogInRaw"><strong>getAnalogInRaw</strong></a>(self) -&gt; int</dt><dd><tt>Get&nbsp;the&nbsp;position&nbsp;of&nbsp;whatever&nbsp;is&nbsp;in&nbsp;the&nbsp;analog&nbsp;pin&nbsp;of&nbsp;the&nbsp;Talon,<br>
+regardless&nbsp;of&nbsp;whether&nbsp;it&nbsp;is&nbsp;actually&nbsp;being&nbsp;used&nbsp;for&nbsp;feedback.<br>
+&nbsp;<br>
+:returns:&nbsp;the&nbsp;ADC&nbsp;(0&nbsp;-&nbsp;1023)&nbsp;on&nbsp;analog&nbsp;pin&nbsp;of&nbsp;the&nbsp;Talon.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-getAnalogInVel"><strong>getAnalogInVel</strong></a>(self) -&gt; int</dt><dd><tt>Get&nbsp;the&nbsp;velocity&nbsp;of&nbsp;whatever&nbsp;is&nbsp;in&nbsp;the&nbsp;analog&nbsp;pin&nbsp;of&nbsp;the&nbsp;Talon,<br>
+regardless&nbsp;of&nbsp;whether&nbsp;it&nbsp;is&nbsp;actually&nbsp;being&nbsp;used&nbsp;for&nbsp;feedback.<br>
+&nbsp;<br>
+:returns:&nbsp;the&nbsp;speed&nbsp;in&nbsp;units&nbsp;per&nbsp;100ms&nbsp;where&nbsp;1024&nbsp;units&nbsp;is&nbsp;one&nbsp;rotation.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-getBusVoltage"><strong>getBusVoltage</strong></a>(self) -&gt; float</dt><dd><tt>Gets&nbsp;the&nbsp;bus&nbsp;voltage&nbsp;seen&nbsp;by&nbsp;the&nbsp;device.<br>
+&nbsp;<br>
+:returns:&nbsp;The&nbsp;bus&nbsp;voltage&nbsp;value&nbsp;(in&nbsp;volts).</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-getClosedLoopError"><strong>getClosedLoopError</strong></a>(self, pidIdx:int) -&gt; int</dt><dd><tt>Gets&nbsp;the&nbsp;closed-loop&nbsp;error.&nbsp;&nbsp;The&nbsp;units&nbsp;depend&nbsp;on&nbsp;which&nbsp;control&nbsp;mode&nbsp;is&nbsp;in<br>
+use.&nbsp;See&nbsp;Phoenix-Documentation&nbsp;information&nbsp;on&nbsp;units.<br>
+&nbsp;<br>
+:param&nbsp;pidIdx:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;for&nbsp;Primary&nbsp;closed-loop.&nbsp;1&nbsp;for&nbsp;auxiliary&nbsp;closed-loop.<br>
+:returns:&nbsp;Closed-loop&nbsp;error&nbsp;value.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-getClosedLoopTarget"><strong>getClosedLoopTarget</strong></a>(self, pidIdx:int) -&gt; int</dt><dd><tt>Gets&nbsp;the&nbsp;current&nbsp;target&nbsp;of&nbsp;a&nbsp;given&nbsp;closed&nbsp;loop.<br>
+&nbsp;<br>
+:param&nbsp;pidIdx:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;for&nbsp;Primary&nbsp;closed-loop.&nbsp;1&nbsp;for&nbsp;auxiliary&nbsp;closed-loop.<br>
+:returns:&nbsp;Closed-loop&nbsp;error&nbsp;value.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-getDeviceNumber"><strong>getDeviceNumber</strong></a>(self) -&gt; int</dt></dl>
+
+<dl><dt><a name="TalonMotor-getErrorDerivative"><strong>getErrorDerivative</strong></a>(self, pidIdx:int) -&gt; float</dt><dd><tt>Gets&nbsp;the&nbsp;derivative&nbsp;of&nbsp;the&nbsp;closed-loop&nbsp;error.<br>
+&nbsp;<br>
+:param&nbsp;pidIdx:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;for&nbsp;Primary&nbsp;closed-loop.&nbsp;1&nbsp;for&nbsp;auxiliary&nbsp;closed-loop.<br>
+:returns:&nbsp;The&nbsp;error&nbsp;derivative&nbsp;value.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-getFirmwareVersion"><strong>getFirmwareVersion</strong></a>(self) -&gt; int</dt><dd><tt>Gets&nbsp;the&nbsp;firmware&nbsp;version&nbsp;of&nbsp;the&nbsp;device.<br>
+&nbsp;<br>
+:returns:&nbsp;Firmware&nbsp;version&nbsp;of&nbsp;device.&nbsp;For&nbsp;example:&nbsp;version&nbsp;1-dot-2<br>
+&nbsp;&nbsp;&nbsp;&nbsp;is&nbsp;0x0102.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-getIntegralAccumulator"><strong>getIntegralAccumulator</strong></a>(self, pidIdx:int) -&gt; float</dt><dd><tt>Gets&nbsp;the&nbsp;iaccum&nbsp;value.<br>
+&nbsp;<br>
+:param&nbsp;pidIdx:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;for&nbsp;Primary&nbsp;closed-loop.&nbsp;1&nbsp;for&nbsp;auxiliary&nbsp;closed-loop.<br>
+:returns:&nbsp;Integral&nbsp;accumulator&nbsp;value.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-getLastError"><strong>getLastError</strong></a>(self) -&gt; ctre._impl.autogen.ctre_sim_enums.ErrorCode</dt><dd><tt>Gets&nbsp;the&nbsp;last&nbsp;error&nbsp;generated&nbsp;by&nbsp;this&nbsp;object.<br>
+&nbsp;<br>
+:returns:&nbsp;Last&nbsp;Error&nbsp;Code&nbsp;generated&nbsp;by&nbsp;a&nbsp;function.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-getLimitSwitchState"><strong>getLimitSwitchState</strong></a>(self) -&gt; Tuple[int, int]</dt><dd><tt>:returns:&nbsp;Forward&nbsp;Limit&nbsp;switch&nbsp;closed,&nbsp;Reverse&nbsp;Limit&nbsp;switch&nbsp;closed</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-getMotionProfileTopLevelBufferCount"><strong>getMotionProfileTopLevelBufferCount</strong></a>(self) -&gt; int</dt><dd><tt>Retrieve&nbsp;just&nbsp;the&nbsp;buffer&nbsp;count&nbsp;for&nbsp;the&nbsp;api-level&nbsp;(top)&nbsp;buffer.&nbsp;This<br>
+routine&nbsp;performs&nbsp;no&nbsp;CAN&nbsp;or&nbsp;data&nbsp;structure&nbsp;lookups,&nbsp;so&nbsp;its&nbsp;fast&nbsp;and&nbsp;ideal<br>
+if&nbsp;caller&nbsp;needs&nbsp;to&nbsp;quickly&nbsp;poll&nbsp;the&nbsp;progress&nbsp;of&nbsp;trajectory&nbsp;points&nbsp;being<br>
+emptied&nbsp;into&nbsp;controller's&nbsp;RAM.&nbsp;Otherwise&nbsp;just&nbsp;use&nbsp;GetMotionProfileStatus.<br>
+&nbsp;<br>
+:returns:&nbsp;number&nbsp;of&nbsp;trajectory&nbsp;points&nbsp;in&nbsp;the&nbsp;top&nbsp;buffer.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-getMotorOutputPercent"><strong>getMotorOutputPercent</strong></a>(self) -&gt; float</dt><dd><tt>Gets&nbsp;the&nbsp;output&nbsp;percentage&nbsp;of&nbsp;the&nbsp;motor&nbsp;controller.<br>
+&nbsp;<br>
+:returns:&nbsp;Output&nbsp;of&nbsp;the&nbsp;motor&nbsp;controller&nbsp;(in&nbsp;percent).</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-getOutputCurrent"><strong>getOutputCurrent</strong></a>(self) -&gt; float</dt><dd><tt>Gets&nbsp;the&nbsp;output&nbsp;current&nbsp;of&nbsp;the&nbsp;motor&nbsp;controller.<br>
+&nbsp;<br>
+:returns:&nbsp;The&nbsp;output&nbsp;current&nbsp;(in&nbsp;amps).</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-getPinStateQuadA"><strong>getPinStateQuadA</strong></a>(self) -&gt; int</dt></dl>
+
+<dl><dt><a name="TalonMotor-getPinStateQuadB"><strong>getPinStateQuadB</strong></a>(self) -&gt; int</dt></dl>
+
+<dl><dt><a name="TalonMotor-getPinStateQuadIdx"><strong>getPinStateQuadIdx</strong></a>(self) -&gt; int</dt></dl>
+
+<dl><dt><a name="TalonMotor-getPulseWidthAll"><strong>getPulseWidthAll</strong></a>(self) -&gt; Tuple[int, int, int, int]</dt></dl>
+
+<dl><dt><a name="TalonMotor-getPulseWidthPosition"><strong>getPulseWidthPosition</strong></a>(self) -&gt; int</dt><dd><tt>Gets&nbsp;pulse&nbsp;width&nbsp;position,&nbsp;regardless&nbsp;of&nbsp;whether<br>
+it&nbsp;is&nbsp;actually&nbsp;being&nbsp;used&nbsp;for&nbsp;feedback.<br>
+&nbsp;<br>
+:returns:&nbsp;the&nbsp;pulse&nbsp;width&nbsp;position.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-getPulseWidthRiseToFallUs"><strong>getPulseWidthRiseToFallUs</strong></a>(self) -&gt; int</dt><dd><tt>Gets&nbsp;pulse&nbsp;width&nbsp;rise&nbsp;to&nbsp;fall&nbsp;time.<br>
+&nbsp;<br>
+:returns:&nbsp;the&nbsp;pulse&nbsp;width&nbsp;rise&nbsp;to&nbsp;fall&nbsp;time&nbsp;in&nbsp;microseconds.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-getPulseWidthRiseToRiseUs"><strong>getPulseWidthRiseToRiseUs</strong></a>(self) -&gt; int</dt><dd><tt>Gets&nbsp;pulse&nbsp;width&nbsp;rise&nbsp;to&nbsp;rise&nbsp;time.<br>
+&nbsp;<br>
+:returns:&nbsp;the&nbsp;pulse&nbsp;width&nbsp;rise&nbsp;to&nbsp;rise&nbsp;time&nbsp;in&nbsp;microseconds.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-getPulseWidthVelocity"><strong>getPulseWidthVelocity</strong></a>(self) -&gt; int</dt><dd><tt>Gets&nbsp;pulse&nbsp;width&nbsp;velocity,&nbsp;regardless&nbsp;of&nbsp;whether<br>
+it&nbsp;is&nbsp;actually&nbsp;being&nbsp;used&nbsp;for&nbsp;feedback.<br>
+&nbsp;<br>
+:returns:&nbsp;the&nbsp;pulse&nbsp;width&nbsp;velocity&nbsp;&nbsp;in&nbsp;units&nbsp;per&nbsp;100ms&nbsp;(where&nbsp;4096&nbsp;units&nbsp;is&nbsp;1&nbsp;rotation).</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-getQuadPinStates"><strong>getQuadPinStates</strong></a>(self) -&gt; Tuple[int, int, int]</dt></dl>
+
+<dl><dt><a name="TalonMotor-getQuadraturePosition"><strong>getQuadraturePosition</strong></a>(self) -&gt; int</dt><dd><tt>Get&nbsp;the&nbsp;quadrature&nbsp;position&nbsp;of&nbsp;the&nbsp;Talon,&nbsp;regardless&nbsp;of&nbsp;whether<br>
+it&nbsp;is&nbsp;actually&nbsp;being&nbsp;used&nbsp;for&nbsp;feedback.<br>
+&nbsp;<br>
+:returns:&nbsp;Quadrature&nbsp;encoder&nbsp;position</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-getQuadratureSensor"><strong>getQuadratureSensor</strong></a>(self) -&gt; Tuple[int, int]</dt></dl>
+
+<dl><dt><a name="TalonMotor-getQuadratureVelocity"><strong>getQuadratureVelocity</strong></a>(self) -&gt; int</dt><dd><tt>Get&nbsp;the&nbsp;quadrature&nbsp;velocity,&nbsp;regardless&nbsp;of&nbsp;whether<br>
+it&nbsp;is&nbsp;actually&nbsp;being&nbsp;used&nbsp;for&nbsp;feedback.<br>
+&nbsp;<br>
+:returns:&nbsp;the&nbsp;quadrature&nbsp;encoder&nbsp;velocity</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-getSelectedSensorPosition"><strong>getSelectedSensorPosition</strong></a>(self, pidIdx:int) -&gt; int</dt><dd><tt>Get&nbsp;the&nbsp;selected&nbsp;sensor&nbsp;position.<br>
+&nbsp;<br>
+:param&nbsp;pidIdx:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;for&nbsp;Primary&nbsp;closed-loop.&nbsp;1&nbsp;for&nbsp;auxiliary&nbsp;closed-loop.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;See&nbsp;Phoenix-Documentation&nbsp;for&nbsp;how&nbsp;to&nbsp;interpret.<br>
+:returns:&nbsp;Position&nbsp;of&nbsp;selected&nbsp;sensor&nbsp;(in&nbsp;Raw&nbsp;Sensor&nbsp;Units).</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-getSelectedSensorVelocity"><strong>getSelectedSensorVelocity</strong></a>(self, pidIdx:int) -&gt; int</dt><dd><tt>Get&nbsp;the&nbsp;selected&nbsp;sensor&nbsp;velocity.<br>
+&nbsp;<br>
+:param&nbsp;pidIdx:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;for&nbsp;Primary&nbsp;closed-loop.&nbsp;1&nbsp;for&nbsp;auxiliary&nbsp;closed-loop.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;See&nbsp;Phoenix-Documentation&nbsp;for&nbsp;how&nbsp;to&nbsp;interpret.<br>
+:returns:&nbsp;selected&nbsp;sensor&nbsp;(in&nbsp;raw&nbsp;sensor&nbsp;units)&nbsp;per&nbsp;100ms.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-getStatusFramePeriod"><strong>getStatusFramePeriod</strong></a>(self, frame:int, timeoutMs:int) -&gt; int</dt><dd><tt>Gets&nbsp;the&nbsp;period&nbsp;of&nbsp;the&nbsp;given&nbsp;status&nbsp;frame.<br>
+&nbsp;<br>
+:param&nbsp;frame:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Frame&nbsp;to&nbsp;get&nbsp;the&nbsp;period&nbsp;of.<br>
+:type&nbsp;frame:&nbsp;:class:`.StatusFrame`&nbsp;or&nbsp;:class:`.StatusFrameEnhanced`<br>
+:param&nbsp;timeoutMs:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Timeout&nbsp;value&nbsp;in&nbsp;ms.&nbsp;If&nbsp;nonzero,&nbsp;function&nbsp;will&nbsp;wait&nbsp;for&nbsp;config<br>
+&nbsp;&nbsp;&nbsp;&nbsp;success&nbsp;and&nbsp;report&nbsp;an&nbsp;error&nbsp;if&nbsp;it&nbsp;times&nbsp;out.&nbsp;If&nbsp;zero,&nbsp;no<br>
+&nbsp;&nbsp;&nbsp;&nbsp;blocking&nbsp;or&nbsp;checking&nbsp;is&nbsp;performed.<br>
+:returns:&nbsp;Period&nbsp;of&nbsp;the&nbsp;given&nbsp;status&nbsp;frame.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-getTemperature"><strong>getTemperature</strong></a>(self) -&gt; float</dt><dd><tt>Gets&nbsp;the&nbsp;temperature&nbsp;of&nbsp;the&nbsp;motor&nbsp;controller.<br>
+&nbsp;<br>
+:returns:&nbsp;Temperature&nbsp;of&nbsp;the&nbsp;motor&nbsp;controller&nbsp;(in&nbsp;'C)</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-hasResetOccurred"><strong>hasResetOccurred</strong></a>(self) -&gt; bool</dt><dd><tt>:returns:&nbsp;Returns&nbsp;true&nbsp;if&nbsp;the&nbsp;device&nbsp;has&nbsp;reset&nbsp;since&nbsp;last&nbsp;call</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-isFwdLimitSwitchClosed"><strong>isFwdLimitSwitchClosed</strong></a>(self) -&gt; int</dt></dl>
+
+<dl><dt><a name="TalonMotor-isMotionProfileTopLevelBufferFull"><strong>isMotionProfileTopLevelBufferFull</strong></a>(self) -&gt; bool</dt><dd><tt>Retrieve&nbsp;just&nbsp;the&nbsp;buffer&nbsp;full&nbsp;for&nbsp;the&nbsp;api-level&nbsp;(top)&nbsp;buffer.&nbsp;This<br>
+routine&nbsp;performs&nbsp;no&nbsp;CAN&nbsp;or&nbsp;data&nbsp;structure&nbsp;lookups,&nbsp;so&nbsp;its&nbsp;fast&nbsp;and&nbsp;ideal<br>
+if&nbsp;caller&nbsp;needs&nbsp;to&nbsp;quickly&nbsp;poll.&nbsp;Otherwise&nbsp;just&nbsp;use<br>
+GetMotionProfileStatus.<br>
+&nbsp;<br>
+:returns:&nbsp;number&nbsp;of&nbsp;trajectory&nbsp;points&nbsp;in&nbsp;the&nbsp;top&nbsp;buffer.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-isRevLimitSwitchClosed"><strong>isRevLimitSwitchClosed</strong></a>(self) -&gt; int</dt></dl>
+
+<dl><dt><a name="TalonMotor-overrideLimitSwitchesEnable"><strong>overrideLimitSwitchesEnable</strong></a>(self, enable:bool) -&gt; None</dt><dd><tt>Sets&nbsp;the&nbsp;enable&nbsp;state&nbsp;for&nbsp;limit&nbsp;switches.<br>
+&nbsp;<br>
+:param&nbsp;enable:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Enable&nbsp;state&nbsp;for&nbsp;limit&nbsp;switches.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-overrideSoftLimitsEnable"><strong>overrideSoftLimitsEnable</strong></a>(self, enable:bool) -&gt; None</dt><dd><tt>Can&nbsp;be&nbsp;used&nbsp;to&nbsp;override-disable&nbsp;the&nbsp;soft&nbsp;limits.<br>
+This&nbsp;function&nbsp;can&nbsp;be&nbsp;used&nbsp;to&nbsp;quickly&nbsp;disable&nbsp;soft&nbsp;limits&nbsp;without<br>
+having&nbsp;to&nbsp;modify&nbsp;the&nbsp;persistent&nbsp;configuration.<br>
+&nbsp;<br>
+:param&nbsp;enable:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Enable&nbsp;state&nbsp;for&nbsp;soft&nbsp;limit&nbsp;switches.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-processMotionProfileBuffer"><strong>processMotionProfileBuffer</strong></a>(self) -&gt; ctre._impl.autogen.ctre_sim_enums.ErrorCode</dt><dd><tt>This&nbsp;must&nbsp;be&nbsp;called&nbsp;periodically&nbsp;to&nbsp;funnel&nbsp;the&nbsp;trajectory&nbsp;points&nbsp;from&nbsp;the<br>
+API's&nbsp;top&nbsp;level&nbsp;buffer&nbsp;to&nbsp;the&nbsp;controller's&nbsp;bottom&nbsp;level&nbsp;buffer.&nbsp;Recommendation<br>
+is&nbsp;to&nbsp;call&nbsp;this&nbsp;twice&nbsp;as&nbsp;fast&nbsp;as&nbsp;the&nbsp;execution&nbsp;rate&nbsp;of&nbsp;the&nbsp;motion<br>
+profile.&nbsp;So&nbsp;if&nbsp;MP&nbsp;is&nbsp;running&nbsp;with&nbsp;20ms&nbsp;trajectory&nbsp;points,&nbsp;try&nbsp;calling<br>
+this&nbsp;routine&nbsp;every&nbsp;10ms.&nbsp;All&nbsp;motion&nbsp;profile&nbsp;functions&nbsp;are&nbsp;thread-safe<br>
+through&nbsp;the&nbsp;use&nbsp;of&nbsp;a&nbsp;mutex,&nbsp;so&nbsp;there&nbsp;is&nbsp;no&nbsp;harm&nbsp;in&nbsp;having&nbsp;the&nbsp;caller<br>
+utilize&nbsp;threading.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-selectDemandType"><strong>selectDemandType</strong></a>(self, enable:bool) -&gt; ctre._impl.autogen.ctre_sim_enums.ErrorCode</dt><dd><tt>For&nbsp;now&nbsp;this&nbsp;simply&nbsp;updates&nbsp;the&nbsp;CAN&nbsp;signal&nbsp;to&nbsp;the&nbsp;motor&nbsp;controller.<br>
+Future&nbsp;firmware&nbsp;updates&nbsp;will&nbsp;use&nbsp;this&nbsp;to&nbsp;control&nbsp;advanced&nbsp;auxiliary&nbsp;loop&nbsp;behavior.<br>
+&nbsp;<br>
+:param&nbsp;value:</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-selectProfileSlot"><strong>selectProfileSlot</strong></a>(self, slotIdx:int, pidIdx:int) -&gt; ctre._impl.autogen.ctre_sim_enums.ErrorCode</dt><dd><tt>Selects&nbsp;which&nbsp;profile&nbsp;slot&nbsp;to&nbsp;use&nbsp;for&nbsp;closed-loop&nbsp;control.<br>
+&nbsp;<br>
+:param&nbsp;slotIdx:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Profile&nbsp;slot&nbsp;to&nbsp;select.<br>
+:param&nbsp;pidIdx:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;for&nbsp;Primary&nbsp;closed-loop.&nbsp;1&nbsp;for&nbsp;auxiliary&nbsp;closed-loop.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-setAnalogPosition"><strong>setAnalogPosition</strong></a>(self, newPosition:int, timeoutMs:int) -&gt; ctre._impl.autogen.ctre_sim_enums.ErrorCode</dt><dd><tt>Sets&nbsp;analog&nbsp;position.<br>
+&nbsp;<br>
+:param&nbsp;newPosition:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;new&nbsp;position.<br>
+:param&nbsp;timeoutMs:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Timeout&nbsp;value&nbsp;in&nbsp;ms.&nbsp;If&nbsp;nonzero,&nbsp;function&nbsp;will&nbsp;wait&nbsp;for&nbsp;config<br>
+&nbsp;&nbsp;&nbsp;&nbsp;success&nbsp;and&nbsp;report&nbsp;an&nbsp;error&nbsp;if&nbsp;it&nbsp;times&nbsp;out.&nbsp;If&nbsp;zero,&nbsp;no<br>
+&nbsp;&nbsp;&nbsp;&nbsp;blocking&nbsp;or&nbsp;checking&nbsp;is&nbsp;performed.<br>
+:returns:&nbsp;an&nbsp;ErrorCode.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-setControlFramePeriod"><strong>setControlFramePeriod</strong></a>(self, frame:int, periodMs:int) -&gt; ctre._impl.autogen.ctre_sim_enums.ErrorCode</dt><dd><tt>Sets&nbsp;the&nbsp;period&nbsp;of&nbsp;the&nbsp;given&nbsp;control&nbsp;frame.<br>
+&nbsp;<br>
+:param&nbsp;frame:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Frame&nbsp;whose&nbsp;period&nbsp;is&nbsp;to&nbsp;be&nbsp;changed.<br>
+:param&nbsp;periodMs:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Period&nbsp;in&nbsp;ms&nbsp;for&nbsp;the&nbsp;given&nbsp;frame.<br>
+:returns:&nbsp;Error&nbsp;Code&nbsp;generated&nbsp;by&nbsp;function.&nbsp;0&nbsp;indicates&nbsp;no&nbsp;error.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-setDemand"><strong>setDemand</strong></a>(self, mode:int, demand0:int, demand1:int) -&gt; ctre._impl.autogen.ctre_sim_enums.ErrorCode</dt></dl>
+
+<dl><dt><a name="TalonMotor-setIntegralAccumulator"><strong>setIntegralAccumulator</strong></a>(self, iaccum:float, pidIdx:int, timeoutMs:int) -&gt; ctre._impl.autogen.ctre_sim_enums.ErrorCode</dt><dd><tt>Sets&nbsp;the&nbsp;integral&nbsp;accumulator.&nbsp;Typically&nbsp;this&nbsp;is&nbsp;used&nbsp;to&nbsp;clear/zero&nbsp;the<br>
+integral&nbsp;accumulator,&nbsp;however&nbsp;some&nbsp;use&nbsp;cases&nbsp;may&nbsp;require&nbsp;seeding&nbsp;the<br>
+accumulator&nbsp;for&nbsp;a&nbsp;faster&nbsp;response.<br>
+&nbsp;<br>
+:param&nbsp;iaccum:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Value&nbsp;to&nbsp;set&nbsp;for&nbsp;the&nbsp;integral&nbsp;accumulator&nbsp;(closed&nbsp;loop&nbsp;error<br>
+&nbsp;&nbsp;&nbsp;&nbsp;units&nbsp;X&nbsp;1ms).<br>
+:param&nbsp;pidIdx:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;for&nbsp;Primary&nbsp;closed-loop.&nbsp;1&nbsp;for&nbsp;auxiliary&nbsp;closed-loop.<br>
+:param&nbsp;timeoutMs:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Timeout&nbsp;value&nbsp;in&nbsp;ms.&nbsp;If&nbsp;nonzero,&nbsp;function&nbsp;will&nbsp;wait&nbsp;for&nbsp;config<br>
+&nbsp;&nbsp;&nbsp;&nbsp;success&nbsp;and&nbsp;report&nbsp;an&nbsp;error&nbsp;if&nbsp;it&nbsp;times&nbsp;out.&nbsp;If&nbsp;zero,&nbsp;no<br>
+&nbsp;&nbsp;&nbsp;&nbsp;blocking&nbsp;or&nbsp;checking&nbsp;is&nbsp;performed.<br>
+:returns:&nbsp;Error&nbsp;Code&nbsp;generated&nbsp;by&nbsp;function.&nbsp;0&nbsp;indicates&nbsp;no&nbsp;error.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-setLastError"><strong>setLastError</strong></a>(self, error:int) -&gt; ctre._impl.autogen.ctre_sim_enums.ErrorCode</dt></dl>
+
+<dl><dt><a name="TalonMotor-setMPEOutput"><strong>setMPEOutput</strong></a>(self, MpeOutput:int) -&gt; ctre._impl.autogen.ctre_sim_enums.ErrorCode</dt></dl>
+
+<dl><dt><a name="TalonMotor-setNeutralMode"><strong>setNeutralMode</strong></a>(self, neutralMode:int) -&gt; None</dt><dd><tt>Sets&nbsp;the&nbsp;mode&nbsp;of&nbsp;operation&nbsp;during&nbsp;neutral&nbsp;throttle&nbsp;output.<br>
+&nbsp;<br>
+:param&nbsp;neutralMode:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;desired&nbsp;mode&nbsp;of&nbsp;operation&nbsp;when&nbsp;the&nbsp;Controller&nbsp;output<br>
+&nbsp;&nbsp;&nbsp;&nbsp;throttle&nbsp;is&nbsp;neutral&nbsp;(ie&nbsp;brake/coast)</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-setPulseWidthPosition"><strong>setPulseWidthPosition</strong></a>(self, newPosition:int, timeoutMs:int) -&gt; ctre._impl.autogen.ctre_sim_enums.ErrorCode</dt><dd><tt>Sets&nbsp;pulse&nbsp;width&nbsp;position.<br>
+&nbsp;<br>
+:param&nbsp;newPosition:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;position&nbsp;value&nbsp;to&nbsp;apply&nbsp;to&nbsp;the&nbsp;sensor.<br>
+:param&nbsp;timeoutMs:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Timeout&nbsp;value&nbsp;in&nbsp;ms.&nbsp;If&nbsp;nonzero,&nbsp;function&nbsp;will&nbsp;wait&nbsp;for&nbsp;config<br>
+&nbsp;&nbsp;&nbsp;&nbsp;success&nbsp;and&nbsp;report&nbsp;an&nbsp;error&nbsp;if&nbsp;it&nbsp;times&nbsp;out.&nbsp;If&nbsp;zero,&nbsp;no<br>
+&nbsp;&nbsp;&nbsp;&nbsp;blocking&nbsp;or&nbsp;checking&nbsp;is&nbsp;performed.<br>
+:returns:&nbsp;an&nbsp;ErrorCode</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-setQuadraturePosition"><strong>setQuadraturePosition</strong></a>(self, newPosition:int, timeoutMs:int) -&gt; ctre._impl.autogen.ctre_sim_enums.ErrorCode</dt><dd><tt>Change&nbsp;the&nbsp;quadrature&nbsp;reported&nbsp;position.&nbsp;Typically&nbsp;this&nbsp;is&nbsp;used&nbsp;to&nbsp;"zero"<br>
+the&nbsp;sensor.&nbsp;This&nbsp;only&nbsp;works&nbsp;with&nbsp;Quadrature&nbsp;sensor.&nbsp;To&nbsp;set&nbsp;the&nbsp;selected<br>
+sensor&nbsp;position&nbsp;regardless&nbsp;of&nbsp;what&nbsp;type&nbsp;it&nbsp;is,&nbsp;see<br>
+SetSelectedSensorPosition&nbsp;in&nbsp;the&nbsp;motor&nbsp;controller&nbsp;class.<br>
+&nbsp;<br>
+:param&nbsp;newPosition:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;position&nbsp;value&nbsp;to&nbsp;apply&nbsp;to&nbsp;the&nbsp;sensor.<br>
+:param&nbsp;timeoutMs:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Timeout&nbsp;value&nbsp;in&nbsp;ms.&nbsp;If&nbsp;nonzero,&nbsp;function&nbsp;will&nbsp;wait&nbsp;for&nbsp;config<br>
+&nbsp;&nbsp;&nbsp;&nbsp;success&nbsp;and&nbsp;report&nbsp;an&nbsp;error&nbsp;if&nbsp;it&nbsp;times&nbsp;out.&nbsp;If&nbsp;zero,&nbsp;no<br>
+&nbsp;&nbsp;&nbsp;&nbsp;blocking&nbsp;or&nbsp;checking&nbsp;is&nbsp;performed.<br>
+:returns:&nbsp;error&nbsp;code.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-setSelectedSensorPosition"><strong>setSelectedSensorPosition</strong></a>(self, sensorPos:int, pidIdx:int, timeoutMs:int) -&gt; ctre._impl.autogen.ctre_sim_enums.ErrorCode</dt><dd><tt>Sets&nbsp;the&nbsp;sensor&nbsp;position&nbsp;to&nbsp;the&nbsp;given&nbsp;value.<br>
+&nbsp;<br>
+:param&nbsp;sensorPos:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Position&nbsp;to&nbsp;set&nbsp;for&nbsp;the&nbsp;selected&nbsp;sensor&nbsp;(in&nbsp;raw&nbsp;sensor&nbsp;units).<br>
+:param&nbsp;pidIdx:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;for&nbsp;Primary&nbsp;closed-loop.&nbsp;1&nbsp;for&nbsp;auxiliary&nbsp;closed-loop.<br>
+:param&nbsp;timeoutMs:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Timeout&nbsp;value&nbsp;in&nbsp;ms.&nbsp;If&nbsp;nonzero,&nbsp;function&nbsp;will&nbsp;wait&nbsp;for&nbsp;config<br>
+&nbsp;&nbsp;&nbsp;&nbsp;success&nbsp;and&nbsp;report&nbsp;an&nbsp;error&nbsp;if&nbsp;it&nbsp;times&nbsp;out.&nbsp;If&nbsp;zero,&nbsp;no<br>
+&nbsp;&nbsp;&nbsp;&nbsp;blocking&nbsp;or&nbsp;checking&nbsp;is&nbsp;performed.<br>
+:returns:&nbsp;Error&nbsp;Code&nbsp;generated&nbsp;by&nbsp;function.&nbsp;0&nbsp;indicates&nbsp;no&nbsp;error.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-setSensorPhase"><strong>setSensorPhase</strong></a>(self, PhaseSensor:bool) -&gt; None</dt><dd><tt>Sets&nbsp;the&nbsp;phase&nbsp;of&nbsp;the&nbsp;sensor.&nbsp;Use&nbsp;when&nbsp;controller&nbsp;forward/reverse&nbsp;output<br>
+doesn't&nbsp;correlate&nbsp;to&nbsp;appropriate&nbsp;forward/reverse&nbsp;reading&nbsp;of&nbsp;sensor.<br>
+&nbsp;<br>
+Pick&nbsp;a&nbsp;value&nbsp;so&nbsp;that&nbsp;positive&nbsp;PercentOutput&nbsp;yields&nbsp;a&nbsp;positive&nbsp;change&nbsp;in&nbsp;sensor.<br>
+After&nbsp;setting&nbsp;this,&nbsp;user&nbsp;can&nbsp;freely&nbsp;call&nbsp;SetInvert()&nbsp;with&nbsp;any&nbsp;value.<br>
+&nbsp;<br>
+:param&nbsp;PhaseSensor:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Indicates&nbsp;whether&nbsp;to&nbsp;invert&nbsp;the&nbsp;phase&nbsp;of&nbsp;the&nbsp;sensor.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-setStatusFramePeriod"><strong>setStatusFramePeriod</strong></a>(self, frame:int, periodMs:int, timeoutMs:int) -&gt; ctre._impl.autogen.ctre_sim_enums.ErrorCode</dt><dd><tt>Sets&nbsp;the&nbsp;period&nbsp;of&nbsp;the&nbsp;given&nbsp;status&nbsp;frame.<br>
+&nbsp;<br>
+User&nbsp;ensure&nbsp;CAN&nbsp;Bus&nbsp;utilization&nbsp;is&nbsp;not&nbsp;high.<br>
+&nbsp;<br>
+This&nbsp;setting&nbsp;is&nbsp;not&nbsp;persistent&nbsp;and&nbsp;is&nbsp;lost&nbsp;when&nbsp;device&nbsp;is&nbsp;reset.&nbsp;If&nbsp;this<br>
+is&nbsp;a&nbsp;concern,&nbsp;calling&nbsp;application&nbsp;can&nbsp;use&nbsp;HasReset()&nbsp;to&nbsp;determine&nbsp;if&nbsp;the<br>
+status&nbsp;frame&nbsp;needs&nbsp;to&nbsp;be&nbsp;reconfigured.<br>
+&nbsp;<br>
+:param&nbsp;frame:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Frame&nbsp;whose&nbsp;period&nbsp;is&nbsp;to&nbsp;be&nbsp;changed.<br>
+:param&nbsp;periodMs:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Period&nbsp;in&nbsp;ms&nbsp;for&nbsp;the&nbsp;given&nbsp;frame.<br>
+:param&nbsp;timeoutMs:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Timeout&nbsp;value&nbsp;in&nbsp;ms.&nbsp;If&nbsp;nonzero,&nbsp;function&nbsp;will&nbsp;wait&nbsp;for&nbsp;config<br>
+&nbsp;&nbsp;&nbsp;&nbsp;success&nbsp;and&nbsp;report&nbsp;an&nbsp;error&nbsp;if&nbsp;it&nbsp;times&nbsp;out.&nbsp;If&nbsp;zero,&nbsp;no<br>
+&nbsp;&nbsp;&nbsp;&nbsp;blocking&nbsp;or&nbsp;checking&nbsp;is&nbsp;performed.<br>
+:returns:&nbsp;Error&nbsp;Code&nbsp;generated&nbsp;by&nbsp;function.&nbsp;0&nbsp;indicates&nbsp;no&nbsp;error.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="ctre._impl.autogen.motcontroller_sim.html#MotController">ctre._impl.autogen.motcontroller_sim.MotController</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="ctre._impl.autogen.motcontroller_sim.html#MotController">ctre._impl.autogen.motcontroller_sim.MotController</a>:<br>
+<dl><dt><strong>Notifier</strong> = &lt;class 'wpilib.notifier.Notifier'&gt;</dl>
+
+<hr>
+Methods inherited from <a href="wpilib.sendablebase.html#SendableBase">wpilib.sendablebase.SendableBase</a>:<br>
+<dl><dt><a name="TalonMotor-addChild"><strong>addChild</strong></a>(self, child)</dt><dd><tt>Add&nbsp;a&nbsp;child&nbsp;component<br>
+&nbsp;<br>
+:param&nbsp;child:&nbsp;child&nbsp;component</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-free"><strong>free</strong></a>(self)</dt><dd><tt>Free&nbsp;the&nbsp;resources&nbsp;used&nbsp;by&nbsp;this&nbsp;object.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-getName"><strong>getName</strong></a>(self)</dt><dd><tt>Gets&nbsp;the&nbsp;name&nbsp;of&nbsp;this&nbsp;Sendable&nbsp;object.<br>
+&nbsp;<br>
+:returns:&nbsp;Name</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-getSubsystem"><strong>getSubsystem</strong></a>(self)</dt><dd><tt>Gets&nbsp;the&nbsp;subsystem&nbsp;name&nbsp;of&nbsp;this&nbsp;Sendable&nbsp;object.<br>
+&nbsp;<br>
+:returns:&nbsp;subsystem&nbsp;name</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-setName"><strong>setName</strong></a>(self, *args, **kwargs)</dt><dd><tt>Sets&nbsp;the&nbsp;name&nbsp;of&nbsp;this&nbsp;Sendable&nbsp;object.<br>
+&nbsp;<br>
+Arguments&nbsp;can&nbsp;be&nbsp;structured&nbsp;as&nbsp;follows:<br>
+&nbsp;<br>
+-&nbsp;name<br>
+-&nbsp;subsystem,&nbsp;name<br>
+-&nbsp;moduleType,&nbsp;channel<br>
+-&nbsp;moduleType,&nbsp;moduleNumber,&nbsp;channel<br>
+&nbsp;<br>
+:param&nbsp;name:&nbsp;name<br>
+:type&nbsp;name:&nbsp;str<br>
+:param&nbsp;subsystem:&nbsp;subsystem&nbsp;name<br>
+:type&nbsp;subsystem:&nbsp;str<br>
+:param&nbsp;moduleType:&nbsp;A&nbsp;string&nbsp;that&nbsp;defines&nbsp;the&nbsp;module&nbsp;name&nbsp;in&nbsp;the&nbsp;label&nbsp;for&nbsp;the&nbsp;value<br>
+:type&nbsp;moduleType:&nbsp;str<br>
+:param&nbsp;channel:&nbsp;The&nbsp;channel&nbsp;number&nbsp;the&nbsp;device&nbsp;is&nbsp;plugged&nbsp;into<br>
+:type&nbsp;channel:&nbsp;int<br>
+:param&nbsp;moduleNumber:&nbsp;The&nbsp;number&nbsp;of&nbsp;the&nbsp;particular&nbsp;module&nbsp;type<br>
+:type&nbsp;moduleNumber:&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-setSubsystem"><strong>setSubsystem</strong></a>(self, subsystem)</dt><dd><tt>Sets&nbsp;the&nbsp;subsystem&nbsp;name&nbsp;of&nbsp;this&nbsp;Sendable&nbsp;object.<br>
+&nbsp;<br>
+:param&nbsp;subsystem:&nbsp;subsystem&nbsp;name</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="wpilib.motorsafety.html#MotorSafety">wpilib.motorsafety.MotorSafety</a>:<br>
+<dl><dt><a name="TalonMotor-check"><strong>check</strong></a>(self)</dt><dd><tt>Check&nbsp;if&nbsp;this&nbsp;motor&nbsp;has&nbsp;exceeded&nbsp;its&nbsp;timeout.<br>
+This&nbsp;method&nbsp;is&nbsp;called&nbsp;periodically&nbsp;to&nbsp;determine&nbsp;if&nbsp;this&nbsp;motor&nbsp;has<br>
+exceeded&nbsp;its&nbsp;timeout&nbsp;value.&nbsp;If&nbsp;it&nbsp;has,&nbsp;the&nbsp;stop&nbsp;method&nbsp;is&nbsp;called,<br>
+and&nbsp;the&nbsp;motor&nbsp;is&nbsp;shut&nbsp;down&nbsp;until&nbsp;its&nbsp;value&nbsp;is&nbsp;updated&nbsp;again.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-feed"><strong>feed</strong></a>(self)</dt><dd><tt>Feed&nbsp;the&nbsp;motor&nbsp;safety&nbsp;object.<br>
+Resets&nbsp;the&nbsp;timer&nbsp;on&nbsp;this&nbsp;object&nbsp;that&nbsp;is&nbsp;used&nbsp;to&nbsp;do&nbsp;the&nbsp;timeouts.</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-getExpiration"><strong>getExpiration</strong></a>(self)</dt><dd><tt>Retrieve&nbsp;the&nbsp;timeout&nbsp;value&nbsp;for&nbsp;the&nbsp;corresponding&nbsp;motor&nbsp;safety<br>
+object.<br>
+&nbsp;<br>
+:returns:&nbsp;the&nbsp;timeout&nbsp;value&nbsp;in&nbsp;seconds.<br>
+:rtype:&nbsp;float</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-isAlive"><strong>isAlive</strong></a>(self)</dt><dd><tt>Determine&nbsp;of&nbsp;the&nbsp;motor&nbsp;is&nbsp;still&nbsp;operating&nbsp;or&nbsp;has&nbsp;timed&nbsp;out.<br>
+&nbsp;<br>
+:returns:&nbsp;True&nbsp;if&nbsp;the&nbsp;motor&nbsp;is&nbsp;still&nbsp;operating&nbsp;normally&nbsp;and&nbsp;hasn't<br>
+&nbsp;&nbsp;&nbsp;&nbsp;timed&nbsp;out.<br>
+:rtype:&nbsp;float</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-isSafetyEnabled"><strong>isSafetyEnabled</strong></a>(self)</dt><dd><tt>Return&nbsp;the&nbsp;state&nbsp;of&nbsp;the&nbsp;motor&nbsp;safety&nbsp;enabled&nbsp;flag.<br>
+Return&nbsp;if&nbsp;the&nbsp;motor&nbsp;safety&nbsp;is&nbsp;currently&nbsp;enabled&nbsp;for&nbsp;this&nbsp;device.<br>
+&nbsp;<br>
+:returns:&nbsp;True&nbsp;if&nbsp;motor&nbsp;safety&nbsp;is&nbsp;enforced&nbsp;for&nbsp;this&nbsp;device<br>
+:rtype:&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-setExpiration"><strong>setExpiration</strong></a>(self, expirationTime)</dt><dd><tt>Set&nbsp;the&nbsp;expiration&nbsp;time&nbsp;for&nbsp;the&nbsp;corresponding&nbsp;motor&nbsp;safety&nbsp;object.<br>
+&nbsp;<br>
+:param&nbsp;expirationTime:&nbsp;The&nbsp;timeout&nbsp;value&nbsp;in&nbsp;seconds.<br>
+:type&nbsp;expirationTime:&nbsp;float</tt></dd></dl>
+
+<dl><dt><a name="TalonMotor-setSafetyEnabled"><strong>setSafetyEnabled</strong></a>(self, enabled)</dt><dd><tt>Enable/disable&nbsp;motor&nbsp;safety&nbsp;for&nbsp;this&nbsp;device.<br>
+Turn&nbsp;on&nbsp;and&nbsp;off&nbsp;the&nbsp;motor&nbsp;safety&nbsp;option&nbsp;for&nbsp;this&nbsp;PWM&nbsp;object.<br>
+&nbsp;<br>
+:param&nbsp;enabled:&nbsp;True&nbsp;if&nbsp;motor&nbsp;safety&nbsp;is&nbsp;enforced&nbsp;for&nbsp;this&nbsp;object<br>
+:type&nbsp;&nbsp;enabled:&nbsp;bool</tt></dd></dl>
+
+<hr>
+Static methods inherited from <a href="wpilib.motorsafety.html#MotorSafety">wpilib.motorsafety.MotorSafety</a>:<br>
+<dl><dt><a name="TalonMotor-checkMotors"><strong>checkMotors</strong></a>()</dt><dd><tt>Check&nbsp;the&nbsp;motors&nbsp;to&nbsp;see&nbsp;if&nbsp;any&nbsp;have&nbsp;timed&nbsp;out.<br>
+This&nbsp;static&nbsp;method&nbsp;is&nbsp;called&nbsp;periodically&nbsp;to&nbsp;poll&nbsp;all&nbsp;the&nbsp;motors&nbsp;and<br>
+stop&nbsp;any&nbsp;that&nbsp;have&nbsp;timed&nbsp;out.</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="wpilib.motorsafety.html#MotorSafety">wpilib.motorsafety.MotorSafety</a>:<br>
+<dl><dt><strong>DEFAULT_SAFETY_EXPIRATION</strong> = 0.1</dl>
+
+<dl><dt><strong>helpers</strong> = &lt;_weakrefset.WeakSet object&gt;</dl>
+
+<dl><dt><strong>helpers_lock</strong> = &lt;unlocked _thread.lock object&gt;</dl>
+
+</td></tr></table></td></tr></table>
+</body></html>

@@ -1,0 +1,504 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module KiwiRobotLib.handlers</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="KiwiRobotLib.html"><font color="#ffffff">KiwiRobotLib</font></a>.handlers</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cmurp9%5Cdocuments%5Cprogramming%5Crobotics%5Cpython%5Ckiwirobotics%5Ckiwirobotlib%5Chandlers.py">c:\users\murp9\documents\programming\robotics\python\kiwirobotics\kiwirobotlib\handlers.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#9AC2C9">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#9AC2C9"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="ctre.html">ctre</a><br>
+</td><td width="25%" valign=top><a href="time.html">time</a><br>
+</td><td width="25%" valign=top><a href="wpilib.html">wpilib</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#8AA1B1">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#8AA1B1"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="collections.html#deque">collections.deque</a>(<a href="builtins.html#object">builtins.object</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="KiwiRobotLib.handlers.html#Handler">Handler</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="KiwiRobotLib.handlers.html#SolenoidHandler">SolenoidHandler</a>
+</font></dt></dl>
+</dd>
+</dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="wpilib.speedcontrollergroup.html#SpeedControllerGroup">wpilib.speedcontrollergroup.SpeedControllerGroup</a>(<a href="wpilib.sendablebase.html#SendableBase">wpilib.sendablebase.SendableBase</a>, <a href="wpilib.interfaces.speedcontroller.html#SpeedController">wpilib.interfaces.speedcontroller.SpeedController</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="KiwiRobotLib.handlers.html#MotorHandler">MotorHandler</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#B9D8C2">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Handler">class <strong>Handler</strong></a>(<a href="collections.html#deque">collections.deque</a>)</font></td></tr>
+    
+<tr bgcolor="#B9D8C2"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>This&nbsp;is&nbsp;the&nbsp;baseclass&nbsp;for&nbsp;all&nbsp;of&nbsp;the&nbsp;different<br>
+handlers,&nbsp;such&nbsp;as&nbsp;the&nbsp;Solenoid&nbsp;handler.<br>
+&nbsp;<br>
+This&nbsp;class&nbsp;is&nbsp;meant&nbsp;to&nbsp;allow&nbsp;objects&nbsp;of&nbsp;the&nbsp;same&nbsp;or<br>
+similar&nbsp;types&nbsp;to&nbsp;be&nbsp;grouped&nbsp;together&nbsp;and&nbsp;to&nbsp;be&nbsp;controlled<br>
+as&nbsp;a&nbsp;whole.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="KiwiRobotLib.handlers.html#Handler">Handler</a></dd>
+<dd><a href="collections.html#deque">collections.deque</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Handler-__call__"><strong>__call__</strong></a>(self, method, *args)</dt><dd><tt>This&nbsp;allows&nbsp;the&nbsp;handler&nbsp;to&nbsp;be&nbsp;called&nbsp;like&nbsp;a&nbsp;function<br>
+to&nbsp;run&nbsp;a&nbsp;function&nbsp;on&nbsp;all&nbsp;of&nbsp;the&nbsp;handlers&nbsp;children.<br>
+&nbsp;<br>
+For&nbsp;example:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;'''<br>
+&nbsp;&nbsp;&nbsp;&nbsp;h&nbsp;=&nbsp;<a href="#Handler">Handler</a>(TalonMotor(1),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TalonMotor(2))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;h(TalonMotor.set,&nbsp;1)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;'''<br>
+This&nbsp;code&nbsp;will&nbsp;set&nbsp;the&nbsp;<a href="#Handler">Handler</a>'s&nbsp;talon&nbsp;motors&nbsp;to<br>
+100%.<br>
+&nbsp;<br>
+This&nbsp;is&nbsp;identical&nbsp;to:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;'''<br>
+&nbsp;&nbsp;&nbsp;&nbsp;h&nbsp;=&nbsp;<a href="#Handler">Handler</a>(TalonMotor(1),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TalonMotor(2))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;h.<a href="#Handler-handle">handle</a>(TalonMotor.set,&nbsp;1)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;'''</tt></dd></dl>
+
+<dl><dt><a name="Handler-__init__"><strong>__init__</strong></a>(self, *args)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="Handler-handle"><strong>handle</strong></a>(self, method, *args)</dt><dd><tt>This&nbsp;function&nbsp;is&nbsp;identical&nbsp;to&nbsp;the&nbsp;__call__<br>
+function&nbsp;of&nbsp;this&nbsp;class.<br>
+&nbsp;<br>
+It&nbsp;allows&nbsp;the&nbsp;handler&nbsp;to&nbsp;call&nbsp;a&nbsp;function&nbsp;on&nbsp;all<br>
+of&nbsp;the&nbsp;handlers&nbsp;children.<br>
+&nbsp;<br>
+Here's&nbsp;an&nbsp;example:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;'''<br>
+&nbsp;&nbsp;&nbsp;&nbsp;h&nbsp;=&nbsp;<a href="#Handler">Handler</a>(TalonMotor(1),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TalonMotor(2))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;h.<a href="#Handler-handle">handle</a>(TalonMotor.set,&nbsp;1)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;'''<br>
+This&nbsp;code&nbsp;will&nbsp;set&nbsp;the&nbsp;<a href="#Handler">Handler</a>'s&nbsp;talon&nbsp;motors&nbsp;to<br>
+100%.</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Methods inherited from <a href="collections.html#deque">collections.deque</a>:<br>
+<dl><dt><a name="Handler-__add__"><strong>__add__</strong></a>(self, value, /)</dt><dd><tt>Return&nbsp;self+value.</tt></dd></dl>
+
+<dl><dt><a name="Handler-__bool__"><strong>__bool__</strong></a>(self, /)</dt><dd><tt>self&nbsp;!=&nbsp;0</tt></dd></dl>
+
+<dl><dt><a name="Handler-__contains__"><strong>__contains__</strong></a>(self, key, /)</dt><dd><tt>Return&nbsp;key&nbsp;in&nbsp;self.</tt></dd></dl>
+
+<dl><dt><a name="Handler-__copy__"><strong>__copy__</strong></a>(...)</dt><dd><tt>Return&nbsp;a&nbsp;shallow&nbsp;copy&nbsp;of&nbsp;a&nbsp;<a href="collections.html#deque">deque</a>.</tt></dd></dl>
+
+<dl><dt><a name="Handler-__delitem__"><strong>__delitem__</strong></a>(self, key, /)</dt><dd><tt>Delete&nbsp;self[key].</tt></dd></dl>
+
+<dl><dt><a name="Handler-__eq__"><strong>__eq__</strong></a>(self, value, /)</dt><dd><tt>Return&nbsp;self==value.</tt></dd></dl>
+
+<dl><dt><a name="Handler-__ge__"><strong>__ge__</strong></a>(self, value, /)</dt><dd><tt>Return&nbsp;self&gt;=value.</tt></dd></dl>
+
+<dl><dt><a name="Handler-__getattribute__"><strong>__getattribute__</strong></a>(self, name, /)</dt><dd><tt>Return&nbsp;getattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="Handler-__getitem__"><strong>__getitem__</strong></a>(self, key, /)</dt><dd><tt>Return&nbsp;self[key].</tt></dd></dl>
+
+<dl><dt><a name="Handler-__gt__"><strong>__gt__</strong></a>(self, value, /)</dt><dd><tt>Return&nbsp;self&gt;value.</tt></dd></dl>
+
+<dl><dt><a name="Handler-__iadd__"><strong>__iadd__</strong></a>(self, value, /)</dt><dd><tt>Implement&nbsp;self+=value.</tt></dd></dl>
+
+<dl><dt><a name="Handler-__imul__"><strong>__imul__</strong></a>(self, value, /)</dt><dd><tt>Implement&nbsp;self*=value.</tt></dd></dl>
+
+<dl><dt><a name="Handler-__iter__"><strong>__iter__</strong></a>(self, /)</dt><dd><tt>Implement&nbsp;iter(self).</tt></dd></dl>
+
+<dl><dt><a name="Handler-__le__"><strong>__le__</strong></a>(self, value, /)</dt><dd><tt>Return&nbsp;self&lt;=value.</tt></dd></dl>
+
+<dl><dt><a name="Handler-__len__"><strong>__len__</strong></a>(self, /)</dt><dd><tt>Return&nbsp;len(self).</tt></dd></dl>
+
+<dl><dt><a name="Handler-__lt__"><strong>__lt__</strong></a>(self, value, /)</dt><dd><tt>Return&nbsp;self&lt;value.</tt></dd></dl>
+
+<dl><dt><a name="Handler-__mul__"><strong>__mul__</strong></a>(self, value, /)</dt><dd><tt>Return&nbsp;self*value.n</tt></dd></dl>
+
+<dl><dt><a name="Handler-__ne__"><strong>__ne__</strong></a>(self, value, /)</dt><dd><tt>Return&nbsp;self!=value.</tt></dd></dl>
+
+<dl><dt><a name="Handler-__new__"><strong>__new__</strong></a>(*args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;object.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="Handler-__reduce__"><strong>__reduce__</strong></a>(...)</dt><dd><tt>Return&nbsp;state&nbsp;information&nbsp;for&nbsp;pickling.</tt></dd></dl>
+
+<dl><dt><a name="Handler-__repr__"><strong>__repr__</strong></a>(self, /)</dt><dd><tt>Return&nbsp;repr(self).</tt></dd></dl>
+
+<dl><dt><a name="Handler-__reversed__"><strong>__reversed__</strong></a>(...)</dt><dd><tt>D.<a href="#Handler-__reversed__">__reversed__</a>()&nbsp;--&nbsp;return&nbsp;a&nbsp;reverse&nbsp;iterator&nbsp;over&nbsp;the&nbsp;<a href="collections.html#deque">deque</a></tt></dd></dl>
+
+<dl><dt><a name="Handler-__rmul__"><strong>__rmul__</strong></a>(self, value, /)</dt><dd><tt>Return&nbsp;self*value.</tt></dd></dl>
+
+<dl><dt><a name="Handler-__setitem__"><strong>__setitem__</strong></a>(self, key, value, /)</dt><dd><tt>Set&nbsp;self[key]&nbsp;to&nbsp;value.</tt></dd></dl>
+
+<dl><dt><a name="Handler-__sizeof__"><strong>__sizeof__</strong></a>(...)</dt><dd><tt>D.<a href="#Handler-__sizeof__">__sizeof__</a>()&nbsp;--&nbsp;size&nbsp;of&nbsp;D&nbsp;in&nbsp;memory,&nbsp;in&nbsp;bytes</tt></dd></dl>
+
+<dl><dt><a name="Handler-append"><strong>append</strong></a>(...)</dt><dd><tt>Add&nbsp;an&nbsp;element&nbsp;to&nbsp;the&nbsp;right&nbsp;side&nbsp;of&nbsp;the&nbsp;<a href="collections.html#deque">deque</a>.</tt></dd></dl>
+
+<dl><dt><a name="Handler-appendleft"><strong>appendleft</strong></a>(...)</dt><dd><tt>Add&nbsp;an&nbsp;element&nbsp;to&nbsp;the&nbsp;left&nbsp;side&nbsp;of&nbsp;the&nbsp;<a href="collections.html#deque">deque</a>.</tt></dd></dl>
+
+<dl><dt><a name="Handler-clear"><strong>clear</strong></a>(...)</dt><dd><tt>Remove&nbsp;all&nbsp;elements&nbsp;from&nbsp;the&nbsp;<a href="collections.html#deque">deque</a>.</tt></dd></dl>
+
+<dl><dt><a name="Handler-copy"><strong>copy</strong></a>(...)</dt><dd><tt>Return&nbsp;a&nbsp;shallow&nbsp;copy&nbsp;of&nbsp;a&nbsp;<a href="collections.html#deque">deque</a>.</tt></dd></dl>
+
+<dl><dt><a name="Handler-count"><strong>count</strong></a>(...)</dt><dd><tt>D.<a href="#Handler-count">count</a>(value)&nbsp;-&gt;&nbsp;integer&nbsp;--&nbsp;return&nbsp;number&nbsp;of&nbsp;occurrences&nbsp;of&nbsp;value</tt></dd></dl>
+
+<dl><dt><a name="Handler-extend"><strong>extend</strong></a>(...)</dt><dd><tt>Extend&nbsp;the&nbsp;right&nbsp;side&nbsp;of&nbsp;the&nbsp;<a href="collections.html#deque">deque</a>&nbsp;with&nbsp;elements&nbsp;from&nbsp;the&nbsp;iterable</tt></dd></dl>
+
+<dl><dt><a name="Handler-extendleft"><strong>extendleft</strong></a>(...)</dt><dd><tt>Extend&nbsp;the&nbsp;left&nbsp;side&nbsp;of&nbsp;the&nbsp;<a href="collections.html#deque">deque</a>&nbsp;with&nbsp;elements&nbsp;from&nbsp;the&nbsp;iterable</tt></dd></dl>
+
+<dl><dt><a name="Handler-index"><strong>index</strong></a>(...)</dt><dd><tt>D.<a href="#Handler-index">index</a>(value,&nbsp;[start,&nbsp;[stop]])&nbsp;-&gt;&nbsp;integer&nbsp;--&nbsp;return&nbsp;first&nbsp;index&nbsp;of&nbsp;value.<br>
+Raises&nbsp;ValueError&nbsp;if&nbsp;the&nbsp;value&nbsp;is&nbsp;not&nbsp;present.</tt></dd></dl>
+
+<dl><dt><a name="Handler-insert"><strong>insert</strong></a>(...)</dt><dd><tt>D.<a href="#Handler-insert">insert</a>(index,&nbsp;object)&nbsp;--&nbsp;insert&nbsp;object&nbsp;before&nbsp;index</tt></dd></dl>
+
+<dl><dt><a name="Handler-pop"><strong>pop</strong></a>(...)</dt><dd><tt>Remove&nbsp;and&nbsp;return&nbsp;the&nbsp;rightmost&nbsp;element.</tt></dd></dl>
+
+<dl><dt><a name="Handler-popleft"><strong>popleft</strong></a>(...)</dt><dd><tt>Remove&nbsp;and&nbsp;return&nbsp;the&nbsp;leftmost&nbsp;element.</tt></dd></dl>
+
+<dl><dt><a name="Handler-remove"><strong>remove</strong></a>(...)</dt><dd><tt>D.<a href="#Handler-remove">remove</a>(value)&nbsp;--&nbsp;remove&nbsp;first&nbsp;occurrence&nbsp;of&nbsp;value.</tt></dd></dl>
+
+<dl><dt><a name="Handler-reverse"><strong>reverse</strong></a>(...)</dt><dd><tt>D.<a href="#Handler-reverse">reverse</a>()&nbsp;--&nbsp;reverse&nbsp;*IN&nbsp;PLACE*</tt></dd></dl>
+
+<dl><dt><a name="Handler-rotate"><strong>rotate</strong></a>(...)</dt><dd><tt>Rotate&nbsp;the&nbsp;<a href="collections.html#deque">deque</a>&nbsp;n&nbsp;steps&nbsp;to&nbsp;the&nbsp;right&nbsp;(default&nbsp;n=1).&nbsp;&nbsp;If&nbsp;n&nbsp;is&nbsp;negative,&nbsp;rotates&nbsp;left.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="collections.html#deque">collections.deque</a>:<br>
+<dl><dt><strong>maxlen</strong></dt>
+<dd><tt>maximum&nbsp;size&nbsp;of&nbsp;a&nbsp;deque&nbsp;or&nbsp;None&nbsp;if&nbsp;unbounded</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="collections.html#deque">collections.deque</a>:<br>
+<dl><dt><strong>__hash__</strong> = None</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#B9D8C2">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="MotorHandler">class <strong>MotorHandler</strong></a>(<a href="wpilib.speedcontrollergroup.html#SpeedControllerGroup">wpilib.speedcontrollergroup.SpeedControllerGroup</a>)</font></td></tr>
+    
+<tr bgcolor="#B9D8C2"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>This&nbsp;handler&nbsp;is&nbsp;used&nbsp;to&nbsp;group&nbsp;motors&nbsp;together<br>
+and&nbsp;to&nbsp;control&nbsp;them&nbsp;as&nbsp;a&nbsp;whole.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="KiwiRobotLib.handlers.html#MotorHandler">MotorHandler</a></dd>
+<dd><a href="wpilib.speedcontrollergroup.html#SpeedControllerGroup">wpilib.speedcontrollergroup.SpeedControllerGroup</a></dd>
+<dd><a href="wpilib.sendablebase.html#SendableBase">wpilib.sendablebase.SendableBase</a></dd>
+<dd><a href="wpilib.sendable.html#Sendable">wpilib.sendable.Sendable</a></dd>
+<dd><a href="wpilib.interfaces.speedcontroller.html#SpeedController">wpilib.interfaces.speedcontroller.SpeedController</a></dd>
+<dd><a href="wpilib.interfaces.pidoutput.html#PIDOutput">wpilib.interfaces.pidoutput.PIDOutput</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="MotorHandler-__call__"><strong>__call__</strong></a>(self, method, *args)</dt><dd><tt>See&nbsp;<a href="#Handler">Handler</a>.__call__</tt></dd></dl>
+
+<dl><dt><a name="MotorHandler-__getitem__"><strong>__getitem__</strong></a>(self, n)</dt></dl>
+
+<dl><dt><a name="MotorHandler-__init__"><strong>__init__</strong></a>(self, *args)</dt><dd><tt>Create&nbsp;a&nbsp;new&nbsp;<a href="wpilib.speedcontrollergroup.html#SpeedControllerGroup">SpeedControllerGroup</a>&nbsp;with&nbsp;the&nbsp;provided&nbsp;SpeedControllers.<br>
+&nbsp;<br>
+:param&nbsp;args:&nbsp;SpeedControllers&nbsp;to&nbsp;add<br>
+:type&nbsp;args:&nbsp;:class:`.SpeedController`</tt></dd></dl>
+
+<dl><dt><a name="MotorHandler-__iter__"><strong>__iter__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="MotorHandler-__len__"><strong>__len__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="MotorHandler-append"><strong>append</strong></a>(self, a)</dt><dd><tt>This&nbsp;adds&nbsp;a&nbsp;motor&nbsp;object&nbsp;to&nbsp;the&nbsp;handler.</tt></dd></dl>
+
+<dl><dt><a name="MotorHandler-handle"><strong>handle</strong></a>(self, method, *args)</dt><dd><tt>See&nbsp;<a href="#Handler">Handler</a>.handle</tt></dd></dl>
+
+<dl><dt><a name="MotorHandler-invert"><strong>invert</strong></a>(self)</dt><dd><tt>This&nbsp;inverts&nbsp;all&nbsp;of&nbsp;the&nbsp;motors&nbsp;in&nbsp;the&nbsp;handler.</tt></dd></dl>
+
+<dl><dt><a name="MotorHandler-set"><strong>set</strong></a>(self, s)</dt><dd><tt>This&nbsp;sets&nbsp;the&nbsp;speed&nbsp;of&nbsp;all&nbsp;the&nbsp;motors<br>
+in&nbsp;the&nbsp;handler&nbsp;to&nbsp;a&nbsp;given&nbsp;percent.</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="wpilib.speedcontrollergroup.html#SpeedControllerGroup">wpilib.speedcontrollergroup.SpeedControllerGroup</a>:<br>
+<dl><dt><a name="MotorHandler-disable"><strong>disable</strong></a>(self)</dt><dd><tt>Disable&nbsp;the&nbsp;speed&nbsp;controller.</tt></dd></dl>
+
+<dl><dt><a name="MotorHandler-get"><strong>get</strong></a>(self)</dt><dd><tt>Common&nbsp;interface&nbsp;for&nbsp;getting&nbsp;the&nbsp;current&nbsp;set&nbsp;speed&nbsp;of&nbsp;a&nbsp;speed<br>
+controller.<br>
+&nbsp;<br>
+:returns:&nbsp;The&nbsp;current&nbsp;set&nbsp;speed.&nbsp;&nbsp;Value&nbsp;is&nbsp;between&nbsp;-1.0&nbsp;and&nbsp;1.0.</tt></dd></dl>
+
+<dl><dt><a name="MotorHandler-getInverted"><strong>getInverted</strong></a>(self)</dt><dd><tt>Common&nbsp;interface&nbsp;for&nbsp;determining&nbsp;if&nbsp;a&nbsp;speed&nbsp;controller&nbsp;is&nbsp;in&nbsp;the<br>
+inverted&nbsp;state&nbsp;or&nbsp;not.<br>
+&nbsp;<br>
+:returns:&nbsp;True&nbsp;if&nbsp;in&nbsp;inverted&nbsp;state</tt></dd></dl>
+
+<dl><dt><a name="MotorHandler-initSendable"><strong>initSendable</strong></a>(self, builder)</dt><dd><tt>Initializes&nbsp;this&nbsp;Sendable&nbsp;object.<br>
+&nbsp;<br>
+:param&nbsp;builder:&nbsp;sendable&nbsp;builder</tt></dd></dl>
+
+<dl><dt><a name="MotorHandler-pidWrite"><strong>pidWrite</strong></a>(self, output)</dt><dd><tt>Set&nbsp;the&nbsp;output&nbsp;to&nbsp;the&nbsp;value&nbsp;calculated&nbsp;by&nbsp;:class:`.PIDController`.<br>
+&nbsp;<br>
+:param&nbsp;output:&nbsp;the&nbsp;value&nbsp;calculated&nbsp;by&nbsp;PIDController</tt></dd></dl>
+
+<dl><dt><a name="MotorHandler-setInverted"><strong>setInverted</strong></a>(self, isInverted)</dt><dd><tt>Common&nbsp;interface&nbsp;for&nbsp;inverting&nbsp;direction&nbsp;of&nbsp;a&nbsp;speed&nbsp;controller.<br>
+&nbsp;<br>
+:param&nbsp;isInverted:&nbsp;The&nbsp;state&nbsp;of&nbsp;inversion</tt></dd></dl>
+
+<dl><dt><a name="MotorHandler-stopMotor"><strong>stopMotor</strong></a>(self)</dt><dd><tt>Stops&nbsp;motor&nbsp;movement.&nbsp;Motor&nbsp;can&nbsp;be&nbsp;moved&nbsp;again&nbsp;by&nbsp;calling&nbsp;set&nbsp;without&nbsp;having<br>
+to&nbsp;re-enable&nbsp;the&nbsp;motor.</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="wpilib.speedcontrollergroup.html#SpeedControllerGroup">wpilib.speedcontrollergroup.SpeedControllerGroup</a>:<br>
+<dl><dt><strong>instances</strong> = 0</dl>
+
+<hr>
+Methods inherited from <a href="wpilib.sendablebase.html#SendableBase">wpilib.sendablebase.SendableBase</a>:<br>
+<dl><dt><a name="MotorHandler-addChild"><strong>addChild</strong></a>(self, child)</dt><dd><tt>Add&nbsp;a&nbsp;child&nbsp;component<br>
+&nbsp;<br>
+:param&nbsp;child:&nbsp;child&nbsp;component</tt></dd></dl>
+
+<dl><dt><a name="MotorHandler-free"><strong>free</strong></a>(self)</dt><dd><tt>Free&nbsp;the&nbsp;resources&nbsp;used&nbsp;by&nbsp;this&nbsp;object.</tt></dd></dl>
+
+<dl><dt><a name="MotorHandler-getName"><strong>getName</strong></a>(self)</dt><dd><tt>Gets&nbsp;the&nbsp;name&nbsp;of&nbsp;this&nbsp;Sendable&nbsp;object.<br>
+&nbsp;<br>
+:returns:&nbsp;Name</tt></dd></dl>
+
+<dl><dt><a name="MotorHandler-getSubsystem"><strong>getSubsystem</strong></a>(self)</dt><dd><tt>Gets&nbsp;the&nbsp;subsystem&nbsp;name&nbsp;of&nbsp;this&nbsp;Sendable&nbsp;object.<br>
+&nbsp;<br>
+:returns:&nbsp;subsystem&nbsp;name</tt></dd></dl>
+
+<dl><dt><a name="MotorHandler-setName"><strong>setName</strong></a>(self, *args, **kwargs)</dt><dd><tt>Sets&nbsp;the&nbsp;name&nbsp;of&nbsp;this&nbsp;Sendable&nbsp;object.<br>
+&nbsp;<br>
+Arguments&nbsp;can&nbsp;be&nbsp;structured&nbsp;as&nbsp;follows:<br>
+&nbsp;<br>
+-&nbsp;name<br>
+-&nbsp;subsystem,&nbsp;name<br>
+-&nbsp;moduleType,&nbsp;channel<br>
+-&nbsp;moduleType,&nbsp;moduleNumber,&nbsp;channel<br>
+&nbsp;<br>
+:param&nbsp;name:&nbsp;name<br>
+:type&nbsp;name:&nbsp;str<br>
+:param&nbsp;subsystem:&nbsp;subsystem&nbsp;name<br>
+:type&nbsp;subsystem:&nbsp;str<br>
+:param&nbsp;moduleType:&nbsp;A&nbsp;string&nbsp;that&nbsp;defines&nbsp;the&nbsp;module&nbsp;name&nbsp;in&nbsp;the&nbsp;label&nbsp;for&nbsp;the&nbsp;value<br>
+:type&nbsp;moduleType:&nbsp;str<br>
+:param&nbsp;channel:&nbsp;The&nbsp;channel&nbsp;number&nbsp;the&nbsp;device&nbsp;is&nbsp;plugged&nbsp;into<br>
+:type&nbsp;channel:&nbsp;int<br>
+:param&nbsp;moduleNumber:&nbsp;The&nbsp;number&nbsp;of&nbsp;the&nbsp;particular&nbsp;module&nbsp;type<br>
+:type&nbsp;moduleNumber:&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="MotorHandler-setSubsystem"><strong>setSubsystem</strong></a>(self, subsystem)</dt><dd><tt>Sets&nbsp;the&nbsp;subsystem&nbsp;name&nbsp;of&nbsp;this&nbsp;Sendable&nbsp;object.<br>
+&nbsp;<br>
+:param&nbsp;subsystem:&nbsp;subsystem&nbsp;name</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="wpilib.sendable.html#Sendable">wpilib.sendable.Sendable</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#B9D8C2">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="SolenoidHandler">class <strong>SolenoidHandler</strong></a>(<a href="KiwiRobotLib.handlers.html#Handler">Handler</a>)</font></td></tr>
+    
+<tr bgcolor="#B9D8C2"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>This&nbsp;handler&nbsp;is&nbsp;used&nbsp;to&nbsp;group&nbsp;motors&nbsp;together<br>
+and&nbsp;to&nbsp;control&nbsp;them&nbsp;as&nbsp;a&nbsp;whole.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="KiwiRobotLib.handlers.html#SolenoidHandler">SolenoidHandler</a></dd>
+<dd><a href="KiwiRobotLib.handlers.html#Handler">Handler</a></dd>
+<dd><a href="collections.html#deque">collections.deque</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="SolenoidHandler-__init__"><strong>__init__</strong></a>(self, *args, pcm=20)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="SolenoidHandler-pull"><strong>pull</strong></a>(self)</dt><dd><tt>This&nbsp;"pulls"&nbsp;with&nbsp;all&nbsp;of&nbsp;the&nbsp;solenoids&nbsp;in&nbsp;the&nbsp;group.</tt></dd></dl>
+
+<dl><dt><a name="SolenoidHandler-push"><strong>push</strong></a>(self)</dt><dd><tt>This&nbsp;"pushes"&nbsp;with&nbsp;all&nbsp;of&nbsp;the&nbsp;solenoids&nbsp;in&nbsp;the&nbsp;group.</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="KiwiRobotLib.handlers.html#Handler">Handler</a>:<br>
+<dl><dt><a name="SolenoidHandler-__call__"><strong>__call__</strong></a>(self, method, *args)</dt><dd><tt>This&nbsp;allows&nbsp;the&nbsp;handler&nbsp;to&nbsp;be&nbsp;called&nbsp;like&nbsp;a&nbsp;function<br>
+to&nbsp;run&nbsp;a&nbsp;function&nbsp;on&nbsp;all&nbsp;of&nbsp;the&nbsp;handlers&nbsp;children.<br>
+&nbsp;<br>
+For&nbsp;example:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;'''<br>
+&nbsp;&nbsp;&nbsp;&nbsp;h&nbsp;=&nbsp;<a href="#Handler">Handler</a>(TalonMotor(1),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TalonMotor(2))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;h(TalonMotor.set,&nbsp;1)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;'''<br>
+This&nbsp;code&nbsp;will&nbsp;set&nbsp;the&nbsp;<a href="#Handler">Handler</a>'s&nbsp;talon&nbsp;motors&nbsp;to<br>
+100%.<br>
+&nbsp;<br>
+This&nbsp;is&nbsp;identical&nbsp;to:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;'''<br>
+&nbsp;&nbsp;&nbsp;&nbsp;h&nbsp;=&nbsp;<a href="#Handler">Handler</a>(TalonMotor(1),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TalonMotor(2))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;h.<a href="#SolenoidHandler-handle">handle</a>(TalonMotor.set,&nbsp;1)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;'''</tt></dd></dl>
+
+<dl><dt><a name="SolenoidHandler-handle"><strong>handle</strong></a>(self, method, *args)</dt><dd><tt>This&nbsp;function&nbsp;is&nbsp;identical&nbsp;to&nbsp;the&nbsp;__call__<br>
+function&nbsp;of&nbsp;this&nbsp;class.<br>
+&nbsp;<br>
+It&nbsp;allows&nbsp;the&nbsp;handler&nbsp;to&nbsp;call&nbsp;a&nbsp;function&nbsp;on&nbsp;all<br>
+of&nbsp;the&nbsp;handlers&nbsp;children.<br>
+&nbsp;<br>
+Here's&nbsp;an&nbsp;example:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;'''<br>
+&nbsp;&nbsp;&nbsp;&nbsp;h&nbsp;=&nbsp;<a href="#Handler">Handler</a>(TalonMotor(1),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TalonMotor(2))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;h.<a href="#SolenoidHandler-handle">handle</a>(TalonMotor.set,&nbsp;1)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;'''<br>
+This&nbsp;code&nbsp;will&nbsp;set&nbsp;the&nbsp;<a href="#Handler">Handler</a>'s&nbsp;talon&nbsp;motors&nbsp;to<br>
+100%.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="KiwiRobotLib.handlers.html#Handler">Handler</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Methods inherited from <a href="collections.html#deque">collections.deque</a>:<br>
+<dl><dt><a name="SolenoidHandler-__add__"><strong>__add__</strong></a>(self, value, /)</dt><dd><tt>Return&nbsp;self+value.</tt></dd></dl>
+
+<dl><dt><a name="SolenoidHandler-__bool__"><strong>__bool__</strong></a>(self, /)</dt><dd><tt>self&nbsp;!=&nbsp;0</tt></dd></dl>
+
+<dl><dt><a name="SolenoidHandler-__contains__"><strong>__contains__</strong></a>(self, key, /)</dt><dd><tt>Return&nbsp;key&nbsp;in&nbsp;self.</tt></dd></dl>
+
+<dl><dt><a name="SolenoidHandler-__copy__"><strong>__copy__</strong></a>(...)</dt><dd><tt>Return&nbsp;a&nbsp;shallow&nbsp;copy&nbsp;of&nbsp;a&nbsp;<a href="collections.html#deque">deque</a>.</tt></dd></dl>
+
+<dl><dt><a name="SolenoidHandler-__delitem__"><strong>__delitem__</strong></a>(self, key, /)</dt><dd><tt>Delete&nbsp;self[key].</tt></dd></dl>
+
+<dl><dt><a name="SolenoidHandler-__eq__"><strong>__eq__</strong></a>(self, value, /)</dt><dd><tt>Return&nbsp;self==value.</tt></dd></dl>
+
+<dl><dt><a name="SolenoidHandler-__ge__"><strong>__ge__</strong></a>(self, value, /)</dt><dd><tt>Return&nbsp;self&gt;=value.</tt></dd></dl>
+
+<dl><dt><a name="SolenoidHandler-__getattribute__"><strong>__getattribute__</strong></a>(self, name, /)</dt><dd><tt>Return&nbsp;getattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="SolenoidHandler-__getitem__"><strong>__getitem__</strong></a>(self, key, /)</dt><dd><tt>Return&nbsp;self[key].</tt></dd></dl>
+
+<dl><dt><a name="SolenoidHandler-__gt__"><strong>__gt__</strong></a>(self, value, /)</dt><dd><tt>Return&nbsp;self&gt;value.</tt></dd></dl>
+
+<dl><dt><a name="SolenoidHandler-__iadd__"><strong>__iadd__</strong></a>(self, value, /)</dt><dd><tt>Implement&nbsp;self+=value.</tt></dd></dl>
+
+<dl><dt><a name="SolenoidHandler-__imul__"><strong>__imul__</strong></a>(self, value, /)</dt><dd><tt>Implement&nbsp;self*=value.</tt></dd></dl>
+
+<dl><dt><a name="SolenoidHandler-__iter__"><strong>__iter__</strong></a>(self, /)</dt><dd><tt>Implement&nbsp;iter(self).</tt></dd></dl>
+
+<dl><dt><a name="SolenoidHandler-__le__"><strong>__le__</strong></a>(self, value, /)</dt><dd><tt>Return&nbsp;self&lt;=value.</tt></dd></dl>
+
+<dl><dt><a name="SolenoidHandler-__len__"><strong>__len__</strong></a>(self, /)</dt><dd><tt>Return&nbsp;len(self).</tt></dd></dl>
+
+<dl><dt><a name="SolenoidHandler-__lt__"><strong>__lt__</strong></a>(self, value, /)</dt><dd><tt>Return&nbsp;self&lt;value.</tt></dd></dl>
+
+<dl><dt><a name="SolenoidHandler-__mul__"><strong>__mul__</strong></a>(self, value, /)</dt><dd><tt>Return&nbsp;self*value.n</tt></dd></dl>
+
+<dl><dt><a name="SolenoidHandler-__ne__"><strong>__ne__</strong></a>(self, value, /)</dt><dd><tt>Return&nbsp;self!=value.</tt></dd></dl>
+
+<dl><dt><a name="SolenoidHandler-__new__"><strong>__new__</strong></a>(*args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;object.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="SolenoidHandler-__reduce__"><strong>__reduce__</strong></a>(...)</dt><dd><tt>Return&nbsp;state&nbsp;information&nbsp;for&nbsp;pickling.</tt></dd></dl>
+
+<dl><dt><a name="SolenoidHandler-__repr__"><strong>__repr__</strong></a>(self, /)</dt><dd><tt>Return&nbsp;repr(self).</tt></dd></dl>
+
+<dl><dt><a name="SolenoidHandler-__reversed__"><strong>__reversed__</strong></a>(...)</dt><dd><tt>D.<a href="#SolenoidHandler-__reversed__">__reversed__</a>()&nbsp;--&nbsp;return&nbsp;a&nbsp;reverse&nbsp;iterator&nbsp;over&nbsp;the&nbsp;<a href="collections.html#deque">deque</a></tt></dd></dl>
+
+<dl><dt><a name="SolenoidHandler-__rmul__"><strong>__rmul__</strong></a>(self, value, /)</dt><dd><tt>Return&nbsp;self*value.</tt></dd></dl>
+
+<dl><dt><a name="SolenoidHandler-__setitem__"><strong>__setitem__</strong></a>(self, key, value, /)</dt><dd><tt>Set&nbsp;self[key]&nbsp;to&nbsp;value.</tt></dd></dl>
+
+<dl><dt><a name="SolenoidHandler-__sizeof__"><strong>__sizeof__</strong></a>(...)</dt><dd><tt>D.<a href="#SolenoidHandler-__sizeof__">__sizeof__</a>()&nbsp;--&nbsp;size&nbsp;of&nbsp;D&nbsp;in&nbsp;memory,&nbsp;in&nbsp;bytes</tt></dd></dl>
+
+<dl><dt><a name="SolenoidHandler-append"><strong>append</strong></a>(...)</dt><dd><tt>Add&nbsp;an&nbsp;element&nbsp;to&nbsp;the&nbsp;right&nbsp;side&nbsp;of&nbsp;the&nbsp;<a href="collections.html#deque">deque</a>.</tt></dd></dl>
+
+<dl><dt><a name="SolenoidHandler-appendleft"><strong>appendleft</strong></a>(...)</dt><dd><tt>Add&nbsp;an&nbsp;element&nbsp;to&nbsp;the&nbsp;left&nbsp;side&nbsp;of&nbsp;the&nbsp;<a href="collections.html#deque">deque</a>.</tt></dd></dl>
+
+<dl><dt><a name="SolenoidHandler-clear"><strong>clear</strong></a>(...)</dt><dd><tt>Remove&nbsp;all&nbsp;elements&nbsp;from&nbsp;the&nbsp;<a href="collections.html#deque">deque</a>.</tt></dd></dl>
+
+<dl><dt><a name="SolenoidHandler-copy"><strong>copy</strong></a>(...)</dt><dd><tt>Return&nbsp;a&nbsp;shallow&nbsp;copy&nbsp;of&nbsp;a&nbsp;<a href="collections.html#deque">deque</a>.</tt></dd></dl>
+
+<dl><dt><a name="SolenoidHandler-count"><strong>count</strong></a>(...)</dt><dd><tt>D.<a href="#SolenoidHandler-count">count</a>(value)&nbsp;-&gt;&nbsp;integer&nbsp;--&nbsp;return&nbsp;number&nbsp;of&nbsp;occurrences&nbsp;of&nbsp;value</tt></dd></dl>
+
+<dl><dt><a name="SolenoidHandler-extend"><strong>extend</strong></a>(...)</dt><dd><tt>Extend&nbsp;the&nbsp;right&nbsp;side&nbsp;of&nbsp;the&nbsp;<a href="collections.html#deque">deque</a>&nbsp;with&nbsp;elements&nbsp;from&nbsp;the&nbsp;iterable</tt></dd></dl>
+
+<dl><dt><a name="SolenoidHandler-extendleft"><strong>extendleft</strong></a>(...)</dt><dd><tt>Extend&nbsp;the&nbsp;left&nbsp;side&nbsp;of&nbsp;the&nbsp;<a href="collections.html#deque">deque</a>&nbsp;with&nbsp;elements&nbsp;from&nbsp;the&nbsp;iterable</tt></dd></dl>
+
+<dl><dt><a name="SolenoidHandler-index"><strong>index</strong></a>(...)</dt><dd><tt>D.<a href="#SolenoidHandler-index">index</a>(value,&nbsp;[start,&nbsp;[stop]])&nbsp;-&gt;&nbsp;integer&nbsp;--&nbsp;return&nbsp;first&nbsp;index&nbsp;of&nbsp;value.<br>
+Raises&nbsp;ValueError&nbsp;if&nbsp;the&nbsp;value&nbsp;is&nbsp;not&nbsp;present.</tt></dd></dl>
+
+<dl><dt><a name="SolenoidHandler-insert"><strong>insert</strong></a>(...)</dt><dd><tt>D.<a href="#SolenoidHandler-insert">insert</a>(index,&nbsp;object)&nbsp;--&nbsp;insert&nbsp;object&nbsp;before&nbsp;index</tt></dd></dl>
+
+<dl><dt><a name="SolenoidHandler-pop"><strong>pop</strong></a>(...)</dt><dd><tt>Remove&nbsp;and&nbsp;return&nbsp;the&nbsp;rightmost&nbsp;element.</tt></dd></dl>
+
+<dl><dt><a name="SolenoidHandler-popleft"><strong>popleft</strong></a>(...)</dt><dd><tt>Remove&nbsp;and&nbsp;return&nbsp;the&nbsp;leftmost&nbsp;element.</tt></dd></dl>
+
+<dl><dt><a name="SolenoidHandler-remove"><strong>remove</strong></a>(...)</dt><dd><tt>D.<a href="#SolenoidHandler-remove">remove</a>(value)&nbsp;--&nbsp;remove&nbsp;first&nbsp;occurrence&nbsp;of&nbsp;value.</tt></dd></dl>
+
+<dl><dt><a name="SolenoidHandler-reverse"><strong>reverse</strong></a>(...)</dt><dd><tt>D.<a href="#SolenoidHandler-reverse">reverse</a>()&nbsp;--&nbsp;reverse&nbsp;*IN&nbsp;PLACE*</tt></dd></dl>
+
+<dl><dt><a name="SolenoidHandler-rotate"><strong>rotate</strong></a>(...)</dt><dd><tt>Rotate&nbsp;the&nbsp;<a href="collections.html#deque">deque</a>&nbsp;n&nbsp;steps&nbsp;to&nbsp;the&nbsp;right&nbsp;(default&nbsp;n=1).&nbsp;&nbsp;If&nbsp;n&nbsp;is&nbsp;negative,&nbsp;rotates&nbsp;left.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="collections.html#deque">collections.deque</a>:<br>
+<dl><dt><strong>maxlen</strong></dt>
+<dd><tt>maximum&nbsp;size&nbsp;of&nbsp;a&nbsp;deque&nbsp;or&nbsp;None&nbsp;if&nbsp;unbounded</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="collections.html#deque">collections.deque</a>:<br>
+<dl><dt><strong>__hash__</strong> = None</dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#40476D">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#40476D"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-invert"><strong>invert</strong></a>(motor)</dt><dd><tt>This&nbsp;function&nbsp;is&nbsp;used&nbsp;by&nbsp;the&nbsp;<a href="#MotorHandler">MotorHandler</a>&nbsp;class<br>
+to&nbsp;invert&nbsp;a&nbsp;motor.</tt></dd></dl>
+ <dl><dt><a name="-pull"><strong>pull</strong></a>(s)</dt><dd><tt>This&nbsp;function&nbsp;is&nbsp;used&nbsp;by&nbsp;the&nbsp;<a href="#SolenoidHandler">SolenoidHandler</a><br>
+class&nbsp;to&nbsp;"pull"&nbsp;a&nbsp;pnuematic&nbsp;press&nbsp;using&nbsp;a&nbsp;solenoid.</tt></dd></dl>
+ <dl><dt><a name="-push"><strong>push</strong></a>(s)</dt><dd><tt>This&nbsp;function&nbsp;is&nbsp;used&nbsp;by&nbsp;the&nbsp;<a href="#SolenoidHandler">SolenoidHandler</a><br>
+class&nbsp;to&nbsp;"push"&nbsp;a&nbsp;pnuematic&nbsp;press&nbsp;using&nbsp;a&nbsp;solenoid.</tt></dd></dl>
+ <dl><dt><a name="-set"><strong>set</strong></a>(motor, speed)</dt><dd><tt>This&nbsp;function&nbsp;is&nbsp;used&nbsp;by&nbsp;the&nbsp;<a href="#MotorHandler">MotorHandler</a>&nbsp;class<br>
+to&nbsp;set&nbsp;the&nbsp;speed&nbsp;of&nbsp;a&nbsp;motor.</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#826754">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#826754"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>compressor</strong> = &lt;wpilib.compressor.Compressor object&gt;<br>
+<strong>pcm</strong> = 20</td></tr></table>
+</body></html>
